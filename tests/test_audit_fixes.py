@@ -205,7 +205,7 @@ print("CACHE_ISOLATION_OK")
 
 
 def test_rewrite_merge_monotonic() -> None:
-    """改写候选合并:并集去重、同文本取最高分、JD 槽位最前——改写只增不减。"""
+    """改写候选合并:跨轮并集去重、同文本取最高分、JD 槽位最前、统一重排截断。"""
     code = r"""
 import importlib
 d = importlib.import_module("2Milvus_RAG_Qa.core.dual_retrieval")
