@@ -26,7 +26,7 @@ _vector_store = None
 _mysql_system = None
 _memory_layer = None
 _upload_lock = asyncio.Lock()
-_chat_slots = asyncio.Semaphore(2)  # R2:云端 deepseek 限流 2 并发(实测 4 并发易触发 APIConnectionError)
+_chat_slots = threading.BoundedSemaphore(2)  # R2:云端 deepseek 限流 2 并发(实测 4 并发易触发 APIConnectionError);同时覆盖 /chat 与 /chat/stream
 _mysql_lock = threading.Lock()
 _rag_init_lock = threading.Lock()
 _memory_lock = threading.Lock()
@@ -395,9 +395,12 @@ async def index():
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(req: ChatRequest):
-    # slot 在线程真正结束前始终占用，防止超时线程绕过并发上限。
-    async with _chat_slots:
-        return await asyncio.to_thread(_chat_sync, req)
+    def locked() -> ChatResponse:
+        # slot 在线程真正结束前始终占用，防止超时线程绕过并发上限。
+        with _chat_slots:
+            return _chat_sync(req)
+
+    return await asyncio.to_thread(locked)
 
 
 @app.post("/feedback")
@@ -445,32 +448,40 @@ async def chat_stream(req: ChatRequest):
     """
 
     def event_stream():
-        # 先试 MySQL 快筛（命中则一次性返回）
-        if req.use_rag:
+        with _chat_slots:
+            # 先试 MySQL 快筛（命中则一次性返回）
+            if req.use_rag:
+                try:
+                    with _mysql_lock:
+                        mysql_qa = _get_mysql()
+                        answer, _msg = mysql_qa.search(req.query)
+                    if answer:
+                        yield _sse({"type": "token", "content": answer})
+                        yield _sse({
+                            "type": "meta", "answer": answer, "intent": "mysql_faq",
+                            "strategy": "direct", "sources": [], "latency_ms": 0,
+                            "from_cache": True,
+                        })
+                        return
+                except Exception:
+                    logger.exception("MySQL 快筛不可用，继续尝试 RAG 流式")
             try:
-                with _mysql_lock:
-                    mysql_qa = _get_mysql()
-                    answer, _msg = mysql_qa.search(req.query)
-                if answer:
-                    yield _sse({"type": "token", "content": answer})
-                    yield _sse({
-                        "type": "meta", "answer": answer, "intent": "mysql_faq",
-                        "strategy": "direct", "sources": [], "latency_ms": 0,
-                        "from_cache": True,
-                    })
-                    return
+                rag, _vs = _get_rag()
+                hint = _memory_hint(req.session_id, req.query)
+                agent = _get_adaptive_agent()
+                if agent is not None:
+                    events = agent.query_stream(
+                        req.query, session_id=req.session_id, memory_hint=hint
+                    )
+                else:
+                    events = rag.query_stream(
+                        req.query, session_id=req.session_id, memory_hint=hint
+                    )
+                for event in events:
+                    yield _sse(event)
             except Exception:
-                logger.exception("MySQL 快筛不可用，继续尝试 RAG 流式")
-        try:
-            rag, _vs = _get_rag()
-            hint = _memory_hint(req.session_id, req.query)
-            for event in rag.query_stream(
-                req.query, session_id=req.session_id, memory_hint=hint
-            ):
-                yield _sse(event)
-        except Exception:
-            logger.exception("流式问答失败")
-            yield _sse({"type": "error", "content": "抱歉，服务暂时不可用，请稍后重试。"})
+                logger.exception("流式问答失败")
+                yield _sse({"type": "error", "content": "抱歉，服务暂时不可用，请稍后重试。"})
 
     return StreamingResponse(event_stream(), media_type="text/event-stream")
 
@@ -498,7 +509,9 @@ def _chat_sync(req: ChatRequest) -> ChatResponse:
                 hint = _memory_hint(req.session_id, req.query)
                 agent = _get_adaptive_agent()
                 if agent is not None:
-                    result = agent.query(req.query, memory_hint=hint)
+                    result = agent.query(
+                        req.query, memory_hint=hint, session_id=req.session_id
+                    )
                     result.setdefault("intent", "rag_adaptive")
                     result.setdefault("strategy", "agent")
                     result.setdefault("latency_ms", 0)

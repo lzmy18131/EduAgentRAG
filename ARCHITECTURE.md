@@ -193,7 +193,7 @@ CI(pytest + 检索快检)+ E4 线上反馈回灌 → 迭代
 ## 六、运行前提与常用命令
 
 - 依赖安装:`pip install -r requirements.txt`,装完 `pip check`;
-- 服务依赖:MySQL / Redis / Milvus(Docker:`docker compose up -d`);
+- 服务依赖:MySQL / Redis / Milvus(仓库根 `compose.yml`,`docker compose up -d`);
 - 初始化 FAQ 库:`python -m 1MySQL_qa.mysql_qa_main init-db`;
 - 构建知识库:`python MAIN.py rebuild`(首次或语料更新后);
 - 命令行问答:`python MAIN.py query "问题"`;
@@ -201,6 +201,8 @@ CI(pytest + 检索快检)+ E4 线上反馈回灌 → 迭代
 - 检索评测:`python -m 2Milvus_RAG_Qa.RAG评测.eval_harness hit-rate`(另有 agent-hit-rate / compare);
 - 生成侧评测:`python -m 2Milvus_RAG_Qa.RAG评测.ragas_evaluate`;
 - 测试:`pytest -q`;一键 CI:`python ci_check.py`。
+- 说明:GitHub Actions 仅运行 pytest 单元测试;完整检索评测与消融依赖 Milvus 与语料,在本地 harness 执行。
+- 完整语料未随仓库分发(体积/许可),仓库内 `sample_data/` 提供小规模冒烟样例;全量评测产物保留在 `2Milvus_RAG_Qa/RAG评测/`。
 
 配置与密钥:`static/config.ini` 提供默认连接参数,敏感项(LLM / 多模态 / 上传管理
 的 API Key,如 EDU_LLM_API_KEY、EDU_DASHSCOPE_API_KEY、EDU_APP_UPLOAD_API_KEY)

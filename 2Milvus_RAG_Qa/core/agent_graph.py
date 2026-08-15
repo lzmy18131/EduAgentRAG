@@ -45,6 +45,7 @@ class AgentState(TypedDict):
     rewrite_count: int    # 已改写次数
     answer: str
     memory_hint: str      # 记忆注入文本(画像+历史事实,可为空串)
+    intent: str           # 意图分类结果(供 JD 双路路由使用)
 
 
 class AdaptiveRAG:
@@ -83,10 +84,12 @@ class AdaptiveRAG:
     def _retrieve(self, state: AgentState) -> dict:
         """检索:求职意图双路并行(JD 结构化 + 向量),其余复用混合检索 + 重排。
 
-        整改(改写只增不减):改写轮(retrieve_count>0)把本轮结果与上一轮
-        按文本并集合并(同文本取最高分,JD 槽位保持最前,向量文档取 top_k)——
-        配对消融实测首版"改写替换原文档"净损失 8 个命中(regression 10/rescue 2),
-        并集合并后候选 ⊇ 首轮候选,改写只能加分不能减分。
+        整改(改写候选跨轮合并):改写轮把本轮结果与上一轮按文本并集合并
+        (同文本取最高分,JD 槽位保持最前,向量文档统一重排后截断 top_k)。
+        配对消融实测:首版"改写直接替换原文档"净损失 8 个命中
+        (regression 10 / rescue 2),改为跨轮并集+统一重排后回归从 10 条降至 3 条
+        (agent_compare.json);注意并集扩大的是候选池,最终 top-k 仍需按分数
+        截断,因此不保证数学上的单调超集。
         """
         t0 = time.time()
         from .dual_retrieval import dual_retrieve, merge_docs
@@ -94,6 +97,7 @@ class AdaptiveRAG:
             state["query"],
             self.rag._vs.hybrid_search_with_rerank_scored,
             cfg.RETRIEVAL_K,
+            intent=state.get("intent", ""),
         )
         prev_docs = state.get("docs") or []
         if prev_docs:
@@ -261,33 +265,151 @@ class AdaptiveRAG:
         return g.compile()
 
     # ---------- 入口 ----------
-    def query(self, user_query: str, verbose: bool = False, memory_hint: str = "") -> dict:
+    def query(
+        self,
+        user_query: str,
+        verbose: bool = False,
+        memory_hint: str = "",
+        session_id: str | None = None,
+    ) -> dict:
+        """完整主链路(与经典 RAGSystem.query 同口径的预处理 + Adaptive 循环)。
+
+        预处理:多轮指代消解 → 意图分类 → 语义缓存(相似度+意图+硬槽+版本)。
+        缓存命中直接返回;否则进 retrieve→grade→rewrite→generate 循环。
+        """
+        history = self.rag._cache.get_history(session_id) if session_id else []
+        resolved = (
+            self.rag._resolve_coreference(user_query, history) if history else user_query
+        )
+        intent = self.rag._classify_intent(resolved)
+        try:
+            cached = self.rag._try_semantic_cache(resolved, intent)
+        except Exception:
+            cached = None
+        if cached is not None:
+            answer = cached.get("answer", "")
+            self.rag._cache.append_history(session_id, user_query, answer)
+            return {
+                "answer": answer,
+                "sources": cached.get("sources", []),
+                "strategy": cached.get("strategy", "直接检索"),
+                "intent": intent,
+                "from_cache": True,
+                "latency_ms": 0,
+            }
+
         state: AgentState = {
-            "query": user_query,
+            "query": resolved,
             "original_query": user_query,
             "docs": [],
             "grade": "",
             "rewrite_count": 0,
             "answer": "",
             "memory_hint": memory_hint or "",
+            "intent": intent,
         }
         try:
             result = self._graph.invoke(state)
         except Exception as e:
             logger.warning("Agent 循环失败,降级为单次直接检索: %s", e)
-            return self._fallback_query(user_query)
+            fallback = self._fallback_query(resolved)
+            fallback["intent"] = intent
+            return fallback
         if verbose:
             print(f"[AdaptiveRAG] 问题: {user_query}")
             print(f"  改写次数: {result.get('rewrite_count', 0)}")
             print(f"  最终自省: {result.get('grade', '')}")
             print(f"  检索块数: {len(result.get('docs', []))}")
             print(f"  答案: {(result.get('answer') or '')[:200]}")
+        self.rag._cache.append_history(session_id, user_query, result.get("answer", ""))
         return {
             "answer": result.get("answer", ""),
             "sources": [d["text"] for d in result.get("docs", [])],
             "rewrite_count": result.get("rewrite_count", 0),
             "degraded": False,
+            "intent": intent,
+            "from_cache": False,
         }
+
+    def query_stream(
+        self,
+        user_query: str,
+        session_id: str | None = None,
+        memory_hint: str = "",
+    ):
+        """流式主链路:与 query() 相同的预处理 + Adaptive 循环 + 逐 token 生成。
+
+        事件格式与 RAGSystem.query_stream 一致:{"type":"token",...} 与
+        {"type":"meta",...}。循环异常时降级为经典流式路径。
+        """
+        t0 = time.time()
+        rag = self.rag
+        history = rag._cache.get_history(session_id) if session_id else []
+        resolved = (
+            rag._resolve_coreference(user_query, history) if history else user_query
+        )
+        intent = rag._classify_intent(resolved)
+
+        def _meta(answer, sources, strategy, from_cache=False):
+            return {
+                "type": "meta",
+                "answer": answer,
+                "intent": intent,
+                "strategy": strategy,
+                "sources": sources,
+                "latency_ms": round((time.time() - t0) * 1000),
+                "from_cache": from_cache,
+            }
+
+        try:
+            cached = rag._try_semantic_cache(resolved, intent)
+        except Exception:
+            cached = None
+        if cached is not None:
+            answer = cached.get("answer", "")
+            yield {"type": "token", "content": answer}
+            rag._cache.append_history(session_id, user_query, answer)
+            yield _meta(answer, cached.get("sources", []),
+                        cached.get("strategy", "直接检索"), from_cache=True)
+            return
+
+        try:
+            loop = self.retrieve_loop(resolved)
+            docs = loop["docs"]
+        except Exception as e:
+            logger.warning("Adaptive 循环失败,降级为经典流式检索: %s", e)
+            for event in rag.query_stream(
+                resolved, session_id=session_id, memory_hint=memory_hint
+            ):
+                yield event
+            return
+
+        contexts = [d["text"] for d in docs]
+        if memory_hint:
+            contexts = [memory_hint] + contexts
+        try:
+            contexts = rag._vs.build_layered_contexts(resolved, contexts)
+        except Exception as e:
+            logger.warning("三档上下文组装失败,用原文兜底: %s", e)
+
+        prompt = rag._build_rag_prompt(resolved, contexts)
+        if loop.get("grade") == "fail":
+            prompt += (
+                "\n\n【系统指令】检索到的知识库证据不足以完全支撑回答。"
+                "只回答能由上述证据支撑的部分;无法支撑的部分必须明确说明"
+                "\"知识库证据不足\",严禁编造事实或装作知道。"
+            )
+        parts: list[str] = []
+        for token in rag._stream_llm(prompt, reasoning="high", max_tokens=4096):
+            parts.append(token)
+            yield {"type": "token", "content": token}
+        answer = "".join(parts)
+        try:
+            rag._write_semantic_cache(resolved, intent, "agent", answer, contexts)
+        except Exception:
+            pass
+        rag._cache.append_history(session_id, user_query, answer)
+        yield _meta(answer, contexts, "agent")
 
     def retrieve_loop(self, user_query: str, memory_hint: str = "") -> dict:
         """只跑检索-自省-改写循环(不生成),返回最终 docs 与改写次数。
@@ -303,6 +425,7 @@ class AdaptiveRAG:
             "rewrite_count": 0,
             "answer": "",
             "memory_hint": memory_hint or "",
+            "intent": "",
         }
         state.update(self._retrieve(state))
         for _ in range(MAX_REWRITES + 1):

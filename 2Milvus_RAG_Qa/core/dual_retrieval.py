@@ -131,14 +131,15 @@ def format_jd_text(row: dict) -> str:
 
 
 def merge_docs(prev: list[dict], new: list[dict], top_k: int) -> list[dict]:
-    """多轮检索候选合并(整改:改写只增不减,消除改写回归)。
+    """多轮检索候选合并(跨轮并集 + 统一重排截断)。
 
-    配对消融(agent_compare.json 第一版)发现改写路径净损失 8 个命中
-    (regression 10 vs rescue 2,McNemar p=0.039)——原因是改写后重新检索
+    配对消融(agent_compare.json)发现首版"改写直接替换原文档"净损失 8 个
+    命中(regression 10 vs rescue 2,McNemar p=0.039)——原因是改写后重新检索
     **替换**了原文档,把首轮已命中的父块挤出了候选池。
-    修复:按文本去重取并集,同文本保留最高分;JD 结构化槽位保持在最前
-    (≤JD_MAX_SLOTS,不参与分数排序),向量文档按分数降序取 top_k——
-    改写只增不减,保证最终候选 ⊇ 首轮候选(与子问题检索的并集策略一致)。
+    现在:按文本去重取并集,同文本保留最高分;JD 结构化槽位保持在最前
+    (≤JD_MAX_SLOTS,不参与分数排序),向量文档按分数统一重排后截断 top_k。
+    注意:并集扩大的是候选池,最终 top-k 仍按分数截断,不保证数学上的
+    单调超集;实测效果是改写回归从 10 条降至 3 条(agent_compare.json)。
 
     Args:
         prev:  上一轮合并后的 docs(首轮为空列表)

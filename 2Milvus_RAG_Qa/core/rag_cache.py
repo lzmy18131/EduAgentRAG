@@ -152,6 +152,8 @@ class RagCache:
         threshold: float = SEMANTIC_SIMILARITY_THRESHOLD,
         intent: str | None = None,
         slots: dict | None = None,
+        prompt_version: str | None = None,
+        llm_model: str | None = None,
     ) -> dict[str, Any] | None:
         """查询语义缓存:精确 key 快路径 + 最近邻余弦相似度扫描。
 
@@ -180,7 +182,8 @@ class RagCache:
             if raw is not None:
                 payload = json.loads(raw)
                 if isinstance(payload, dict) and payload.get("answer") and \
-                        self._payload_consistent(payload, intent, slots):
+                        self._payload_consistent(payload, intent, slots,
+                                                 prompt_version, llm_model):
                     logger.info("语义缓存精确命中: %s", query[:40])
                     return payload
 
@@ -197,7 +200,8 @@ class RagCache:
                     emb_list = payload.get("embedding")
                     if not isinstance(emb_list, list) or not payload.get("answer"):
                         continue
-                    if not self._payload_consistent(payload, intent, slots):
+                    if not self._payload_consistent(payload, intent, slots,
+                                                     prompt_version, llm_model):
                         continue
                     sim = self._cosine(query_emb, np.asarray(emb_list, dtype=np.float32))
                     if sim > best_sim:
@@ -215,26 +219,36 @@ class RagCache:
 
     @staticmethod
     def _payload_consistent(
-        payload: dict[str, Any], intent: str | None, slots: dict | None
+        payload: dict[str, Any],
+        intent: str | None,
+        slots: dict | None,
+        prompt_version: str | None = None,
+        llm_model: str | None = None,
     ) -> bool:
-        """缓存条目与当前查询的意图/硬槽一致性校验(整改)。
+        """缓存条目与当前查询的一致性校验(意图/硬槽/版本)。
 
-        意图不一致(如缓存是"求职"而本次是"技术问题")或求职类硬槽
-        (城市/技术/薪资)不一致时,视为不同诉求,不得复用缓存答案。
+        任一不一致即视为不同诉求或不同版本,不得复用缓存答案:
+          - 意图标签严格相等(非仅求职/非求职粗分);
+          - 求职类硬槽(city/tech/salary)逐字段相等;
+          - prompt 版本与生成模型版本与当前一致。
         """
         slots = slots or {}
         cached_intent = payload.get("intent")
-        if intent is not None and cached_intent is not None:
-            # 归类为求职类与否必须一致(细粒度标签不一致时保守拒绝)
-            job_now = intent in {"就业薪资", "求职岗位推荐"}
-            job_cached = cached_intent in {"就业薪资", "求职岗位推荐"}
-            if job_now != job_cached:
-                return False
+        if intent is not None and cached_intent is not None and cached_intent != intent:
+            return False
         cached_slots = payload.get("slots") or {}
         if slots or cached_slots:
             for k in ("city", "tech", "salary_min", "salary_max"):
                 if slots.get(k) != cached_slots.get(k):
                     return False
+        if prompt_version is not None:
+            cached_pv = payload.get("prompt_version")
+            if cached_pv and cached_pv != prompt_version:
+                return False
+        if llm_model is not None:
+            cached_model = payload.get("llm_model")
+            if cached_model and cached_model != llm_model:
+                return False
         return True
 
     def set_semantic(

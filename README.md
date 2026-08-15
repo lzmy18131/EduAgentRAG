@@ -34,7 +34,7 @@
 
 1. **推理模型空返回**:deepseek-v4-pro 的 reasoning 会吃满 max_tokens 导致 content 空——分档 max_tokens + reasoning_effort 必传修复;
 2. **异构分数融合**:稠密/稀疏分数量纲差 2 个数量级,加权失效 → RRF 只看排名;
-3. **改写回归**:配对消融(McNemar)实测第一版循环显著更差(p=0.039)——改写后重新检索替换原文档,把首轮命中挤出了候选池 → 改写轮改为**并集合并**(只增不减),回归 10→3 条;
+3. **改写回归**:配对消融(McNemar)实测第一版循环显著更差(p=0.039)——改写后重新检索替换原文档,把首轮命中挤出了候选池 → 改写轮改为**跨轮候选并集 + 统一重排截断**,回归 10→3 条;
 4. **门控分数校准**:重排分高度右偏,门控误差大头在分数校准(直过区 FP 29.4%),已量化、校准列入下一步;
 5. **评测可信度**:97% LLM 生成的评测集会高估线上效果 → 评测集分层 + 56 条人工编写口语化子集独立报告(实测低 ≈18pp,分布偏移的量化证据)。
 
@@ -64,10 +64,12 @@
                拒答(向量路 top1<0.15) / 语义缓存 / SSE 流式 / Tracing / 评测闭环
 ```
 
-> **主链路接线口径**:Web `/chat` 主链路 = Adaptive 循环(自省/改写本地 Qwen2.5-0.5B,
-> 任何异常自动降级经典检索;LocalLLM 不可用时回退经典 `RAGSystem.query`);
-> `/chat/stream` 走经典流式路径;记忆(画像+历史事实)在两类路径请求前自动注入,
-> 记忆层不可用时静默跳过——架构图与运行代码一致。
+> **主链路口径**:`/chat` 与 `/chat/stream` 共用同一条 Adaptive 主链路——
+> 指代消解 → 意图分类 → 语义缓存(相似度+意图+硬槽+prompt/model 版本)→
+> Adaptive 检索循环 → 生成(非流式/SSE 流式);自省/改写走本地 Qwen2.5-0.5B,
+> 循环异常自动降级经典检索,LocalLLM 不可用时回退 `RAGSystem` 经典路径;
+> 记忆(画像+历史事实)在请求前自动注入,记忆层不可用时静默跳过;
+> `/chat` 与 `/chat/stream` 共用 2 并发信号量。
 
 ## 核心特性
 
@@ -82,7 +84,7 @@
 | **父子分块** | 父块 1200 / 子块 300 / 重叠 80,子块检索、父块回填;代码块整体保留不截断 |
 | **数据治理** | 语料审计(精确重复 4.69%/过短 1.18%/语言分布)+ 清洗 + 文档内去重,报告落盘 |
 | **可靠性机制** | 置信度拒答(向量路重排分口径)、空返回修复(推理模型 max_tokens×prompt 长度根因)、降级兜底、熔断限流、数据落盘可重放 + 确定性重建、破坏性操作显式化、索引实验可回滚 |
-| **评测闭环** | 统一 harness(hit-rate / agent-hit-rate / compare / RAGAS)+ Wilson CI + bootstrap CI + 配对 McNemar 检验 + 指标 diff + 👍/👎 反馈回灌评测集 + CI(`ci_check.py`) |
+| **评测闭环** | 统一 harness(hit-rate / agent-hit-rate / compare / RAGAS)+ Wilson CI + bootstrap CI + 配对 McNemar 检验 + 指标 diff + 👍/👎 反馈回灌评测集。GitHub Actions 只跑 pytest 单元测试;完整检索评测/消融依赖 Milvus 与语料,由本地 `ci_check.py` 与 harness 执行 |
 
 ## 量化指标(真实评测,实测口径)
 
@@ -90,7 +92,7 @@
 |---|---|---|
 | HitRate@5(单次检索,453 条合成回归集) | **0.678** | Wilson 95%CI [0.633, 0.719],重建语料(358,221 行)实测 |
 | MRR | **0.555** | bootstrap 95%CI [0.5155, 0.5986](2000 次,seed=42,重采样单位=query) |
-| agent 循环 vs 单次(453 条,配对) | **0.6711 vs 0.6777** | 转移矩阵 304/3/0/146,McNemar p=0.25,ΔHitRate 95%CI [-1.3pp, 0.0];改写救活率:合成集 0/45、**口语化子集 1/4=25% 且回归 0**(改写价值在真实分布侧);循环不提升检索命中率,价值=控制层;详见 `agent_compare.json` / `rewrite_rescue_real_style.json` |
+| agent 循环 vs 单次(453 条,配对) | HitRate **0.6711 vs 0.6777**,MRR **0.5449 vs 0.5551** | 转移矩阵 304/3/0/146,McNemar p=0.25;ΔMRR 配对 bootstrap 95%CI [-1.9pp, -0.3pp](区间整体小于 0);改写救活率:合成集 0/45、**口语化子集 1/4=25% 且回归 0**。结论:循环未改善 HitRate,且 MRR 有约 1pp 小幅下降——因此定位为控制层(意图路由/改写重试/门控成本/兜底),而不是检索优化器;详见 `agent_compare.json` / `rewrite_rescue_real_style.json` |
 | 真实口语风格子集(56 条 human_written) | **独立报告** | 技术 46 条 HitRate@5=0.500(95%CI 0.361-0.639)/MRR 0.406;求职 10 条 JD 条件满足 10/10——口语化问法比合成集低 ≈18pp(分布偏移的量化佐证);见 `eval_real_style_report.json` |
 | 向量规模 | **358,221** | 全集 584,834 行 → 按原规模抽样 + 黄金父块 100% 保留(确定性重建) |
 | JD 数据 | **46,353 条** | 公开招聘 JD 结构化字段入库(来源/抓取日期/许可见 D 盘语料目录) |
@@ -125,10 +127,16 @@ pip install -r requirements.txt
 
 # 2. 配置(config.ini + .env,参照 .env.example)
 #    必需:EDU_LLM_API_KEY(deepseek)、EDU_DASHSCOPE_API_KEY(Qwen-VL,多模态)、
-#          MySQL / Redis / Milvus 连接
+#          MySQL / Redis / Milvus 连接(compose.yml 默认:MySQL root/edurag123、
+#          Redis 密码 1234,通过 EDU_MYSQL_PASSWORD / EDU_REDIS_PASSWORD 注入)
 
-# 3. 启动服务(需 Docker 起 Milvus+Redis:docker compose up -d)
+# 3. 启动服务(仓库根目录已提供 compose.yml:Milvus/etcd/MinIO/Redis/MySQL)
+docker compose up -d
+python -m 1MySQL_qa.mysql_qa_main init-db     # FAQ 库初始化
 python run.py            # http://127.0.0.1:8000
+
+# 本地冒烟数据(可选):完整语料因体积/许可未随仓库分发,评测产物保留在 RAG评测/
+# 见 sample_data/README.md:复制技术样例后 python MAIN.py rebuild,JD 样例一键入库
 
 # 4. 一键评测 / CI / 消融 / 反馈回灌
 python ci_check.py
@@ -148,7 +156,7 @@ python -m 2Milvus_RAG_Qa.core.data_governance                   # D2 语料审�
 
 | 实验项 | 对比方式与结果 | 结论 |
 |---|---|---|
-| 双路并行检索 | 35 条真实求职查询,配对同口径条件判定:仅向量 32/35(91.4%,CI [0.776,0.970])vs 双路 **35/35(100%,CI [0.901,1.000])**;转移矩阵 32/0/3/0,McNemar p=0.25;延迟 695→779ms | 保留:JD 双路零回归、只增不减(+3 条精确条件召回,如"成都 C#"),+84ms 可接受 |
+| 双路并行检索 | 35 条真实求职查询,配对同口径条件判定:仅向量 32/35(91.4%,CI [0.776,0.970])vs 双路 **35/35(100%,CI [0.901,1.000])**;转移矩阵 32/0/3/0,McNemar p=0.25;延迟 695→779ms | 保留:JD 双路零回归(+3 条精确条件召回,如"成都 C#"),+84ms 可接受 |
 | 重排瘦身 20→15 | 453 条同一批 query 配对跑:pool20=pool15=0.6777,转移矩阵 304/3/3/143,**McNemar p=1.0**,ΔHitRate 95%CI [-1.1pp,+1.1pp](此前双比例 z 与 0.73 系列数字作废) | p=1.0 仅表述"未观察到统计显著差异";收益口径=rerank 候选数减少 25%,非实测 GPU 时间降 25% |
 | 向量量化 IVF_PQ | **工程踩坑记录(非消融)**:nlist=1024 构建 >50min 卡 47%;nlist=256 >25min 无进度且卡索引队列(6GB WSL2 受限);两次安全回滚,358,221 行全程完好 | 保留 HNSW;不宣称算法优劣,切换接口保留,大内存机器可重测 |
 | 投机解码 | 实测:自省 32token 0.90×、改写 128token 0.67×(更慢),输出无损一致 | 主动弃用:短输出场景草稿+校验开销>收益,红利在长输出场景 |

@@ -342,7 +342,10 @@ class RAGSystem:
             logger.warning("语义缓存 query 编码失败，跳过缓存: %s", e)
             return None
         slots = extract_jd_conditions(query) if should_trigger_jd(query, intent=intent) else {}
-        payload = self._cache.get_semantic(query, query_emb, intent=intent, slots=slots)
+        payload = self._cache.get_semantic(
+            query, query_emb, intent=intent, slots=slots,
+            prompt_version=_prompt_version(), llm_model=self._model,
+        )
         if payload is None:
             return None
         return {
