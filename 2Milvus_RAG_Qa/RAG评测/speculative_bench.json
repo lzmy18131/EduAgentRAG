@@ -1,0 +1,24 @@
+{
+  "device": "cuda",
+  "trials": 3,
+  "rows": [
+    {
+      "task": "grade",
+      "max_new_tokens": 32,
+      "plain_avg_s": 1.595,
+      "spec_avg_s": 1.766,
+      "speedup": 0.903,
+      "output_identical": true,
+      "output_head": "{\"verdict\": \"不充分\"}"
+    },
+    {
+      "task": "rewrite",
+      "max_new_tokens": 128,
+      "plain_avg_s": 1.338,
+      "spec_avg_s": 1.997,
+      "speedup": 0.67,
+      "output_identical": true,
+      "output_head": "Java 中位运算符是什么？"
+    }
+  ]
+}

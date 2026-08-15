@@ -1,0 +1,32 @@
+[
+  {
+    "lang": "zh",
+    "query": "Golang中的&^运算符是什么意思?",
+    "top1_score": 0.9971,
+    "top1_text": "- 这一题是第 136 题的加强版。这类题也可以扩展，在数组中每个元素都出现 5 次，找出只出现 1 次的数。 - 本题中要求找出只出现 1 次的数，出现 3 次的数都要被消除。第 136 题是消除出现 2 次的数。这一题也会相当相同的解法"
+  },
+  {
+    "lang": "en",
+    "query": "What is Object.defineProperty used for?",
+    "top1_score": 0.9862,
+    "top1_text": "在了解 `freeze` 和 `seal` 之前，我们首先需要知道 Object 中的 `defineProperty` 方法是什么。当你或者浏览器引擎在初始化进程中创建对象时，JavaScript 会为新创建的对象提供基本属性，以处理来自"
+  },
+  {
+    "lang": "ja",
+    "query": "データサイエンスや機械学習プロジェクトで最初に行うべきことは何ですか?",
+    "top1_score": 0.9997,
+    "top1_text": "データ サイエンスや機械学習プロジェクトの最初のタスクは、データを理解してクリーンアップすることです。   - 各特徴のデータ型を理解する - 異常と欠損値を探す - 各特徴の分布を理解する"
+  },
+  {
+    "lang": "ko",
+    "query": "TensorFlow.js에서 모델을 훈련하는 방법은 무엇인가요?",
+    "top1_score": 0.999,
+    "top1_text": "このガイドは、 [モデルとレイヤーの](models_and_layers.md)ガイドをすでに読んでいることを前提としています。   TensorFlow.js には、機械学習モデルをトレーニングする 2つ の方法があります。   1. "
+  },
+  {
+    "lang": "pt",
+    "query": "Como posso treinar o modelo novamente do zero?",
+    "top1_score": 0.9372,
+    "top1_text": "Os pesos iniciais do modelo são recuperados. Isto permitirá treinar do zero novamente carregando os pesos."
+  }
+]

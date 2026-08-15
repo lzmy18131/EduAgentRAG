@@ -1,0 +1,359 @@
+{
+  "set": "eval_real_style_56.json(技术 46 条,口语化/碎片化问法)",
+  "num_queries": 46,
+  "single_hits": 23,
+  "agent_hits": 24,
+  "single_hit_rate": 0.5,
+  "agent_hit_rate": 0.5217,
+  "transition_matrix": {
+    "both_hit": 23,
+    "single_hit_agent_miss": 0,
+    "single_miss_agent_hit": 1,
+    "both_miss": 22
+  },
+  "mcnemar": {
+    "b": 0,
+    "c": 1,
+    "p_value": 1.0,
+    "test": "mcnemar_exact_paired"
+  },
+  "paired_bootstrap_95ci_agent_minus_single": [
+    0.0,
+    0.0217,
+    0.0652
+  ],
+  "rewrite_analysis": {
+    "rewrote_count": 4,
+    "avg_rewrites": 0.1304,
+    "rescued_with_rewrite": 1,
+    "rescue_rate_given_rewrite": 0.25
+  },
+  "comparison_with_synthetic": {
+    "synthetic_453_rescue_rate": "0/45 = 0.0%(agent_compare.json 终版)",
+    "note": "口语化子集若救活率 > 0,则改写价值集中在口语化问法;若仍为 0,则改写定位=低成本重试+低置信度降级,不宣称检索增益"
+  },
+  "per_query": [
+    {
+      "question": "这题用二叉搜索树做的话 时间复杂度和空间复杂度分别是啥啊",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "lighthouse 那个性能分 到底是按哪几个指标算出来的",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "梯度下降里加动量 为啥就能收敛得更稳 原理是啥",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "啥叫回归测试 代码改完之后为啥还要把老用例再跑一遍",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "react 列表里那个 key 属性 到底干嘛用的 不写会出啥问题",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "选择排序跟冒泡排序 碰到相等元素的时候 处理上有啥不一样",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "Maurice Wilkes 是不是有句关于找 bug 的名言 具体咋说的",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 1,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "力扣 662 二叉树的宽度 中间那些空节点算不算 到底怎么数",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "inception v3 做 deepdream 的时候 一般关注哪些层 效果差别大吗",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "刚装完 咋检查环境装没装对啊",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 1,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "深度学习这两年这么火 到底在哪些地方算真正成功了",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "alexnet 这名字咋来的 有故事吗",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "local"
+    },
+    {
+      "question": "rpa-python 是个啥东西 能帮我自动开网页截图不",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "scoop 咋上手 新手应该先看啥资料",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "现在存密码 哈希算法推荐用哪个 argon2 还是 bcrypt",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "vhr 这个项目是干嘛的 练手合适不",
+      "single_hit": false,
+      "agent_hit": true,
+      "rewrites": 2,
+      "grade_via": "local"
+    },
+    {
+      "question": "想往专业程序员这条路走 有没有啥资料合集能推荐",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "训练的时候 reward 曲线一般是啥走向 一路涨吗",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "gif 放大了有锯齿 那我用大图缩小来展示行不行",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "这项目都涉及哪些技术方向啊",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "力扣 1022 这题难不难 都考些啥知识点",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "本地想跑两个 worker tf_config 这个变量咋配",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "mmap 那个零拷贝 拷贝次数是固定的吗 到底省了啥",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "力扣 1203 的英文题解在哪能看",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "那个用芝加哥出租车数据的教程 我想换成自己的数据 放哪都行吗",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "bert_qa 跟 mobilebert_qa_squad 这俩模型到底啥区别",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "MRI 那种体数据 该用啥 CNN 模型处理",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "怎么用 generator 建一个 tf.data 的数据集来着",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "压缩字符串迭代器那道题 初始化和 next 的复杂度是多少",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "二进制手表那道题 小时和分钟数怎么统计",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "力扣 2725 这题难不难 主要考啥语言",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "这页面都能干点啥 有哪些入口",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 2,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "descriptions 构造二叉树 输出序列是啥",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "QCNN 这个模型的层 是怎么定义的",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "tf-agents 有没有 bandit 相关的教程",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "这门课用的啥教材",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "scipy 有没有现成的特殊矩阵 在哪能看",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "这题为啥输出是 1 没太看懂",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "梯度实现的示例代码 在哪儿能看",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "这项目都配了些啥开发工具 有 eslint 吗",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "3d cnn 做视频分类 官方有现成教程吗",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "tf-agents 那个 cartpole 例子 是训练啥的",
+      "single_hit": false,
+      "agent_hit": false,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "这例子用 debugger 打开的是个啥应用",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "kubeflow pipelines 部署的时候 那个 api 和 zone 咋选",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "wordvec_dim 想调大重新训 咋操作",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    },
+    {
+      "question": "gif 文件怎么读成 tf tensor 视频形状是啥",
+      "single_hit": true,
+      "agent_hit": true,
+      "rewrites": 0,
+      "grade_via": "score_gate"
+    }
+  ]
+}

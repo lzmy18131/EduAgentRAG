@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 敏感配置
+.env
+
+# 模型与产出（本地生成，不提交）
+models/
+outputs/
+
+# 日志与 trace
+logs/
+
+# 测试/工具缓存
+.pytest_cache/
+.reasonix/
+*.db
+
+# CodeGraph
+.codegraph/
+
+# 简历/展示素材（非代码）
+项目简历图片/
+项目内容图片/
+2Milvus_RAG_Qa/章节图片/
+2Milvus_RAG_Qa/RAG评测/评测图片/
+
+# 评测临时子集（由 ci_check/harness 生成）
+2Milvus_RAG_Qa/RAG评测/eval_golden_15.json
+2Milvus_RAG_Qa/RAG评测/eval_golden_20.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/

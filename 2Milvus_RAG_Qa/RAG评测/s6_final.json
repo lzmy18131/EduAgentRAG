@@ -1,0 +1,20 @@
+{
+  "hnsw": {
+    "index": "HNSW",
+    "hit_rate": {
+      "num_queries": 453,
+      "hits": 305,
+      "hit_rate": 0.6733,
+      "mrr": 0.5519
+    },
+    "latency": {
+      "n": 30,
+      "avg_ms": 3041,
+      "p50_ms": 3049
+    },
+    "eval_s": 1452
+  },
+  "ivf_pq": {
+    "error": "<MilvusException: (code=65535, message=empty grpc client: find no available rootcoord, check rootcoord state)>"
+  }
+}

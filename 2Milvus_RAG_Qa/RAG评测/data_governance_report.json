@@ -1,0 +1,43 @@
+{
+  "collection": "edurag_0421",
+  "total_rows": 307868,
+  "sampled": 16000,
+  "exact_duplicate_chunks": 750,
+  "duplicate_rate": 0.0469,
+  "short_chunks_lt20": 188,
+  "short_rate": 0.0118,
+  "code_block_chunks": 0,
+  "code_rate": 0.0,
+  "language_distribution": {
+    "en": {
+      "count": 5041,
+      "rate": 0.3151
+    },
+    "ja": {
+      "count": 148,
+      "rate": 0.0092
+    },
+    "ko": {
+      "count": 416,
+      "rate": 0.026
+    },
+    "other": {
+      "count": 632,
+      "rate": 0.0395
+    },
+    "pt": {
+      "count": 1170,
+      "rate": 0.0731
+    },
+    "zh": {
+      "count": 8593,
+      "rate": 0.5371
+    }
+  },
+  "chunk_len_p50_p90_p99": [
+    184,
+    287,
+    300
+  ],
+  "audit_time": "2026-08-14 18:37:11"
+}

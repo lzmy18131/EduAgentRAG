@@ -1,0 +1,872 @@
+[
+  {
+    "question": "Golang中的&^运算符是什么意思？",
+    "answer": "在golang中，&^表示AND NOT。这里的^作为一元操作符表示按位取反，X &^ Y会将X中与Y相异的位保留，相同的位清零。另外，golang中没有Java中的~运算符，Java的~按位取反相当于golang中^作为一元操作符使用。",
+    "expected_chunk": "- 变量 twos 中记录遍历中每个位上出现 1 ，2次 的个数。与 A[i] 进行异或的目的和上述描述相同，不再赘述。  \n> 在 golang 中，&^ 表示 AND NOT 的意思。这里的 ^ 作为一元操作符，表示按位取反 (^0001 0100 = 1110 1011)，X &^ Y 的意思是将 X 中与 Y 相异的位保留，相同的位清零。  \n> 在 golang 中没有 Java 中的 ~ 位操作运算符，Java 中的 ~ 运算符代表按位取反。这个操作就想当于 golang 中的 ^ 运算符当做一元运算符使用的效果。",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "connect 的第一个函数和第二个函数分别是干什么的？",
+    "answer": "第一个函数 mapStateToProps 从 store 中获取当前的 state 并返回一些 props；第二个函数 mapDispatchToProps 获取 store 的 dispatch 方法并返回一些 props。connect 会返回一个新函数，把组件传进去后得到的新组件会自动获取这些 props。",
+    "expected_chunk": "嘿，看上去好多了！  \n传给 `connect` 的首个函数（`mapStateToProps`）从我们的 `store` 中获取当前的 `state` 并返回一些 props。第二个传给 `connect` 的函数（`mapDispatchToProps`）会获取我们 `store` 的 `dispatch` 方法，并返回一些 props。`connect` 给我们返回了一个新的函数，把我们的组件 `NoteApp` 传给这个函数，会得到一个新的组件，它将会自动获取所有这些 props（和我们额外传入的部分）。",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "LeetCode 第 826 题 Most Profit Assigning Work 的难度是什么？有哪些标签？",
+    "answer": "难度为 Medium，标签包括 Greedy、Array、Two Pointers、Binary Search、Sorting。",
+    "expected_chunk": "---\ncomments: true\ndifficulty: Medium\nedit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0826.Most%20Profit%20Assigning%20Work/README_EN.md\ntags:\n- Greedy\n- Array\n- Two Pointers\n- Binary Search\n- Sorting\n---",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "如何从验证数据集中取16张图片，并对它们进行压缩和解压？",
+    "answer": "从验证数据集中取16张图片；可通过修改 skip 参数选择不同子集；将图片压缩成字符串，并以比特为单位控制每张图片的信息内容；然后从字符串解压图片。",
+    "expected_chunk": "Pegue 16 imagens do dataset de validação. Você pode selecionar um subconjunto diferente alterando o argumento para `skip`.  \nCompacte-as em strings e controle o conteúdo de informação de cada uma delas em bits.  \nDescompacte as imagens das strings.",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "给定一个正整数 k，请问如何求能被 k 整除且只由数字 1 组成的最小正整数的长度？如果不存在这样的数怎么办？",
+    "answer": "返回这个最小正整数的长度；如果不存在这样的正整数，则返回 -1。注意该整数可能超出 64 位带符号整数范围。",
+    "expected_chunk": "给定正整数 k&nbsp;，你需要找出可以被 k&nbsp;整除的、仅包含数字 1 的最 小 正整数 n&nbsp;的长度。  \n返回 n&nbsp;的长度。如果不存在这样的 n&nbsp;，就返回-1。  \n注意： n 可能不符合 64 位带符号整数。  \n&nbsp;  \n示例 1：  \n输入：k = 1\n输出：1\n解释：最小的答案是 n = 1，其长度为 1。  \n示例 2：  \n输入：k = 2\n输出：-1\n解释：不存在可被 2 整除的正整数 n 。  \n示例 3：  \n输入：k = 3\n输出：3\n解释：最小的答案是 n = 111，其长度为 3。  \n&nbsp;  \n提示：",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "データサイエンスや機械学習プロジェクトで最初に行うべきことは何ですか？",
+    "answer": "最初のタスクはデータを理解してクリーンアップすることです。具体的には、各特徴のデータ型を理解し、異常と欠損値を探し、各特徴の分布を理解します。",
+    "expected_chunk": "データ サイエンスや機械学習プロジェクトの最初のタスクは、データを理解してクリーンアップすることです。  \n- 各特徴のデータ型を理解する\n- 異常と欠損値を探す\n- 各特徴の分布を理解する",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "Como posso treinar o modelo novamente do zero?",
+    "answer": "Defina o passo de teste, carregue os pesos iniciais do modelo e execute o loop de treinamento personalizado.",
+    "expected_chunk": "Agora, defina o passo de teste:  \nCarregue os pesos iniciais do modelo para poder treinar novamente do zero:  \nPor fim, execute o loop de treinamento personalizado:",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "bert_qa 和 mobilebert_qa_squad 这两个模型有什么区别？",
+    "answer": "mobilebert_qa_squad 是 MobileBERT-SQuAD 模型，采用与 MobileBERT 相同的架构，并基于 SQuAD1.1 重新训练；bert_qa 是 BERT-Base 模型，是 NLP 任务中广泛使用的标准 BERT 模型。",
+    "expected_chunk": "[MobileBERT-SQuAD](https://arxiv.org/pdf/2004.02984.pdf) | 'mobilebert_qa_squad' | MobileBERT モデルと同じモデルアーキテクチャを持ち、最初のモデルは [SQuAD1.1](https://rajpurkar.github.io/SQuAD-explorer/) で再トレーニング済みです。\n[BERT-Base](https://arxiv.org/pdf/1810.04805.pdf) | 'bert_qa' | NLP タスクで広く使用される標準的な BERT モデルです。",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "默认情况下会生成什么类型的二进制文件？",
+    "answer": "默认会生成一个优化的 release 二进制文件。",
+    "expected_chunk": "It generates an optimized release binary by default. If you want to build for\nyour workstation, simply run the following command.",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "Python Basics 这门课和哪些课程一起出现过？",
+    "answer": "Python Basics 与 React Basics、SQL Fundamentals 各有 1 次共同出现。",
+    "expected_chunk": "| Python Basics    | React Basics     | 1                |\n| Python Basics    | SQL Fundamentals | 1                |\n| SQL Fundamentals | JavaScript       | 1                |\n+------------------+------------------+------------------+  \n解释：  \n用户 1：完成了 6 门课程，平均分为 4.5（满足顶尖学生）",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "这门课主要会讲哪些内容？",
+    "answer": "课程主要包括两大主题：一是通过TensorFlow/PyTorch讲解机器学习系统基础，包括抽象和执行模型；二是GPU架构与CUDA编程，涉及内存和性能调优。",
+    "expected_chunk": "The course is structured as lectures, with major themes including:  \n1. ML systems fundamentals via TensorFlow/PyTorch (abstractions, execution models)\n2. GPU architecture and CUDA programming (memory, performance tuning)",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "Como posso colocar o TensorFlow.js em um projeto para navegador?",
+    "answer": "Usando tags script.",
+    "expected_chunk": "Existem duas maneiras principais de colocar o TensorFlow.js em seus projetos para navegador:  \n- Usando [tags script](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage).",
+    "source": "human_reviewed"
+  },
+  {
+    "question": "北京 java 8k 岗位有哪些",
+    "answer": "北京博汇科技的java岗位，薪资8k-12k，经验要求1-3年本科。",
+    "expected_chunk": "[1] - 城市:北京\n- 公司:博汇科技\n- 薪资:8k-12k\n- 经验要求:1-3年本科\n- 技术方向:java",
+    "source": "user_feedback"
+  },
+  {
+    "question": "TLS错误开端和会话恢复分别是怎样减少握手往返的？",
+    "answer": "TLS错误开端允许客户端在第一个TLS来回之后立刻发送加密数据，把新TLS连接的握手减少到一个来回；TLS会话恢复通过确认浏览器和服务器过去是否进行过TLS通信，由浏览器记忆session标识符并在下次连接时重用，从而再节约一个来回。",
+    "expected_chunk": "**TLS 错误开端** 允许客户端在第一个 TLS 来回之后立刻发送加密数据。这个优化对于新的 TLS 链接把握手减少到了一个来回。一旦客户端知道密钥便可以开始传输应用数据。剩下的握手用于确认没人在篡改握手记录，并可以并行执行。  \n**TLS会话恢复** 通过确认浏览器和服务器在过去是否在 TLS 上通信过的节约了另一个来回，浏览器可以记忆 session 标识符，在下一次建立连接时，标识符可以重新使用并节约一个来回。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "作者第一次接触到 async-await 模式是在什么场景下？他有什么感受？",
+    "answer": "作者是在做微软 Azure 上的一个业余项目、学习 C# 和 .NET 时第一次接触到 async-await 模式。他当时很震惊，觉得异步和同步完美结合，可以用过程化思维而不用忍受阻塞，并称赞做得真棒。",
+    "expected_chunk": "第一次与 **async-await** 模式[相遇](http://stackoverflow.com/questions/18498942/why-shouldnt-all-functions-be-async-by-default)，是在做微软 Azure 上的一个业余项目时，囫囵吞枣地学了一些 [C# 和 .NET](https://msdn.microsoft.com/en-us/library/mt674882.aspx)。我当时就震惊了。两个世界（译注：异步和同步）在这完美结合了——直接的过程化思维，而不用忍受该死的阻塞。这些家伙做得真棒！",
+    "source": "llm_generated"
+  },
+  {
+    "question": "优化问题里的条件数是什么？如果条件数很大说明什么？",
+    "answer": "条件数是最大和最小特征值之比，即 κ = Λ₁ / Λ_d。如果条件数 κ 很大，准确解决优化问题就会很难。",
+    "expected_chunk": "相反，对小的$\\boldsymbol{\\Lambda}_i$来说，$\\bar{x}_i$的变化可能是剧烈的。\n最大和最小的特征值之比称为优化问题的*条件数*（condition number）。  \n$$\\kappa = \\frac{\\boldsymbol{\\Lambda}_1}{\\boldsymbol{\\Lambda}_d}.$$  \n如果条件编号$\\kappa$很大，准确解决优化问题就会很难。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "在三值逻辑里，TRUE OR UNKNOWN 和 TRUE AND UNKNOWN 分别会返回什么？",
+    "answer": "TRUE OR UNKNOWN 返回 TRUE；TRUE AND UNKNOWN 返回 UNKNOWN。",
+    "expected_chunk": "| 逻辑函数 | 描述 |\n| --- | --- |\n|  \n如果 _boolean1_ 为真或 _boolean2_ 为真，则返回 TRUE。支持三值逻辑(three-valued logic)。如 `TRUE OR UNKNOWN` 返回 TRUE。  \n如果 _boolean1_ 和 _boolean2_ 都为真，则返回 TRUE。支持三值逻辑(three-valued logic)。如 `TRUE AND UNKNOWN` 返回 UNKNOWN。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "FASTQ文件格式一般存储哪些信息？",
+    "answer": "FASTQ 是一种常见的基因组学文件格式，除了基本的质量信息外，还存储序列信息。",
+    "expected_chunk": "FASTQ 是一种常见的基因组学文件格式，除了基本的质量信息外，还存储序列信息。  \n首先，让我们下载一个样本 `fastq` 文件。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "¿Cómo se construye el búfer de repetición y de dónde se obtienen las especificaciones de los tensores?",
+    "answer": "El búfer de repetición se construye a partir de especificaciones que describen los tensores que se van a almacenar; estas especificaciones se pueden obtener del agente usando agent.collect_data_spec.",
+    "expected_chunk": "Este búfer de repetición se construye a partir de especificaciones que describen los tensores que se van a almacenar, y que se pueden obtener del agente si se usa agent.collect_data_spec.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "下一节会如何使用这个方法？",
+    "answer": "会使用该方法将变量 'TF_CONFIG' 传递给 worker 的子进程。真实场景中不会这样启动，本教程只是用最小多 worker 示例来演示。",
+    "expected_chunk": "Na próxima seção, você usará esse método para passar a variável `'TF_CONFIG'` aos subprocessos do worker. Em um cenário real, você jamais iniciaria os trabalho dessa forma, mas este tutorial apenas mostra como fazê-lo em um exemplo mínimo de multiworker.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Evaluatorは何をするものですか？",
+    "answer": "Evaluatorはトレーニング結果の詳細分析を実行します。",
+    "expected_chunk": "- [Evaluator](https://www.tensorflow.org/tfx/guide/evaluator) はトレーニング結果の詳細分析を実行します。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "我该在哪里查看Kubeflow管道的输出结果？",
+    "answer": "访问KFP dashboard，点击左侧的Experiments标签，在Experiments页面选择All runs，找到以你的pipeline命名的run，即可查看pipeline outputs。",
+    "expected_chunk": "For Kubeflow Orchestrator, visit KFP dashboard and find pipeline outputs in the\npage for your pipeline run. Click \"Experiments\" tab on the left, and \"All runs\"\nin the Experiments page. You should be able to find the run with the name of\nyour pipeline.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "我 git push 完了，接下来怎么提交 pull request？",
+    "answer": "推送完成后可能会显示一个 URL，可直接用于向上游仓库提交 pull request。如果没有显示，访问 tensorflow/docs 仓库（或你自己的仓库），GitHub 会提示你创建 pull request。",
+    "expected_chunk": "git push  \nApós a conclusão do push, uma mensagem poderá exibir uma URL para enviar automaticamente um pull request ao repositório upstream. Caso contrário, acesse o repositório tensorflow/docs — ou seu próprio repositório — e o GitHub solicitará que você crie um pull request.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Linux系统里怎么快速安装Docker？",
+    "answer": "在测试或开发环境中，可以使用Docker官方提供的安装脚本，它会自动完成准备工作并安装Docker稳定版。不同发行版安装命令略有差异，生产环境建议优先参考官方文档。安装完成后启动服务，并推荐设置开机自启。",
+    "expected_chunk": "下面来看看 Linux 中如何安装 Docker。不同发行版的安装命令略有差异，生产环境建议优先参考 Docker 官方文档。这里用官方安装脚本演示测试或开发环境的快速安装方式。  \n在测试或开发环境中，Docker 官方为了简化安装流程，提供了一套便捷的安装脚本，执行这个脚本后就会自动地将一切准备工作做好，并且把 Docker 的稳定版本安装在系统中。  \n安装完成后直接启动服务：  \n推荐设置开机自启，执行指令：",
+    "source": "llm_generated"
+  },
+  {
+    "question": "CUAD数据集使用的是什么许可证？",
+    "answer": "CUAD使用Creative Commons Attribution 4.0 (CC BY 4.0)许可证。",
+    "expected_chunk": "*   **Description**:  \n*   **License**: CUAD is licensed under the Creative Commons Attribution 4.0 (CC BY 4.0) license.\n*   **Version**: 1.0.0\n*   **Splits**:  \nSplit  | Examples\n:----- | -------:\n`'test'` | 4182\n`'train'` | 22450  \n*   **Features**:",
+    "source": "llm_generated"
+  },
+  {
+    "question": "pipeline.pyでコンポーネントをパイプラインに追加するにはどうすればいいですか？",
+    "answer": "`pipeline`/`pipeline.py`で、これらのコンポーネントをパイプラインに追加する行のコメントを外します。ExampleGenはテンプレートファイルがコピーされたときにすでに有効になっています。",
+    "expected_chunk": "`pipeline`/`pipeline.py`で、これらのコンポーネントをパイプラインに追加する行のコメントを外します。  \n（ExampleGenは、テンプレート ファイルがコピーされたときにすでに有効になっています）。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "레이어 그래프에 레이어를 몇 개 더 추가한 뒤에는 무엇을 할 수 있나요?",
+    "answer": "레이어 그래프에서 입력과 출력을 지정하여 Model을 작성할 수 있고, 모델 요약을 확인하거나 모델을 그래프로 플롯할 수 있습니다. 선택적으로 플롯된 그래프에 각 레이어의 입력 및 출력 모양을 표시할 수도 있습니다. 그림과 코드는 거의 동일하며, 코드에서는 연결 화살표가 호출 작업으로 대체됩니다.",
+    "expected_chunk": "레이어 그래프에 레이어를 몇 개 레이어를 더 추가해 보겠습니다.  \n이 시점에서 레이어 그래프에서 입력 및 출력을 지정하여 `Model`을 작성할 수 있습니다.  \n모델 요약이 어떻게 보이는지 확인하십시오.  \n모델을 그래프로 플롯 할 수도 있습니다.  \n그리고 선택적으로 플롯 된 그래프에 각 레이어의 입력 및 출력 모양을 표시합니다.  \n이 그림과 코드는 거의 동일합니다. 코드 버전에서 연결 화살표는 호출 작업으로 대체됩니다.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Nonlocal Net 的提出对图像领域有什么影响？Facebook 开源的视频分类项目基于什么框架？",
+    "answer": "Nonlocal Net 的提出引领了一波在图像领域运用注意力机制的浪潮，最近两年该方向论文层出不穷；Facebook 开源的相关项目基于 caffe2 框架。",
+    "expected_chunk": "。Nonlocal Net 的提出，引领了一波在图像领域运用注意力机制的浪潮，最近两年该方向论文层出不穷。Facebook 也开源了一个 Nonlocal Net 在视频分类中的[项目](https://github.com/facebookresearch/video-nonlocal-net)，但是框架基于他们维护的 caffe2，读者可以根据自身实际情况进行浏览阅读",
+    "source": "llm_generated"
+  },
+  {
+    "question": "在 TensorFlow 1 中怎么使用 ParameterServerStrategy？",
+    "answer": "在 TensorFlow 1 中，ParameterServerStrategy 只能与 Estimator 一起使用，对应符号为 tf.compat.v1.distribute.experimental.ParameterServerStrategy。",
+    "expected_chunk": "No TensorFlow 1, a `ParameterServerStrategy` está disponível apenas com um Estimador por meio do símbolo `tf.compat.v1.distribute.experimental.ParameterServerStrategy`.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "concat_ws 函数和 concat 函数有什么区别？",
+    "answer": "concat_ws 会用指定的分隔符连接多个字符串，并自动跳过空参数；如果分隔符为 NULL，则返回 NULL。例如 concat_ws('~', 'AA', Null(STRING), 'BB', '', 'CC') 返回 \"AA~BB~~CC\"。",
+    "expected_chunk": "返回一个字符串，该字符串用分隔符 _STRING1_ 连接  _STRING2, STRING3, ..._ 。分隔符被添加到要连接的字符串之间。如果 _STRING1_ 为 NULL，则返回 NULL。与 `concat()` 相比，`concat_ws()` 会自动跳过空参数。例如 `concat_ws('~', 'AA', Null(STRING), 'BB', '', 'CC')` 返回 \"AA~BB~~CC\"。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "3676 Count Bowl Subarrays 这道题的英文版在哪里可以查看？",
+    "answer": "英文版位于 /solution/3600-3699/3676.Count%20Bowl%20Subarrays/README_EN.md。",
+    "expected_chunk": "[English Version](/solution/3600-3699/3676.Count%20Bowl%20Subarrays/README_EN.md)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个示例演示了什么？",
+    "answer": "演示如何使用TF-Agents库在Cartpole环境中训练DQN（Deep Q Networks）代理。",
+    "expected_chunk": "En este ejemplo se muestra cómo usar la biblioteca de TF-Agents para entrenar un agente [DQN (Deep Q Networks)](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) en el entorno Cartpole.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "运行管道时产生的 artifacts 需要存储在哪里？",
+    "answer": "Artifacts 必须存储在 ML-Metadata 中；artifacts 对应的 payload 文件需要存储在文件系统或块存储中。本教程使用 GCS 来存储 metadata payloads。",
+    "expected_chunk": "Running pipelines create artifacts which have to be stored in\n[ML-Metadata](https://github.com/google/ml-metadata). Artifacts refer to\npayloads, which are files that must be stored in a file system or block storage.\nFor this tutorial, we'll use GCS to store our metadata payloads, using the",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个接收器写入的存储桶文件中，date-time、parallel-task 和 count 分别代表什么？",
+    "answer": "date-time 是从日期/时间格式得到的字符串，parallel-task 是并行接收器实例的索引，count 是由于批量大小或批量滚动间隔而创建的部分文件的运行编号。",
+    "expected_chunk": "这将创建一个接收器，该接收器写入遵循此架构的存储桶文件：  \nWhere `date-time` is the string that we get from the date/time format, `parallel-task` is the index of the parallel sink instance and `count` is the running number of part files that were created because of the batch size or batch roll over interval.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "请问这个取余（模数）函数返回值的正负号是怎么规定的？",
+    "answer": "返回 numeric1 除以 numeric2 的余数（模数）。只有当 numeric1 为负时，结果才为负。",
+    "expected_chunk": "返回 _numeric1_ 的 _numeric2_ 次方。  \n返回 _numeric_ 的绝对值。  \n返回 _numeric1_ 除以 _numeric2_ 的余数(模数)。只有当 _numeric1_ 为负时，结果才为负。  \n返回 _numeric_ 的平方根。  \n返回 _numeric_ 的自然对数(以e为底)。  \n返回 _numeric_ 的以10为底的对数。  \n返回 _numeric_ 的以2为底的对数。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "在 TensorFlow 中训练模型时，怎样做可以提高 GPU 的使用效率？",
+    "answer": "可以串联小型张量并使用矢量化运算，或者使用更大的批次大小，让 GPU 保持更长时间忙碌；同时应使用 tf.function 创建计算图，避免在纯 Eager 模式下运行。如果使用 Model.fit，tf.keras.Model.compile 会自动完成此操作。",
+    "expected_chunk": "- 串联小型张量并使用矢量化运算，或者使用更大批次大小以使每个启动的内核执行更多工作，这将使 GPU 保持忙碌时间的变长。\n- 确保您使用 `tf.function` 创建 TensorFlow 计算图，从而避免在纯 Eager 模式下运行运算。如果您使用的是 `Model.fit`（与使用 `tf.GradientTape` 的自定义训练循环相反），那么 `tf.keras.Model.compile` 将自动为您执行此操作。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Handright 这个 Python 库是干什么的？",
+    "answer": "Handright 是一个模拟手写体中文的 Python 库，基于 PIL 开发，能够输出手写体中文图片，支持自定义背景图。",
+    "expected_chunk": "27、[Handright](https://hellogithub.com/periodical/statistics/click?target=https://github.com/Gsllchb/Handright)：模拟手写体中文的 Python 库。基于 PIL 开发实现的工具库，能够输出手写体中文的图片，支持自定义背景图",
+    "source": "llm_generated"
+  },
+  {
+    "question": "V8 中快速元素和字典元素有什么区别？",
+    "answer": "快速元素是简单的 VM 内部数组，属性索引映射到元素存储区中的索引；稀疏数组使用基于字典的表示来节省内存，但访问速度稍慢。",
+    "expected_chunk": "**快速元素和字典元素:** 元素的第二个主要区别是它们是快速的还是字典模式的。快速元素是简单的 VM 内部数组，其中属性索引映射到元素存储区中的索引。然而，这种简单的表示在稀疏数组中是相当浪费的。在这种情况下，我们使用基于字典的表示来节省内存，以访问速度稍微慢一些为代价：\n```\nconst sparseArray = [];",
+    "source": "llm_generated"
+  },
+  {
+    "question": "《An Ode to Async-Await》这篇文章的译者是谁？",
+    "answer": "Xekri",
+    "expected_chunk": "> * 原文地址：[An Ode to Async-Await](https://hackernoon.com/an-ode-to-async-await-7da2dd3c2056#.pdydhv9a0)\n* 原文作者：[Tal Kol](https://hackernoon.com/@talkol)\n* 译文出自：[掘金翻译计划](https://github.com/xitu/gold-miner)\n* 译者：[Xekri](https://github.com/xekri/)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "LeetCode 2725 Interval Cancellation 这道题难度怎么样？主要涉及什么语言？",
+    "answer": "这道题难度为简单，标签是 JavaScript。",
+    "expected_chunk": "---\ncomments: true\ndifficulty: 简单\nedit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2725.Interval%20Cancellation/README.md\ntags:\n- JavaScript\n---",
+    "source": "llm_generated"
+  },
+  {
+    "question": "怎么检查我的环境是否已经正确安装好了？",
+    "answer": "请运行相关的命令来确认环境是否正确设置。如果没有看到问候信息，请参考安装指南（Installation）中的说明。",
+    "expected_chunk": "Please run the following to make sure that your environment is\ncorrectly setup. If you don't see a greeting, please refer to the\n[Installation](../install.md) guide for instructions.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "动态规划和分治法的主要区别是什么？",
+    "answer": "动态规划也会递归地分解问题，但与分治法的主要区别在于：动态规划中的子问题相互依赖，并且在分解过程中会出现许多重叠的子问题。",
+    "expected_chunk": "- Динамическое программирование тоже раскладывает задачу рекурсивно, но его главное отличие от метода «разделяй и властвуй» в том, что подзадачи здесь зависят друг от друга и в процессе разложения возникает много перекрывающихся подзадач.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "为什么系统会给用户1和用户3互相推荐为好友？",
+    "answer": "因为用户1和用户3在同一天收听了歌曲10、11和12，并且他们不是好友，所以系统推荐他们互相成为好友。",
+    "expected_chunk": "| 2       | 3              |\n| 3       | 1              |\n| 3       | 2              |\n+---------+----------------+\n解释\n用户 1 和 2 在同一天收听了歌曲 10、11 和 12，但他们已经是好友了。\n用户 1 和 3 在同一天收听了歌曲 10、11 和 12。由于他们不是好友，所以我们给他们互相推荐为好友。\n用户 1 和 4 没有收听三首相同的歌曲。\n用户 1 和 5 收听了歌曲 10、11 和 12，但不是在同一天收听的。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "响应式图片应该怎么实现比较好？",
+    "answer": "尽可能通过 srcset、sizes 和 <picture> 元素使用响应式图片。",
+    "expected_chunk": "尽可能通过 `srcset`，`sizes` 和 `` 元素使用 [响应式图片](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Keras混合精度训练时，Softmax运算和损失扩缩策略上有什么性能优化建议？",
+    "answer": "独立的Softmax运算应转换为fp32以获得最佳性能，避免默认使用fp16可能导致的数值问题和收敛性不佳。损失扩缩方面，静态损失扩缩没有动态损失扩缩的额外主机运算开销，性能通常更好，但需要指定正确的静态损失扩缩值。",
+    "expected_chunk": "注：Keras 混合精度 API 会默认将独立的 Softmax 运算（不属于 Keras 损失函数的运算）评估为 `fp16`，这可能导致出现数值问题和收敛性不佳的情况。将此类运算转换为 `fp32` 可以获得最佳性能。  \n在尝试优化性能时，请注意，动态损失扩缩会引入在主机上运行的额外条件运算，并导致出现能够在 Trace Viewer 中看到的步骤之间的间隙。另一方面，静态损失扩缩则没有这样的开销，并且在性能方面可能是更好的选择，只是必须注意您需要指定正确的静态损失扩缩值。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这道题对输入有什么限制？",
+    "answer": "m等于quantities数组的长度，1 <= m <= n <= 10^5，并且1 <= quantities[i] <= 10^5。",
+    "expected_chunk": "&nbsp;\nConstraints:  \nm == quantities.length\n1 &lt;= m &lt;= n &lt;= 105\n1 &lt;= quantities[i] &lt;= 105",
+    "source": "llm_generated"
+  },
+  {
+    "question": "3499题“Maximize Active Section with Trade I”的英文版在哪里可以看？",
+    "answer": "可以通过 /solution/3400-3499/3499.Maximize%20Active%20Section%20with%20Trade%20I/README_EN.md 查看英文版本。",
+    "expected_chunk": "[English Version](/solution/3400-3499/3499.Maximize%20Active%20Section%20with%20Trade%20I/README_EN.md)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "TensorFlow Liteでネイティブにサポートされている演算のみを含むモデルを変換する場合、追加のフラグは必要ですか？",
+    "answer": "いいえ、追加のフラグは必要ありません。このタイプのモデルはスムーズに変換され、デフォルトのTensorFlow Liteランタイムを使用して最適化と実行がより簡単になるため、推奨されるパスです。また、Google Playサービスなど、より多くのモデルのデプロイオプションがあります。",
+    "expected_chunk": "モデルに TensorFlow Lite でネイティブにサポートされている演算のみが含まれている場合は、変換するための追加のフラグは必要ありません。このタイプのモデルはスムーズに変換され、デフォルトの TensorFlow Lite ランタイムを使用して最適化と実行がより簡単になるため、これが推奨されるパスです。また、[Google Play サービス](../android/play_services)など、より多くのモデルのデプロイオプションがあります",
+    "source": "llm_generated"
+  },
+  {
+    "question": "React 组件更新阶段会涉及哪些生命周期方法？",
+    "answer": "会涉及 getDerivedStateFromProps、shouldComponentUpdate、[UNSAFE_]componentWillUpdate（已废弃）和 render。",
+    "expected_chunk": "*  getDerivedStateFromProps\n*  shouldComponentUpdate\n*  [UNSAFE_]componentWillUpdate (deprecated)\n*  render",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这部分会讲什么？数学部分能跳过吗？",
+    "answer": "会研究一点数学问题，但可以跳过数学部分，直接到 React.start(); 部分。",
+    "expected_chunk": "最终效果  \n我们首先要研究一点数学问题，但是不要担心，我会尽可能详细地解释每一个步骤。你可以直接跳过这一部分到 React.start(); 部分。  \n准备好了吗？那就开始吧...",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个项目的内容覆盖了哪些技术领域？",
+    "answer": "覆盖Android、iOS、前端、后端、区块链和产品等领域。",
+    "expected_chunk": "。内容覆盖 [Android](https://github.com/xitu/gold-miner#android)、[iOS](https://github.com/xitu/gold-miner#ios)、[前端](https://github.com/xitu/gold-miner#前端)、[后端](https://github.com/xitu/gold-miner#后端)、[区块链](https://github.com/xitu/gold-miner#区块链)、[产品](https://github",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这种看起来像goto语句的操作，一般程序员会用到吗？主要用在什么场景？",
+    "answer": "一般程序员不会用到这种操作。这两种行为更多地被用到机器生成的代码中。",
+    "expected_chunk": "。这看起来甚至有点像goto语句的作用了。当然，一般程序员也不会用到这种操作。这两种行为更多地被用到机器生成的代码中。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Android SQLiteDatabase 的 insertWithOnConflict 方法接收哪些参数？",
+    "answer": "该方法接收四个参数：java.lang.String、java.lang.String、android.content.ContentValues 和 int。",
+    "expected_chunk": ".insertWithOnConflict`](https://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html#insertWithOnConflict%28java.lang.String,%20java.lang.String,%20android.content.ContentValues,%20int%29)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "观察值是字典形式时，怎么自定义智能体使用的网络？",
+    "answer": "可以创建预处理层来处理观察值，再将预处理层连接到其余网络，并确保网络输出层的定义保持一致。",
+    "expected_chunk": "관찰 값이 사전이 되도록 정의했으므로 관찰 값을 처리하기 위한 전처리 레이어를 만들어야 합니다.  \n이제 actor 네트워크가 생겼으므로 환경에서 관찰 값을 처리할 수 있습니다.  \n이 같은 전략을 사용하여 에이전트가 사용하는 기본 네트워크를 사용자 정의 할 수 있습니다. 전처리를 정의하고 나머지 네트워크에 연결할 수 있습니다. 사용자 정의를 정의 할 때 네트워크의 출력 계층 정의가 일치하는지 확인하십시오.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "给定二叉搜索树 [6,2,8,0,4,7,9,null,null,3,5]，节点2和节点8的最近公共祖先是什么？",
+    "answer": "6",
+    "expected_chunk": "给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。  \n百度百科中最近公共祖先的定义为：&ldquo;对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。&rdquo;  \n例如，给定如下二叉搜索树:&nbsp; root =&nbsp;[6,2,8,0,4,7,9,null,null,3,5]  \n&nbsp;  \n示例 1:  \n输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8\n输出: 6",
+    "source": "llm_generated"
+  },
+  {
+    "question": "tensorflow_hub 库可以和哪些 TensorFlow 版本一起安装？",
+    "answer": "tensorflow_hub 库可以和 TensorFlow 1 与 TensorFlow 2 一起安装；推荐 TensorFlow 2 的新用户和现有用户升级到该库。",
+    "expected_chunk": "`tensorflow_hub` ライブラリは、TensorFlow 1 と TensorFlow 2 と併せてインストールできます。TensorFlow 2 から使用し始める新規ユーザーと現行ユーザーはこのライブラリにアップグレードすることをお勧めします。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "如何从上游仓库拉取最新代码并推送到我的 GitHub 账户？",
+    "answer": "使用命令 `git pull upstream master` 拉取上游主分支的更新，然后执行 `git push` 将更改推送到你的 GitHub 账户（默认推送到 origin）。",
+    "expected_chunk": "&lt;code class=\"devsite-terminal\"&gt;git pull upstream master&lt;/code&gt;  \n&lt;code class=\"devsite-terminal\"&gt;git push&lt;/code&gt;  # Push changes to your GitHub account (defaults to origin)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "为什么软件中需要异步和并发？",
+    "answer": "因为不是所有操作都能立刻完成，比如通过网络访问服务器需要等待响应，而CPU被设计成一个接一个地运行指令而不做等待，异步和并发就是用来处理这些等待时间的。",
+    "expected_chunk": "不是所有事都能立马完成。软件中的一些操作要花一段时间才能做完，这就给它们在顺序执行执行系统中的实现提出了提出了有趣的挑战。如果你需要通过网络访问服务器，你必须等它作出响应。CPU 被设计成一个接一个地运行指令码而不做等待，这段时间它们能做些什么呢？  \n这就是**异步**和**并发**的出发点。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个项目的内容覆盖哪些技术领域？",
+    "answer": "覆盖 Android、iOS、React、前端、后端、产品。",
+    "expected_chunk": "。内容覆盖 [Android](https://github.com/xitu/gold-miner#android)、[iOS](https://github.com/xitu/gold-miner#ios)、[React](https://github.com/xitu/gold-miner#react)、[前端](https://github.com/xitu/gold-miner#前端)、[后端](https://github.com/xitu/gold-miner#后端)、[产品](https://github",
+    "source": "llm_generated"
+  },
+  {
+    "question": "如果输入的矩阵是 [[0,0],[0,0]]，里面全是 0，那么最大的全 1 子矩阵面积是多少？",
+    "answer": "面积是 0，因为矩阵中没有 1，不存在任何全 1 的子矩阵。",
+    "expected_chunk": "输入：matrix = [[0,0],[0,0]]\n输出：0\n解释：由于矩阵中没有 1 ，没有任何全 1 的子矩阵，所以面积为 0 。  \n&nbsp;  \n提示：  \nm == matrix.length\nn == matrix[i].length\n1 &lt;= m * n &lt;= 105\nmatrix[i][j]&nbsp;要么是&nbsp;0&nbsp;，要么是&nbsp;1 。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "按照字母顺序排序的产品列表里，输入 m 和 mo 时会显示哪些产品？",
+    "answer": "输入 m 和 mo 时都会显示 mobile、moneypot、monitor。",
+    "expected_chunk": "Explanation: products sorted lexicographically = [&quot;mobile&quot;,&quot;moneypot&quot;,&quot;monitor&quot;,&quot;mouse&quot;,&quot;mousepad&quot;].\nAfter typing m and mo all products match and we show user [&quot;mobile&quot;,&quot;moneypot&quot;,&quot;monitor&quot;].",
+    "source": "llm_generated"
+  },
+  {
+    "question": "为什么要取 x 和 count[i] 的最小值？",
+    "answer": "因为 x ≤ count[i]，所以取两者的最小值即可。",
+    "expected_chunk": "。又因为 $\\textit{x} \\leq \\textit{count[i]}$，所以我们取两者的最小值即可。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "TensorFlow Lite Model Makerライブラリは何をしてくれますか？",
+    "answer": "TensorFlowモデルを適合させ、オンデバイスMLアプリケーションにデプロイする際に特定の入力データに変換するプロセスを単純化します。",
+    "expected_chunk": "TensorFlow.org で表示\nGoogle Colab で実行\nGitHub でソースを表示\nノートブックをダウンロード  \nTensorFlow Lite Model Maker ライブラリは、TensorFlow モデルを適合し、オンデバイス ML アプリケーションにこのモデルをデプロイする際に特定の入力データに変換するプロセスを単純化します。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "TFF的聚合计算示例中，value不再乘以2.0，而是改成了乘以什么？",
+    "answer": "改成了乘以迭代的索引，也就是聚合已经执行的次数。",
+    "expected_chunk": "TFF では、反復的に実行されることが期待されており、イテレーションごとに変化する計算を表現するために、ステートフルネスが幅広く使用されています。たとえば、学習計算の状態には、学習されているモデルの重みが含まれます。  \n集約の計算で状態をどのように使用するかを説明するために、タスク例に変更を加えることにします。`value` を `2.0` で乗算する代わりに、それをイテレーションのインデックス（集約が実行された回数）で乗算します。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个输入里的 n 和 edges 分别代表什么意思？",
+    "answer": "n 表示树中节点的数量，节点编号从 0 到 n - 1；edges 是长度为 n - 1 的二维数组，其中 edges[i] = [ui, vi] 表示节点 ui 和 vi 之间有一条无向边。",
+    "expected_chunk": "You are given an integer n and an undirected tree with n nodes numbered from 0 to n - 1. This is represented by a 2D array edges of length n - 1, where edges[i] = [ui, vi] indicates an undirected edge between nodes ui and vi.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "我想用TensorFlow Hub做文本相关任务，有什么现成的指南和工具可以参考吗？",
+    "answer": "该页面列出了一组使用TensorFlow Hub解决文本领域问题的已知指南和工具，适合不想从头开始、希望使用预训练ML组件解决典型ML问题的人作为起点。",
+    "expected_chunk": "本页面列出了一组使用 TensorFlow Hub 解决文本领域问题的已知指南和工具。如果您不想从头开始，而是使用预训练的 ML 组件来解决典型的 ML 问题，则本文是一个很好的起点。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "如果输入的 events 是 [[1,5,3],[1,5,1],[6,6,5]]，答案是多少？",
+    "answer": "8，选择事件0和2，和为3+5=8。",
+    "expected_chunk": "Output: 5\nExplanation: Choose event 2 for a sum of 5.  \nExample 3:  \nInput: events = [[1,5,3],[1,5,1],[6,6,5]]\nOutput: 8\nExplanation: Choose events 0 and 2 for a sum of 3 + 5 = 8.  \n&nbsp;\nConstraints:  \n2 &lt;= events.length &lt;= 105\nevents[i].length == 3",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个数据集有哪些划分？每个划分分别有多少样本？",
+    "answer": "该数据集包含三个划分：test（175363 个样本）、train（613036 个样本）、validation（87519 个样本）。",
+    "expected_chunk": "Use the following command to load this dataset in TFDS:  \n*   **Description**:  \n*   **License**: No known license\n*   **Version**: 1.0.0\n*   **Splits**:  \nSplit  | Examples\n:----- | -------:\n`'test'` | 175363\n`'train'` | 613036\n`'validation'` | 87519  \n*   **Features**:",
+    "source": "llm_generated"
+  },
+  {
+    "question": "掘金翻译计划涉及哪些领域？想查看更多优质译文可以关注哪些渠道？",
+    "answer": "涉及区块链、产品、设计、人工智能等领域；可以关注掘金翻译计划、官方微博和知乎专栏。",
+    "expected_chunk": ".com/xitu/gold-miner#区块链)、[产品](https://github.com/xitu/gold-miner#产品)、[设计](https://github.com/xitu/gold-miner#设计)、[人工智能](https://github.com/xitu/gold-miner#人工智能)等领域，想要查看更多优质译文请持续关注 [掘金翻译计划](https://github.com/xitu/gold-miner)、[官方微博](http://weibo.com/juejinfanyi)、[知乎专栏](https://zhuanlan.zhihu",
+    "source": "llm_generated"
+  },
+  {
+    "question": "给定 nums = [1,2,3]，所有严格递增子序列的 GCD 之和是多少？",
+    "answer": "10",
+    "expected_chunk": "Return the sum of beauty values for all positive integers g.  \nSince the answer could be very large, return it modulo 109 + 7.  \n&nbsp;\nExample 1:  \nInput: nums = [1,2,3]  \nOutput: 10  \nExplanation:  \nAll strictly increasing subsequences and their GCDs are:  \nSubsequence\nGCD  \n[1]\n1  \n[2]\n2  \n[3]",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Como posso criar um modelo CNN 3D para classificar vídeos?",
+    "answer": "Use o tutorial do TensorFlow em https://www.tensorflow.org/tutorials/video/video_classification. Ele usa uma CNN (2+1)D que decompõe os aspectos espaciais e temporais dos dados 3D.",
+    "expected_chunk": "- [Crie um modelo CNN 3D para a classificação de vídeos](https://www.tensorflow.org/tutorials/video/video_classification): observe que este tutorial usa uma CNN (2+1)D que decompõe os aspectos espaciais e temporais dos dados 3D",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个联邦学习模拟中，每轮会使用几个客户端，每个客户端用几个mini-batch？",
+    "answer": "每轮使用相同的3个客户端进行训练，每个客户端只考虑2个mini-batch。",
+    "expected_chunk": "次は最も単純なループで、1 つのバッチの単一の client における 1 つのラウンドで、フェデレーテッドアベレージングを実行します。  \nでは、もう少し興味深いトレーニングと評価ループを記述してみましょう。  \nこのシミュレーションは比較的素早く実行します。各ラウンドで同一の 3 つの client でトレーニングしますが、それぞれで 2 つのミニバッチのみを考慮しています。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这段代码里定义的 HashMap d 都包含哪些数字和英文单词的对应关系？",
+    "answer": "包含 0 到 9 的英文单词映射：0 对应 zero，1 对应 one，2 对应 two，3 对应 three，4 对应 four，5 对应 five，6 对应 six，7 对应 seven，8 对应 eight，9 对应 nine。",
+    "expected_chunk": "```rust\nimpl Solution {\npub fn count_odd_letters(mut n: i32) -> i32 {\nuse std::collections::HashMap;\n\nlet d: HashMap = [\n(0, \"zero\"),\n(1, \"one\"),\n(2, \"two\"),\n(3, \"three\"),\n(4, \"four\"),\n(5, \"five\"),\n(6, \"six\"),\n(7, \"seven\"),\n(8, \"eight\"),\n(9, \"nine\"),\n]\n.iter()\n.cloned()\n.collect();",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这段版权声明里的版权方是谁？是哪一年的？",
+    "answer": "版权方是 The TensorFlow Authors，版权年份是 2019 年。",
+    "expected_chunk": "##### Copyright 2019 The TensorFlow Authors.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "选择排序和冒泡排序在处理相等元素的顺序上有什么不同？",
+    "answer": "选择排序会改变相等元素的原始顺序；冒泡排序只在左边元素大于右边元素时才交换相邻元素，相等元素不会交换，因此能保持原始顺序。",
+    "expected_chunk": "1 回目の終了時は $[2_a, 1, 2_b]$ となります。$2_a$ は引き続き $2_b$ より前にあり、相対的な順序は変わっていません。  \n3. この例では、選択ソートは等しい要素の元の順序を変えます。バブルソートは、左側の要素が右側の要素より大きい場合にだけ\n隣り合う要素を交換します。等しい要素同士は交換しないため、元の順序を保てます。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Em uma determinada rodada, os coeficientes de qualquer cliente podem ser iguais a zero?",
+    "answer": "Sim, qualquer cliente em uma determinada rodada pode ter coeficientes iguais a zero.",
+    "expected_chunk": "qualquer cliente em uma determinada rodada, seus coeficientes podem ser iguais a zero",
+    "source": "llm_generated"
+  },
+  {
+    "question": "在 RFC 中需要列出哪些人的 GitHub ID？",
+    "answer": "需要包括共同作者、审阅者和赞助者的 GitHub ID。",
+    "expected_chunk": ". Consulte [esta RFC de ejemplo](https://github.com/tensorflow/community/pull/5). Incluya los identificadores de GitHub de coautores, revisores y patrocinadores.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个知识库都包含哪些Java相关的专题？",
+    "answer": "包含Java知识体系、Java基础专题、Java并发编程专题、Java IO专题，以及操作系统相关内容。",
+    "expected_chunk": "- [Java 知识体系](../)\n- [Java 基础专题](../basis/)\n- [Java 并发编程专题](../concurrent/)\n- [Java IO 专题](../io/)\n- [操作系统](../../cs-basics/operating-system/)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Kubeflow Pipelinesでメモリ使用量を設定するにはどうすればいいですか？",
+    "answer": "`set_memory_request`を使用して必要なメモリ量を宣言します。一般的には`set_memory_request`のラッパーを作成し、それをパイプラインの`AggFunc`リストに追加します。",
+    "expected_chunk": "たとえば、メモリを構成するには、[`set_memory_request`](https://github.com/kubeflow/pipelines/blob/646f2fa18f857d782117a078d626006ca7bde06d/sdk/python/kfp/dsl/_container_op.py#L249)を使用して必要なメモリ量を宣言できます。これを行うには、一般的にt`set_memory_request`のラッパーを作成し、それを使用してパイプライン `AggFunc`のリストに追加します。  \n同様に以下の関数を使用してリソースを構成できます。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "IBM设计训练营主要强调和培养了哪些能力？",
+    "answer": "IBM设计训练营中同理心成为关键词，帮助更好地与同事和顾客建立联系；同时还培养了原型设计、团队建设、问题解决能力，以及深入理解客户与同事的感受和需求，从而提出更好的解决方案。",
+    "expected_chunk": "IBM 的设计管理文件。  \n在IBM [设计训练营](http://www.ibm.com/blogs/think/2016/01/21/ibm-design-thinking-a-framework-for-teams-to-continuously-understand-and-deliver/) 这篇文章中说道，同理心（理解他人感受的能力）成为了训练营中的关键词，以此更好地与同事和顾客建立起联系。他们还练就了原型设计、团队建设、问题解决的能力、以及如何深入理解客户与同事的感受和需求，从而提出更好的解决方案。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "在选择编程范式时，除了性能还需要考虑哪些因素？",
+    "answer": "代码的可维护性、可扩展性和开发效率同样重要。",
+    "expected_chunk": "在选择编程范式时，性能并不是唯一的考虑因素。代码的可维护性、可扩展性和开发效率同样重要。  \n现代编程语言基本都支持多种编程范式，既可以用来进行面向过程编程，也可以进行面向对象编程。  \n下面是一个求圆的面积和周长的示例，简单分别展示了面向对象和面向过程两种不同的解决方案。  \n**面向对象**：  \n我们定义了一个 `Circle` 类来表示圆，该类包含了圆的半径属性和计算面积、周长的方法。  \n**面向过程**：  \n我们直接定义了圆的半径，并使用该半径直接计算出圆的面积和周长。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "发现译文有错误想修改的话，应该去哪里提交 PR？",
+    "answer": "可以到掘金翻译计划 https://github.com/xitu/gold-miner 对译文进行修改并提交 PR，也可获得相应奖励积分。",
+    "expected_chunk": "> 如果发现译文存在错误或其他需要改进的地方，欢迎到 [掘金翻译计划](https://github.com/xitu/gold-miner) 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 **本文永久链接** 即为本文在 GitHub 上的 MarkDown 链接。  \n---",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个项目做了哪些开发相关的配置？",
+    "answer": "引入了 ESLint 来检查代码错误，配置了热模块替换，并且可能添加了 source maps 功能。",
+    "expected_chunk": "*   我们引入 ESLint 来检查代码是否存在错误\n*   我们配置了热模块替换\n*   我们（可能）添加了 source maps 功能  \n**特别提醒**：由于许多 npm 依赖项可能会在你阅读此内容时发生更改，因此相同的配置可能对你无效。我恳请你将错误留在下面的评论中，以便我以后编辑。  \n> 如果发现译文存在错误或其他需要改进的地方，欢迎到 [掘金翻译计划](https://github.com/xitu/gold-miner) 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 **本文永久链接** 即为本文在 GitHub 上的 MarkDown 链接。  \n---",
+    "source": "llm_generated"
+  },
+  {
+    "question": "想系统学习 JVM，应该按什么顺序看这些资料？每部分重点是什么？",
+    "answer": "建议按以下顺序学习：1. 先看《大白话带你认识 JVM》，建立 JVM 的整体认知；2. 再看《Java内存区域详解》，理解运行时数据区和常见 OOM 场景；3. 最后看《类文件结构详解》《类加载过程详解》《类加载器详解》，掌握类从 .class 到可运行对象的过程。",
+    "expected_chunk": "1. [大白话带你认识 JVM](./jvm-intro.md)：先建立 JVM 的整体认知。\n2. [Java内存区域详解（重点）](./memory-area.md)：理解运行时数据区和常见 OOM 场景。\n3. [类文件结构详解](./class-file-structure.md)、[类加载过程详解](./class-loading-process.md)、[类加载器详解（重点）](./classloader.md)：掌握类从 `.class` 到可运行对象的过程。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "参与这些项目能有什么收获？",
+    "answer": "可以学到更多编程知识，提高编程技能，并找到编程的乐趣。",
+    "expected_chunk": ". In the process of participating in these projects, you will learn more programming knowledge 📚, improve programming skills 💻, and find the pleasure of programming 🎮.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "如果 nums1 = [1,2]，nums2 = [3,4]，它们所有配对按位异或的结果是多少？",
+    "answer": "0",
+    "expected_chunk": "The bitwise XOR of all these numbers is 13, so we return 13.  \nExample 2:  \nInput: nums1 = [1,2], nums2 = [3,4]\nOutput: 0\nExplanation:\nAll possible pairs of bitwise XORs are nums1[0] ^ nums2[0], nums1[0] ^ nums2[1], nums1[1] ^ nums2[0],\nand nums1[1] ^ nums2[1].",
+    "source": "llm_generated"
+  },
+  {
+    "question": "给定一个字符串数组 words，怎么判断它是否满足每个位置 words[i][j] 都等于 words[j][i]？如果下标越界怎么办？",
+    "answer": "遍历每一行，检查 words[i][j] 是否等于 words[j][i]；如果不满足或下标越界，直接返回 false。时间复杂度 O(n²)，空间复杂度 O(1)。",
+    "expected_chunk": "我们观察发现，只要不满足 $words[i][j] = words[j][i]$，就可以直接返回 `false`。  \n因此，我们只需要遍历每一行，然后检查每一行是否满足 $words[i][j] = words[j][i]$ 即可。注意，如果下标越界，也直接返回 `false`。  \n时间复杂度 $O(n^2)$，其中 $n$ 是 $words$ 的长度。空间复杂度 $O(1)$。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "请问在TFF里，next_fn拿到的state是在哪里的？怎么把它传给客户端？怎么确认跑得对不对？",
+    "answer": "next_fn的state位于服务器，要传给客户端需使用tff.federated_broadcast运算符。可以通过查看报告的measurements来确认是否正常，即使使用相同client_data，每轮运行结果也会不同。",
+    "expected_chunk": "したがって、タスクのステートフルな答えは以下のようになります。  \n`next_fn` に入力として渡される `state` は、サーバーに配置されていることに注意してください。これをクライアントで使用するにはまず、それを伝達する必要があります。これには、`tff.federated_broadcast` 演算子を使用します。  \nすべての作業が期待どおりであることを確認するには、レポートされた `measurements` を確認することができます。これは、同じ `client_data` を使って実行された場合であっても、実行ラウンドごとに異なります。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "如果我是通过 intent 打开 Activity，并且把搜索参数放在 intent 的 extras 里，配置变更后还需要用 onSaveInstanceState 保存这些参数吗？",
+    "answer": "不需要。配置更改和系统恢复该 Activity 时，intent 的 bundle 参数都会被传入，可以直接用 extras 中的 bundle 代替 onSaveInstanceState 中的 bundle；但仍需要 ViewModel 来避免因配置更改重新从数据库加载数据造成资源浪费。",
+    "expected_chunk": "此外，当你通过 intent 打开一个 activity，配置更改和系统恢复这个 activity 时 bundle 参数都会被传进来。如果搜索查询是通过 intent 的 extras 传进来，那么你就可以使用 extras 中的 bundle 代替 `onSaveInstanceState()` 中的 bundle。  \n不过，在这两种场景中，你仍需要一个 ViewModel 来避免因配置更改而重新从数据库中加载数据导致的资源浪费。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "掘金翻译计划涵盖哪些领域？想查看更多优质译文可以关注什么？",
+    "answer": "涵盖区块链、产品、设计、人工智能等领域；可以关注掘金翻译计划、官方微博和知乎专栏。",
+    "expected_chunk": ".com/xitu/gold-miner#区块链)、[产品](https://github.com/xitu/gold-miner#产品)、[设计](https://github.com/xitu/gold-miner#设计)、[人工智能](https://github.com/xitu/gold-miner#人工智能)等领域，想要查看更多优质译文请持续关注 [掘金翻译计划](https://github.com/xitu/gold-miner)、[官方微博](http://weibo.com/juejinfanyi)、[知乎专栏](https://zhuanlan.zhihu",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个QCNN模型的层是怎么定义的？",
+    "answer": "基于Cong和Lukin的QCNN论文来定义模型层，使用Tucci论文的1-qubit和2-qubit参数化酉矩阵，以及一般的参数化2-qubit池化操作。",
+    "expected_chunk": "Cong 및 Lukin QCNN 논문을 사용하여 모델을 구성하는 레이어를 정의합니다. 전제 조건으로 다음을 이용한다고 가정합니다.  \n- Tucci 논문의 1-큐비트 및 2-큐비트 매개변수화된 단일 행렬\n- 일반적인 매개변수화된 2-큐비트 풀링 연산  \n생성 결과를 보기 위해 1-큐비트 단일 회로를 출력합니다.  \n그리고 2-큐비트 단일 회로입니다.  \n그리고 2-큐비트 풀링 회로입니다.  \n##### 1.5.2.1 양자 컨볼루션",
+    "source": "llm_generated"
+  },
+  {
+    "question": "《Blazingly fast parsing, part 2: lazy parsing》这篇文章的原文地址是什么？",
+    "answer": "https://v8.dev/blog/preparser",
+    "expected_chunk": "> * 原文地址：[Blazingly fast parsing, part 2: lazy parsing](https://v8.dev/blog/preparser)\n> * 原文作者：[https://v8.dev](https://v8.dev)\n> * 译文出自：[掘金翻译计划](https://github.com/xitu/gold-miner)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "ReactPathMenu 可以自定义子按钮的数量吗？怎么设置？",
+    "answer": "可以，通过设置 NUM_CHILDREN 变量为任意数量，例如 NUM_CHILDREN = 1、NUM_CHILDREN = 3 或 NUM_CHILDREN = 8。",
+    "expected_chunk": "方法已覆盖，你可以设置任何数量的子按钮  \nNUM_CHILDREN = 1  \nNUM_CHILDREN = 3  \nNUM_CHILDREN = 8  \n相当酷对吗？再说一遍，你可以在[在这](https://github.com/nashvail/ReactPathMenu/blob/staggered-motion/Components/APP.js)找到相应代码。如果你觉得这篇文章有帮助，请点击下面的推荐按钮。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "斯坦福大学开设的这门课有什么先修要求？主要用哪些编程语言，难度和课时是多少？",
+    "answer": "这门课由斯坦福大学开设，先修要求是具备编程语言理论和计算机系统的基础知识；主要使用OCaml和Rust两种编程语言；难度为四星；课程时长约60小时。",
+    "expected_chunk": "- Offered by: Stanford\n- Prerequisites: basic knowledge about programming language theory and computer system\n- Programming Languages: OCaml, Rust\n- Difficulty: 🌟🌟🌟🌟\n- Class Hour: 60 hours",
+    "source": "llm_generated"
+  },
+  {
+    "question": "二叉树的边界这道题的英文版在哪里可以查看？",
+    "answer": "可以通过链接 /solution/0500-0599/0545.Boundary%20of%20Binary%20Tree/README_EN.md 查看英文版。",
+    "expected_chunk": "[English Version](/solution/0500-0599/0545.Boundary%20of%20Binary%20Tree/README_EN.md)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "它有哪些实用的功能？",
+    "answer": "写完文档后可以立即发布，支持全文搜索、可自定义主题、丰富的API、Emoji等功能。",
+    "expected_chunk": ". You can publish it immediately after writing your documents. It supports full-text search, customizable themes, a rich set of APIs, Emoji, and other practical features.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "链表插入排序这题的要求和示例是什么？",
+    "answer": "对链表进行插入排序，使链表按升序排列。示例1：输入 head = [4,2,1,3]，输出 [1,2,3,4]；示例2：输入 head = [-1,5,3,4,0]，输出 [-1,0,3,4,5]。链表节点数在 [1, 5000] 范围内，节点值在 -5000 到 5000 之间。",
+    "expected_chunk": "对链表进行插入排序。  \n&nbsp;  \n示例 1：  \n输入: head = [4,2,1,3]\n输出: [1,2,3,4]  \n示例&nbsp;2：  \n输入: head = [-1,5,3,4,0]\n输出: [-1,0,3,4,5]  \n&nbsp;  \n提示：  \n列表中的节点数在&nbsp;[1, 5000]范围内\n-5000 &lt;= Node.val &lt;= 5000",
+    "source": "llm_generated"
+  },
+  {
+    "question": "给定一个整数数组，怎么判断它能不能通过最多修改一个元素变成非递减？",
+    "answer": "检查数组是否能通过修改至多一个元素，使得对于每个 i（0 <= i <= n-2）都满足 nums[i] <= nums[i+1]。",
+    "expected_chunk": "Given an array nums with n integers, your task is to check if it could become non-decreasing by modifying at most one element.  \nWe define an array is non-decreasing if nums[i] &lt;= nums[i + 1] holds for every i (0-based) such that (0 &lt;= i &lt;= n - 2).  \n&nbsp;\nExample 1:",
+    "source": "llm_generated"
+  },
+  {
+    "question": "给定一个整数数组和一个整数 k，怎么判断能不能把数组里的所有元素分成若干个组，每组正好 k 个元素，并且组内不能有重复？",
+    "answer": "判断是否可能将数组 nums 的所有元素分成一个或多个组，使得每个组恰好包含 k 个元素，并且每个组内的所有元素都互不相同。",
+    "expected_chunk": "You are given an integer array nums and an integer k.  \nYour task is to determine whether it is possible to partition all elements of nums into one or more groups such that:  \nEach group contains exactly k elements.\nAll elements in each group are distinct.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "示例4中，products 是 ['havana']，searchWord 是 'tatiana' 时，输出是什么？",
+    "answer": "[[],[],[],[],[],[],[]]",
+    "expected_chunk": "输出：[[&quot;baggage&quot;,&quot;bags&quot;,&quot;banner&quot;],[&quot;baggage&quot;,&quot;bags&quot;,&quot;banner&quot;],[&quot;baggage&quot;,&quot;bags&quot;],[&quot;bags&quot;]]  \n示例 4：  \n输入：products = [&quot;havana&quot;], searchWord = &quot;tatiana&quot;\n输出：[[],[],[],[],[],[],[]]  \n&nbsp;",
+    "source": "llm_generated"
+  },
+  {
+    "question": "在TensorFlow项目里添加新功能时，单元测试应该怎么处理？",
+    "answer": "新功能必须包含新的单元测试来验证其按预期工作，建议在编写代码之前先编写这些测试，并遵循TensorFlow代码风格指南。",
+    "expected_chunk": "- Las nuevas características deben incluir nuevas pruebas unitarias que sirvan para verificar que la característica funciona según lo esperado. Es conveniente escribir estas pruebas antes de escribir el código.\n- Siga la [Guía de estilo del código de TensorFlow](#tensorflow-code-style-guide)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这段 Go 代码主要是在做什么？",
+    "answer": "代码先把 e 中的时间、金额字段转成整数，城市字段直接取出；然后按 name 把包含时间、城市和索引 i 的元组追加到 d[name] 中。如果金额大于 1000，就在 idx 中把索引 i 标记为 true。最后遍历 d[name] 中的历史记录，对城市不同且时间差满足条件的项进行后续处理，但代码片段中条件体不完整。",
+    "expected_chunk": "time, _ := strconv.Atoi(e[1])\namount, _ := strconv.Atoi(e[2])\ncity := e[3]\nd[name] = append(d[name], tuple{time, city, i})\nif amount > 1000 {\nidx[i] = true\n}\nfor _, item := range d[name] {\nif city != item.city && abs(time-item.t)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "No meu aplicativo Android, o que preciso fazer antes de realizar previsões com o modelo TensorFlow Lite?",
+    "answer": "Você precisa inicializar o modelo de aprendizado de máquina do TensorFlow Lite com parâmetros.",
+    "expected_chunk": "No seu aplicativo Android, você precisa inicializar o modelo de aprendizado de máquina do TensorFlow Lite com parâmetros antes de realizar previsões com o modelo.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "在这个EAKF推断框架中，状态和参数是如何打包用于迭代滤波的？",
+    "answer": "通过定义ParameterStatePair对象将状态和参数打包在一起进行迭代滤波；同时将辅助信息打包到模型中，使用完整观测模型，上游模型每个时间步骤为每个城市发出daily_new_documented_infectious，包含报告延迟；转换动力学被打包用于EAKF框架，并按照李瑞云等人的模型裁剪城市人口范围防止它们变得太小。",
+    "expected_chunk": "首先，我们定义一些用于推断的数据结构。  \n特别是，我们希望进行迭代滤波，即在进行推断时将状态和参数打包在一起。因此，我们将定义一个 `ParameterStatePair` 对象。  \n我们还希望将辅助信息打包到模型中。  \n这是完整的观测模型，打包用于集合卡尔曼滤波。  \n重要的特征是报告延迟（正如前文中的计算）。上游模型在每个时间步骤为每个城市发出 `daily_new_documented_infectious`。  \n我们在这里定义转换动力学。我们已经完成了语义方面的工作；现在，我们只需将其打包用于 EAKF 框架，同时，按照李瑞云等人的模型，裁剪城市人口范围，防止它们变得太小。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "JavaScript 里的 Object.seal 方法是用来做什么的？",
+    "answer": "Object.seal 用于密封传入的对象，使其所有属性都不可配置。",
+    "expected_chunk": "在 [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)](https://cdn-images-1.medium.com/max/12000/0*8hPZaRH0h2uk2UpX)  \n当你听到 “seal” 这个词时，你会想到什么？ “seal” 的第一个意思是印章或者蜜蜡之类封信件的东西。在 JavaScript 中 `Object.seal` 的作用与 “密封” 相同。  \n`Object.seal` 使传入对象的所有属性都不可配置。来举个例子。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Como instalo o TensorFlow Compression e importo as dependências?",
+    "answer": "Instale o TensorFlow Compression pelo pip e importe as dependências de biblioteca.",
+    "expected_chunk": "Instale o TensorFlow Compression pelo `pip`.  \nImporte as dependências de biblioteca.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "FAB 按钮应该用来放什么功能？",
+    "answer": "FAB 用于突出最相关或最常用的操作，应该用于能强烈代表应用特征的操作；理想情况下，FAB 应代表整个应用的核心功能。",
+    "expected_chunk": "FAB highlights the most relevant or frequently used actions. It should be used for the actions that are strongly characteristics of your app. Ideally, the FAB should represent the core function of your entire app just like in the example below.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "quantization_bits 设置为多少比较保险？",
+    "answer": "建议默认值设为6，因为设为5可能有效，但设为4会降低模型质量，所以6更稳妥。",
+    "expected_chunk": ". Por ejemplo, si establecer `quantization_bits` en 5 funciona, pero establecerlo en 4 degrada el modelo, recomendamos que el valor predeterminado sea 6 para \"ir a lo seguro\".",
+    "source": "llm_generated"
+  },
+  {
+    "question": "点击图标查看含义虽然花的时间可能很短，但会带来什么问题？",
+    "answer": "会带来认知负荷。",
+    "expected_chunk": ". Yes, the time it takes to find out what an icon means, by tapping on it, may be quite small. But there is a cognitive load:",
+    "source": "llm_generated"
+  },
+  {
+    "question": "딥드림이 뭐야?",
+    "answer": "딥드림은 신경망이 학습한 패턴을 시각화하는 실험으로, 주어진 이미지 내에 있는 패턴을 향상시키고 과잉해석합니다.",
+    "expected_chunk": "딥드림은 신경망이 학습한 패턴을 시각화하는 실험입니다. 어린 아이가 구름을 보며 임의의 모양을 상상하는 것처럼, 딥드림은 주어진 이미지 내에 있는 패턴을 향상시키고 과잉해석합니다.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "GIF 파일을 tf.Tensor로 읽는 방법과 비디오의 형상이 어떻게 되나요?",
+    "answer": "GIF를 다운로드한 뒤, GIF 파일을 `tf.Tensor`로 읽는 함수를 정의합니다. 비디오의 형상은 `(frames, height, width, colors)`입니다.",
+    "expected_chunk": "gif를 다운로드합니다.  \ngif 파일을 `tf.Tensor`로 읽는 함수를 정의합니다.  \n비디오의 형상은 `(frames, height, width, colors)`입니다.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "¿Qué hace TensorFlow.js cuando se llama a `.engine().runKernel(...)`?",
+    "answer": "TensorFlow.js se ocupa de enviarlo para la implementación en el backend que esté activo en ese momento.",
+    "expected_chunk": ".engine().runKernel(...)` y TensorFlow.js se ocupará de enviarlo para la implementación en el backend que esté activo en ese momento.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "UTF-8为什么能兼容ASCII码？",
+    "answer": "因为对于长度为1字节的字符，UTF-8将最高位设为0，其余7位设为Unicode码点，而ASCII字符在Unicode字符集中占据了前128个码点，所以UTF-8可以向下兼容ASCII码。",
+    "expected_chunk": "UTF-8 的编码规则并不复杂，分为以下两种情况。  \n- 对于长度为 1 字节的字符，将最高位设置为 $0$ ，其余 7 位设置为 Unicode 码点。值得注意的是，ASCII 字符在 Unicode 字符集中占据了前 128 个码点。也就是说，**UTF-8 编码可以向下兼容 ASCII 码**。这意味着我们可以使用 UTF-8 来解析年代久远的 ASCII 码文本。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "使用分片数据集跑 MCMC 时，各设备上计算的对数密度要注意什么？",
+    "answer": "每个设备上计算的非归一化对数密度必须是所有数据的总和，即要代表全部数据的密度。否则每个设备会在自己错误的 target distribution 上运行 MCMC。TFP 提供了 tfp.experimental.distribute 和 tfp.experimental.mcmc 来支持分片对数概率计算和 MCMC 运行。",
+    "expected_chunk": "シャーディングされたデータセットを使用して MCMC を実行する場合は、各デバイスで計算する非正規化対数密度が*合計*、つまりすべてのデータの密度を表すようにする必要があります。そうしないと、各デバイスは独自の誤ったターゲットディストリビューションで MCMC を実行します。そのため、TFP には、「シャーディングされた」対数確率の計算とそれらを使用した MCMC の実行を可能にする新しいツール（`tfp.experimental.distribute` と `tfp.experimental.mcmc`）があります。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "IPアドレスの割り当てでブロックされてしまった場合、必要なIP数を減らすにはどうすればいいですか？",
+    "answer": "より大きな worker_type を使用すると、必要な IP の数を減らすことができます。",
+    "expected_chunk": "。IP アドレスの割り当てによりブロックされている場合は、より大きな [`worker_type`](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options) を使用すると、必要な IP の数を減らすことができます。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "在 Numbers 表里，num 为 0、1、2、3 的频率分别是 7、1、3、1，这个表的中位数是多少？",
+    "answer": "0.0",
+    "expected_chunk": "Example 1:  \nInput:\nNumbers table:\n+-----+-----------+\n| num | frequency |\n+-----+-----------+\n| 0   | 7         |\n| 1   | 1         |\n| 2   | 3         |\n| 3   | 1         |\n+-----+-----------+\nOutput:\n+--------+\n| median |\n+--------+\n| 0.0    |\n+--------+\nExplanation:",
+    "source": "llm_generated"
+  },
+  {
+    "question": "给定一个整数数组 nums 和一个整数 p，什么样的子序列可以被称为 good？",
+    "answer": "一个非空子序列，其长度严格小于 n，并且其所有元素的最大公约数恰好等于 p。",
+    "expected_chunk": "You are given an integer array nums of length n and an integer p.  \nA non-empty subsequence of nums is called good if:  \nIts length is strictly less than n.\nThe greatest common divisor (GCD) of its elements is exactly p.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "网站速度现在对 SEO 排名影响大吗？移动端流量大概占多少？",
+    "answer": "速度已经成为影响 SEO 排名的关键因素，目前大约 50% 的页面流量来自移动设备。为避免排名下降，建议使用最新的性能分析套件跟踪关键页面，例如基于 Lighthouse 的 Calibre。",
+    "expected_chunk": "速度已经变成影响了 SEO 排名的关键因素，尤其是目前大约 50% 的页面流量来自于移动设备。  \n为了避免排名下降，确保你正在使用最新的性能分析套件来跟踪你的关键页面（哈，我们打造了 [Calibre](https://calibreapp.com/blog/release-notes-lighthouse-4/) 来做你的性能提升伙伴。他以 Lighthouse 为基础。每天都有很多来自全球的团队在使用它）。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "TFF 中 next 函数执行之间传递的状态和报告出来的测量值可能为空吗？",
+    "answer": "可能为空。next 函数执行之间传递的状态和针对特定执行报告的测量值都有可能为空，但无论是否为空，都必须明确指定，以便 TFF 的其他部分能够遵循清晰的契约。",
+    "expected_chunk": "`next` 関数の実行間で渡される状態と、`next` 関数の特定の実行に応じて情報をレポートすることを目的にレポートされた測定値は空である場合があることに注意してください。いずれにせよ、これらは TFF の他の部分が従うことのできる明確なコントラクトを持つように明示的に指定されている必要があります。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "怎么创建新集群？",
+    "answer": "点击 Create New Cluster，然后等待几分钟，创建完成后会看到类似：Cluster \"cluster-1\" successfully created in zone \"us-central1-a\"。",
+    "expected_chunk": "1.  Click **Create New Cluster**, and wait several minutes until the cluster\nhas been created.  This will take a few minutes.  When it completes you\nwill see a message like:  \n> Cluster \"cluster-1\" successfully created in zone \"us-central1-a\".",
+    "source": "llm_generated"
+  },
+  {
+    "question": "LeetCode第1268题搜索建议系统的英文版说明在哪里可以看？",
+    "answer": "可以在 /solution/1200-1299/1268.Search%20Suggestions%20System/README_EN.md 查看。",
+    "expected_chunk": "[English Version](/solution/1200-1299/1268.Search%20Suggestions%20System/README_EN.md)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "掘金翻译计划涵盖哪些领域？",
+    "answer": "掘金翻译计划涵盖区块链、产品、设计、人工智能等领域。",
+    "expected_chunk": ".com/xitu/gold-miner#区块链)、[产品](https://github.com/xitu/gold-miner#产品)、[设计](https://github.com/xitu/gold-miner#设计)、[人工智能](https://github.com/xitu/gold-miner#人工智能)等领域，想要查看更多优质译文请持续关注 [掘金翻译计划](https://github.com/xitu/gold-miner)、[官方微博](http://weibo.com/juejinfanyi)、[知乎专栏](https://zhuanlan.zhihu",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这篇文章的译者和校对者分别是谁？",
+    "answer": "译者是Jessica，校对者是noname。",
+    "expected_chunk": "> * 译者：[Jessica](https://github.com/cyz980908)\n> * 校对者：[noname](https://github.com/Eternaldeath)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "什么是JSON Mode？它有什么限制？",
+    "answer": "JSON Mode 是输出格式开关，能让模型输出合法的 JSON，但不保证字段和业务语义。",
+    "expected_chunk": "| ------------------------------- | ---------------------------- | ---------------------------------- | -------------------------- | -------------------- |\n| JSON Mode                       | 输出格式开关                 | 让模型输出合法 JSON                | 模型侧生成                 | 不保证字段和业务语义 |",
+    "source": "llm_generated"
+  },
+  {
+    "question": "你们为什么选择自己架构 de Voorhoede 站点？",
+    "answer": "因为我们想要控制服务器环境，并实验通过改变服务器配置来提升性能。当时我们使用 Apache 网站服务器，并将站点设置为 HTTPS 服务。",
+    "expected_chunk": "我们自己架构了 de Voorhoede站点，因为我们想要控制服务器的环境。我们想实验一下我们可以怎样通过改变服务器配置来提升性能。在这个时候我们有一个 Apache 网站服务器并且我们把我们站点设置为 HTTPS 服务。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "在2x2管理的收敛表现中，经过t步后最初的值会怎样变化？收敛速度由什么决定？",
+    "answer": "经过t步后，最初的值[v0, x0]变为R(β, η, λ)^t [v0, x0]；收敛速度由R的特征值决定。",
+    "expected_chunk": "$$  \n我们用$\\mathbf{R}$来表示$2 \\times 2$管理的收敛表现。\n在$t$步之后，最初的值$[v_0, x_0]$变为$\\mathbf{R}(\\beta, \\eta, \\lambda)^t [v_0, x_0]$。\n因此，收敛速度是由$\\mathbf{R}$的特征值决定的。\n请参阅[文章](https://distill.pub/2017/momentum/) :cite:`Goh.2017`了解精彩动画。\n请参阅 :cite:`Flammarion.Bach.2015`了解详细分析。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "TensorFlow TFXのモデル分析APIドキュメントはどこで見られますか？",
+    "answer": "https://www.tensorflow.org/tfx/model_analysis/api_docs/python/tfma で見られます。",
+    "expected_chunk": "- [ モデル分析 ](https://www.tensorflow.org/tfx/model_analysis/api_docs/python/tfma)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "功能说明文字太多，用户不看怎么办？",
+    "answer": "可以把信息拆分成许多小块儿，每次只展现一小部分，一点点地进行展示，这种方法叫渐进式揭露。",
+    "expected_chunk": "当你试着教会用户如何使用某个功能时，你很可能会把所有信息都一股脑地堆在界面上，并且祈祷用户能够读懂并理解。但事实上，如果你的文字超过了两三行，很多用户可能不会去读它。那么你该怎么办？  \n有时候你可以每次只给用户展现一小部分的信息。这个方法的学名叫做**渐进式揭露**，但是我却偏向称之为**慢慢展示**。（这听起来更有意思不是吗？）试着把你的信息拆分成许多小块儿，并且一点点地进行展示。  \n字数太多了？试着拆分开来一点点展示。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "LeetCode 第 2437 题是什么题？难度如何？",
+    "answer": "题目是 Number of Valid Clock Times（有效时钟时间的数量），难度为简单，属于第 89 场双周赛 Q1，标签为字符串、枚举。",
+    "expected_chunk": "---\ncomments: true\ndifficulty: 简单\nedit_url: https://github.com/doocs/leetcode/edit/main/solution/2400-2499/2437.Number%20of%20Valid%20Clock%20Times/README.md\nrating: 1426\nsource: 第 89 场双周赛 Q1\ntags:\n- 字符串\n- 枚举\n---",
+    "source": "llm_generated"
+  },
+  {
+    "question": "LeetCode 2699 这道题难度怎么样？是哪场比赛的题目，主要考察什么？",
+    "answer": "这道题难度为困难，是第 346 场周赛第 4 题，主要考察图、最短路和堆（优先队列）相关知识。",
+    "expected_chunk": "---\ncomments: true\ndifficulty: 困难\nedit_url: https://github.com/doocs/leetcode/edit/main/solution/2600-2699/2699.Modify%20Graph%20Edge%20Weights/README.md\nrating: 2873\nsource: 第 346 场周赛 Q4\ntags:\n- 图\n- 最短路\n- 堆（优先队列）\n---",
+    "source": "llm_generated"
+  },
+  {
+    "question": "preload 和服务器推送在性能上有什么区别？",
+    "answer": "preload 有利于将资产的开始下载时间更接近初始请求，而服务器推送是一个完整的 RTT 或更多，具体取决于服务器的反应时间。",
+    "expected_chunk": "底线：正如 Sam Saccone [所说](https://medium.com/@samccone/performance-futures-bundling-281543d9a0d5)，`preload` 有利于将资产的开始下载时间更接近初始请求， 而服务器推送是一个完整的 RTT（或 [更多](https://blog.yoav.ws/being_pushy/)，这取决于您的服务器反应时间 —— 如果你有一个服务器可以防止不必要的推送。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "代码里 global_batch_size 为什么要用 per_worker_batch_size 乘以 num_workers？",
+    "answer": "这样能保证每个 worker 处理的批次大小都是 per_worker_batch_size，无论 worker 数量是多少。",
+    "expected_chunk": "No trecho de código acima, observe que `global_batch_size`, que é passado para `Dataset.batch`, é definido como `per_worker_batch_size * num_workers`. Dessa forma, garante-se que cada worker processe lotes de `per_worker_batch_size` exemplos, não importa o número de workers.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "AlexNet这个名字是怎么来的？",
+    "answer": "AlexNet以Alex Krizhevsky的名字命名，他是相关论文的第一作者。",
+    "expected_chunk": "。在2012年ImageNet挑战赛中取得了轰动一时的成绩。AlexNet以Alex Krizhevsky的名字命名，他是论文 :cite:`Krizhevsky.Sutskever.Hinton.2012`的第一作者。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "V8团队为什么要更新管线？",
+    "answer": "V8团队给出的原因包括：减少内存占用（Ignition 代码体积比 full-codegen 小 8 倍）、优化启动时间（字节码更简短，生成更快）、提升基线性能（不依赖编译器优化也能提供高效代码）。",
+    "expected_chunk": "V8 团队给出了很多更新管线的原因，以下是其中一部分：  \n* 减少内存占用 —— 在代码的体积上，Ignition 要比 full-codegen 小 8 倍。\n* 优化启动时间 —— 字节码更简短，可以更快速地生成。\n* 提升基线性能 —— 不再依赖编译器优化，就能提供**极其**高效的代码。  \n你可以在[这里](https://github.com/thlorenz/v8-perf/blob/master/compiler.md#advantages-over-old-pipeline)读到 V8 团队发布的更多内容。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这段递归背包代码中，第13和14行是如何处理当前物品的？",
+    "answer": "从 weights 数组开头开始，检查物品是否在最大容量内；如果在容量内，就递归调用 knapsack() 函数并把结果保存在 profit1 中。然后递归调用同一个函数但排除该物品，结果保存在 profit2 中，最后返回 profit1 和 profit2 中较大的一个。",
+    "expected_chunk": "在第 13 和 14 行，我们从 `weights` 数组的开头开始，检查物品是否在最大容量内。如果是，我们递归地调用 `knapsack()` 函数并将结果保存在 `profit1` 中。  \n然后递归调用相同的函数，排除该物品，并将结果保存在 `profit2` 变量中。在第 21 行，我们返回 `profit1` 和 `profit2` 中较大的一个。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "Function Calling 和 MCP 有什么区别和联系？",
+    "answer": "Function Calling 是模型侧的工具调用意图生成机制，重点是把自然语言变成工具名和参数；MCP 是应用层协议，重点是让工具被标准化发现、描述、调用和返回结果。MCP 可以承载工具生态，Function Calling 可以作为模型选择 MCP 工具时的底层能力之一。",
+    "expected_chunk": "Function Calling 是模型侧的工具调用意图生成机制，重点是“自然语言如何变成工具名和参数”。MCP 是应用层协议，重点是“工具如何被标准化发现、描述、调用和返回结果”。MCP 可以承载工具生态，Function Calling 可以作为模型选择 MCP 工具时的底层能力之一。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "我怎样才能在自己的数据上使用 Fairness Indicators？",
+    "answer": "首先训练一个新模型，并使用 tensorflow_model_analysis.run_model_analysis 或 tensorflow_model_analysis.ExtractEvaluateAndWriteResult API 进行评估。",
+    "expected_chunk": "To use the Fairness Indicators with your own data and evaluations:  \n1.  Train a new model and evaluate using\n`tensorflow_model_analysis.run_model_analysis` or\n`tensorflow_model_analysis.ExtractEvaluateAndWriteResult` API in",
+    "source": "llm_generated"
+  },
+  {
+    "question": "创建存储桶接收器时，必须指定的参数是什么？默认会生成什么样的文件？",
+    "answer": "唯一必须指定的参数是存储桶的基本路径。默认情况下，接收器会生成按时间拆分的滚动文件；还可以通过指定自定义存储区、写入器和批处理大小来进一步配置接收器。",
+    "expected_chunk": "可以配置存储桶的行为以及编写，但是稍后我们将进行介绍。这是您可以创建存储区接收器的方式，默认情况下，该存储区接收到按时间拆分的滚动文件：  \nThe only required parameter is the base path where the buckets will be stored. The sink can be further configured by specifying a custom bucketer, writer and batch size.\n唯一需要的参数是存储桶的基本路径。可以通过指定自定义存储区，写入器和批处理大小来进一步配置接收器。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "为什么说维护一个开源项目比建立一个小工具要难得多？",
+    "answer": "因为开源项目维护者不仅要写代码，还需要写项目文档、检查 Pull Request、查看 Issue、增加新功能、在 Stack Overflow 等平台回答关于项目的问题、在 QQ/微信等用户群里和用户讨论并回答问题，并且要一年到头无偿地做这些复杂繁琐的工作。",
+    "expected_chunk": "> “蛤？这项目对我来说也太简单了吧。”\n>\n> “我一周之内就能做一个更好的版本出来。”  \n确实，很多人都可以在黑客马拉松（hackathon）中建一个小工具，但是维护一个项目比建立一个项目要困难得多。开源项目维护者不仅仅需要写代码，更多时候还需要：  \n- 写项目文档；\n- 检查 Pull Request；\n- 看看大家提的 Issue；\n- 为项目增加新功能；\n- 在 Stack Overflow 等平台回答关于本项目的问题；\n- 在 QQ、微信等用户群里和用户讨论，回答问题。  \n一个开源项目维护者必须一年到头无偿地做这么多复杂繁琐的工作。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个页面提供了哪些查看和运行方式？",
+    "answer": "可以在 TensorFlow.org 上查看、在 Google Colab 中运行、在 GitHub 上查看源代码，以及下载笔记本。",
+    "expected_chunk": "TensorFlow.org에서 보기\nGoogle Colab에서 실행\nGitHub에서 소스 보기\n노트북 다운로드",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个算法为什么空间复杂度是 O(N*C) 呀？",
+    "answer": "因为记忆表里存储了所有子问题的结果，最多只会有 N*C 个子问题。",
+    "expected_chunk": "O(N*C)：记忆表里存储了所有子问题的结果，最多只会有 N∗C 个子问题。",
+    "source": "llm_generated"
+  },
+  {
+    "question": "如果 root 是 [\"ropetree\"]，k 是 8，输出结果是什么？",
+    "answer": "e",
+    "expected_chunk": "Example 3:  \nInput: root = [&quot;ropetree&quot;], k = 8\nOutput: &quot;e&quot;\nExplanation: In the picture below, we put an integer on internal nodes that represents node.len, and a string on leaf nodes that represents node.val.",
+    "source": "llm_generated"
+  },
+  {
+    "question": "掘金翻译的知乎专栏地址是什么？",
+    "answer": "https://zhuanlan.zhihu.com/juejinfanyi",
+    "expected_chunk": ".com/juejinfanyi)、[知乎专栏](https://zhuanlan.zhihu.com/juejinfanyi)",
+    "source": "llm_generated"
+  },
+  {
+    "question": "这个 dfs 函数里，如果节点是 nil 或 null，会返回什么？",
+    "answer": "返回 0。",
+    "expected_chunk": "dfs = func(root *TreeNode, x int) int {\nif root == nil {\nreturn 0\n}\nx = x {\nif (node === null) {\nreturn 0;\n}",
+    "source": "llm_generated"
+  },
+  {
+    "question": "我想开发一个能与Ropsten测试网上智能合约交互的前端应用，应该怎么创建客户端应用的骨架？",
+    "answer": "可以使用vue-cli生成一个VueJS应用，并通过web3与合约通信；交互时需要合约地址和ABI。步骤：打开终端，将目录更改为想要创建应用的地方，然后输入创建项目的命令并回车完成向导。",
+    "expected_chunk": "我们将使用 remix 编写和部署智能合约，并通过 metamask 插件部署到 Ropsten 测试网络。在前端应用程序中，需要与合约交互的是合同地址和 _ABI_ （ _ABI_ 定义了如何在机器代码中访问数据结构或计算程序）。  \n我们的前端将是一个 vue-cli 生成的 vueJS 应用程序。我们也将使用 _web3_ 来与合约通信。遵循以下简单步骤，为客户端应用程序创建 backbone ：  \n1. 打开一个终端，并将目录更改为您想要创建应用程序的地方。\n2. 在终端窗口输入以下命令来创建我们的项目，并输入“回车”来完成向导：",
+    "source": "llm_generated"
+  }
+]

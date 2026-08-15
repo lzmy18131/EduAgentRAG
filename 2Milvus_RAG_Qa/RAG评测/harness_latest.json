@@ -1,0 +1,119 @@
+{
+  "num_queries": 20,
+  "hits": 17,
+  "hit_rate": 0.85,
+  "mrr": 0.6308333333333334,
+  "per_query": [
+    {
+      "question": "Golang中的&^运算符是什么意思？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "Object.defineProperty 方法是什么？它的 enumerable 特性有什么作用？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "这篇文档是谁翻译和校对的？",
+      "hit": false,
+      "rank": null
+    },
+    {
+      "question": "为什么日语学习者知道一个单词的发音却不会写汉字的情况很常见？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "딥드림이 뭐야?",
+      "hit": true,
+      "rank": 5
+    },
+    {
+      "question": "Como posso distribuir o treinamento no TensorFlow?",
+      "hit": true,
+      "rank": 4
+    },
+    {
+      "question": "有没有简单的方法判断我的界面是否需要使用 FAB？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "这个 Colab 笔记本在最新版的 TensorFlow Federated 上能正常运行吗？",
+      "hit": false,
+      "rank": null
+    },
+    {
+      "question": "深度学习最令人惊讶的地方是什么？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "网页加载自定义字体时，如果字体文件加载失败，有没有办法让文字还能正常阅读？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "这个知识片段讲了什么内容？",
+      "hit": true,
+      "rank": 2
+    },
+    {
+      "question": "eladmin 这个后台管理系统有哪些主要功能？",
+      "hit": true,
+      "rank": 2
+    },
+    {
+      "question": "在表达式解析问题中，遍历表达式时遇到 t、f、!、&、| 这些字符应该怎么处理？",
+      "hit": true,
+      "rank": 3
+    },
+    {
+      "question": "掘金翻译的知乎专栏地址是什么？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "掘金翻译计划涵盖哪些领域？",
+      "hit": true,
+      "rank": 3
+    },
+    {
+      "question": "connect 的第一个函数和第二个函数分别是干什么的？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "触屏设备上点击总有300毫秒延迟，怎么解决？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "功能说明文字太多，用户不看怎么办？",
+      "hit": true,
+      "rank": 1
+    },
+    {
+      "question": "LeetCode 第 2437 题是什么题？难度如何？",
+      "hit": false,
+      "rank": null
+    },
+    {
+      "question": "AverageWordVecModelSpecのwordvec_dimを大きくして、モデルを再トレーニングするにはどうすればいいですか？",
+      "hit": true,
+      "rank": 2
+    }
+  ],
+  "hit_rate_ci95": [
+    0.6396,
+    0.9476
+  ],
+  "mrr_ci95": [
+    0.4592,
+    0.8017
+  ],
+  "mode": "hit_rate",
+  "top_k": 5,
+  "timestamp": "2026-08-15 08:54:35"
+}

@@ -1,0 +1,2791 @@
+{
+  "num_queries": 453,
+  "confusion_matrix": {
+    "TP": 281,
+    "FN": 26,
+    "FP": 117,
+    "TN": 29
+  },
+  "accuracy": 0.6843,
+  "accuracy_ci95": [
+    0.6401,
+    0.7254
+  ],
+  "fn_rate": 0.0574,
+  "fp_rate": 0.2583,
+  "gate_pass": {
+    "hits": 398,
+    "n": 453,
+    "rate": 0.8786,
+    "ci95": [
+      0.8453,
+      0.9055
+    ]
+  },
+  "gate_pass_and_miss": {
+    "hits": 117,
+    "n": 398,
+    "rate": 0.294,
+    "ci95": [
+      0.2514,
+      0.3405
+    ]
+  },
+  "gate_fail": {
+    "hits": 31,
+    "n": 453,
+    "rate": 0.0684,
+    "ci95": [
+      0.0486,
+      0.0955
+    ]
+  },
+  "gate_fail_but_hit": {
+    "hits": 16,
+    "n": 31,
+    "rate": 0.5161,
+    "ci95": [
+      0.3484,
+      0.6803
+    ]
+  },
+  "chaos_zone": {
+    "hits": 24,
+    "n": 453,
+    "rate": 0.053,
+    "ci95": [
+      0.0359,
+      0.0776
+    ]
+  },
+  "chaos_llm_accuracy": {
+    "hits": 14,
+    "n": 24,
+    "rate": 0.5833,
+    "ci95": [
+      0.3883,
+      0.7553
+    ]
+  },
+  "notes": "真值=期望 chunk 是否命中向量路召回;门控分数=向量路重排分 top1,JD 槽位不参与;混沌区仲裁由本地 Qwen2.5-0.5B 执行(云端回退)。",
+  "rows": [
+    {
+      "q": "Golang中的&^运算符是什么意思？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Object.defineProperty 方法是什么？它的 enumerabl",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这篇文档是谁翻译和校对的？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "为什么日语学习者知道一个单词的发音却不会写汉字的情况很常见？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "딥드림이 뭐야?",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Como posso distribuir o treinamento no T",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "有没有简单的方法判断我的界面是否需要使用 FAB？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个 Colab 笔记本在最新版的 TensorFlow Federated 上",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "深度学习最令人惊讶的地方是什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "网页加载自定义字体时，如果字体文件加载失败，有没有办法让文字还能正常阅读？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个知识片段讲了什么内容？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "eladmin 这个后台管理系统有哪些主要功能？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在表达式解析问题中，遍历表达式时遇到 t、f、!、&、| 这些字符应该怎么处理？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "掘金翻译的知乎专栏地址是什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "掘金翻译计划涵盖哪些领域？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "connect 的第一个函数和第二个函数分别是干什么的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "触屏设备上点击总有300毫秒延迟，怎么解决？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "功能说明文字太多，用户不看怎么办？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 第 2437 题是什么题？难度如何？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "AverageWordVecModelSpecのwordvec_dimを大きくし",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是差分隐私？它有什么作用？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如何将增量FoldFunction与ProcessWindowFunction组",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "你们网站为什么选择使用SVG图片？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "有没有可以快速上手 React Grid 的教程？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个QCNN模型的层是怎么定义的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "选择排序和冒泡排序在处理相等元素的顺序上有什么不同？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么这里要把状态分成“上一轮跳了1级”和“上一轮跳了2级”？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "在面向协议的方法中，想水平翻转绘制结果该怎么处理？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这道题里一次操作具体是怎么定义的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "descriptions = [[20,15,1],[20,17,0],[50,",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "怎么检查我的环境是否已经正确安装好了？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "InceptionV3做DeepDream时应该关注哪些层？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么这个例子中输出是1？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 第 826 题 Most Profit Assigning W",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么把 unsafe.Pointer 转成 uintptr 保存地址后再使用会",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这道题怎么统计满足条件的小时和分钟数量？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "请问这个取余（模数）函数返回值的正负号是怎么规定的？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "LeetCode 1022 这道题难度怎么样？涉及哪些算法知识点，是哪场周赛的题",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Em uma determinada rodada, os coeficient",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定二叉搜索树 [6,2,8,0,4,7,9,null,null,3,5]，节点",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "3680.Generate Schedule 的题解文档在哪里可以看到？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "PersistDB 的公共 API 提供了哪些内容？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "这段DTM Saga代码中，TransOut子事务的正向操作和补偿操作分别是什么",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "参与这些项目能有什么收获？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "动量方法在优化中为什么能起作用？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果缓存和网络请求都失败了，应该怎么处理？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是回归测试？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "代码里 global_batch_size 为什么要用 per_worker_b",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在文件读取并发送到 TCP 的场景里，mmap 的拷贝次数是固定的吗？零拷贝主要",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Sprout网站首页的动画图像最初是用什么格式展示的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlow TFXのモデル分析APIドキュメントはどこで見られますか？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "神经风格迁移需要哪些输入？生成的图像有什么特点？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "它有哪些实用的功能？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "如何计算一个数的双曲正弦值？返回类型是什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "掘金翻译计划涉及哪些领域？想查看更多优质译文可以关注哪些渠道？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Function Calling 和 MCP 有什么区别和联系？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个字符层次生成的过程是怎样的？",
+      "hit": false,
+      "verdict": "pass",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "如何从验证数据集中取16张图片，并对它们进行压缩和解压？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如何运行 demo.py 将摘要结果写入日志目录，并启动 TensorBoard",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlowの演算で、TensorFlow Liteに変換する際にグラフ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个知识片段主要讲了什么内容？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "这个 dfs 函数里，如果节点是 nil 或 null，会返回什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个数据集在 TFDS 中有哪些数据划分？分别包含多少样本？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个例子中会用 Debugger 打开什么样的应用程序？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Shardedディストリビューションで、各デバイスのsampleは異なるのにlo",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段代码的版权归谁所有？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "Google 去年三月对搜索排名算法做了什么调整？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定一个字符串数组 words，怎么判断它是否满足每个位置 words[i][j",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如何用前面定义好的 generator 对象创建一个 tf.data.Datas",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "复杂的数据库要怎么迁移到 Room？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "BucketingSink 怎么指定自定义的 writer？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在免费试用期间创建 TensorFlow Enterprise 2.7 笔记本时",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Quais GPUs NVIDIA têm maior vantagem de ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个压缩字符串迭代器的初始化和 next、hasNext 操作的时间复杂度分别是",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TLS错误开端和会话恢复分别是怎样减少握手往返的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "创建存储桶接收器时，必须指定的参数是什么？默认会生成什么样的文件？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "IBM是如何在公司内部推行设计文化的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "레이어 그래프에 레이어를 몇 개 더 추가한 뒤에는 무엇을 할 수 있나요?",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "TFDV 内部用什么框架来处理大规模数据集的统计计算？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在Soft Q-learning中，策略π(s_t,a_t)和Q_soft、V_",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "第一列为2且第二列为5的那一行，第三列的数字是多少？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "Java 接口里的 static 方法能被子类重写吗？接口里的 private ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Si estoy entrenando un modelo de lenguaj",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "No meu aplicativo Android, o que preciso",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如何让多个浏览器在文件改动时自动刷新并同步我的操作？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "quantization_bits 设置为多少比较保险？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果我只想复用之前网络的一部分，比如把前两层用到一个不同结构的新网络里，应该怎么",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlow Lite Model Makerライブラリは何をしてくれま",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定一个正整数 k，请问如何求能被 k 整除且只由数字 1 组成的最小正整数的长",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlow Lite库可以用CMake构建吗？在哪些平台上测试过？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "onSaveInstanceState() 方法适合用来保存什么样的数据？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个知识片段里有什么内容？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "这种看起来像goto语句的操作，一般程序员会用到吗？主要用在什么场景？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么 U 和 W 要分片，而 V 却要在设备之间同步呢？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "我在哪里可以找到预训练的MoViNet模型？有适合TFLite的量化版本吗？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个subsetsWithDup方法是用来解决什么问题的？",
+      "hit": true,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "在神经网络中显式建模几何先验和约束能带来什么好处？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "DDPG是怎么解决DQN不能用于连续控制问题的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "你们的网站在性能测试中表现怎么样？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "xtreme_pos数据集的示例在哪里可以查看？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段代码执行什么操作？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 第 3360 题 Stone Removal Game 的难度",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Prettier 怎么针对特定文件设置不同的格式化配置？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个知识库都包含哪些Java相关的专题？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "怎么判断一个前序遍历序列是不是合法的二叉树序列化？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "文本分类模型怎么创建和训练？默认的 epoch 和 batch size 是在哪",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "怎么创建新集群？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段代码里 mx 初始值是多少？哈希表 vis 的键和值分别存的是什么？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "这段求最大子数组的代码里，crossMaxSub 函数是怎么计算跨越中间位置的最",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TF_CONFIG 变量怎么在本地配置两个 worker？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "姿态预测模型有哪些？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么 source maps 不能和 ESLint loader 一起使用？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果输入的矩阵是 [[0,0],[0,0]]，里面全是 0，那么最大的全 1 子",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个接收器写入的存储桶文件中，date-time、parallel-task 和",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在哪里可以查看梯度实现的示例？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段 Go 代码主要是在做什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在2x2管理的收敛表现中，经过t步后最初的值会怎样变化？收敛速度由什么决定？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "使用分片数据集跑 MCMC 时，各设备上计算的对数密度要注意什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 1660 Correct a Binary Tree 这道题难",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么说维护一个开源项目比建立一个小工具要难得多？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Por que devo dobrar o tamanho do lote ao",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "データサイエンスや機械学習プロジェクトで最初に行うべきことは何ですか？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段代码里定义的 HashMap d 都包含哪些数字和英文单词的对应关系？",
+      "hit": false,
+      "verdict": "pass",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "LeetCode 2725 Interval Cancellation 这道题难",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "optimize-js 的基准测试结果能反映真实使用场景吗？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "你们为什么选择自己架构 de Voorhoede 站点？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如何运行TensorBoard并查看新的评估运行结果？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是二部图？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "滑动窗口分配器的offset参数有什么作用？可以举个例子吗？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "不同风险等级的操作分别有哪些安全管控措施？",
+      "hit": true,
+      "verdict": "pass",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "网页上持续的动画会对哪些人造成不好的影响？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个页面提供了哪些查看和运行方式？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "Linux系统里怎么快速安装Docker？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个解法的时间复杂度和空间复杂度分别是多少？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个表格对比了哪几种输出模式？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "モデルを変更したい場合、どの手順を踏めばいいですか？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Kubeflow Pipelines 默认配置不满足我的工作负载需求时，怎么自定",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段分治代码中调用的 crossMaxSub 方法是用来计算什么的？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "最近对 UADataValues.getHighEntropyValues() ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Keras Model.fit 支持哪些 TensorFlow 分布式策略？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Evaluatorは何をするものですか？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "《Blazingly fast parsing, part 2: lazy pa",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么软件中需要异步和并发？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在 TensorFlow 中训练模型时，怎样做可以提高 GPU 的使用效率？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这道题对输入有什么限制？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "怎么把数字或字符串转成十六进制？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个算法为什么空间复杂度是 O(N*C) 呀？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "GIF动图太大会影响页面性能，有什么更好的替代方案吗？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "GIF 파일을 tf.Tensor로 읽는 방법과 비디오의 형상이 어떻게 되",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "首次有效绘制这个性能指标是高好还是低好？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Java 9 为什么要把 String 的底层实现从 char[] 改成 byt",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "用数字1、3、5、7可以组成多少个不超过100的正整数？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "トレーニングジョブとモデルはそれぞれどこで確認できますか？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "コンパイル済みのrunをキャッシュして、オーバーヘッドなしで再度実行したときの速",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个联邦学习模拟中，每轮会使用几个客户端，每个客户端用几个mini-batch？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个项目里模型相关的代码文件有哪些？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Como posso treinar o modelo novamente do",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "这个项目做了哪些开发相关的配置？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "接下来我们要在验证数据集上计算什么指标？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "DNA序列里的字母都有哪些？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "请问输入 root = [1,null,3,2,4,null,5,6] 的 N ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "二分图在实际中有哪些常见的应用例子？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "到达第 n 级台阶的总方法数用这个 dp 递推式最后怎么求？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在挑选要展示的项目时，需要注意什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "怎么查看哪些 GPU 内核在使用 Tensor Core？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个解法在二叉搜索树上的时间复杂度和空间复杂度分别是多少？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Como fazer aprendizado por transferência",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么工具参数的格式校验通过了，还需要再做权限校验？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "V8 中快速元素和字典元素有什么区别？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Apache HTTP 服务器是怎么处理多个并发客户端的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么我运行多个GPU时性能反而变差了？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "怎么才能生成一个能在 TensorFlow Lite 上用的 TensorFlo",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定字符串 s = \"bbbab\"，它的最长回文子序列长度是多少？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "动态规划和分治法的主要区别是什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定区间 [l, r]，怎么求二进制表示里没有连续 1 的数字个数？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么中间件里会有那么多箭头函数？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "O que o método `call` está configurado p",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Web Bundles 是什么？它主要解决了什么问题？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Qual é a maneira mais simples de criar u",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "示例4中，products 是 ['havana']，searchWord 是 ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果两个多项式相加的结果是 0，应该返回什么？",
+      "hit": false,
+      "verdict": "pass",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "JavaScript 里的 Object.seal 方法是用来做什么的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Chrome 会支持 meta name=\"theme-color\" 的 med",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "斯坦福大学开设的这门课有什么先修要求？主要用哪些编程语言，难度和课时是多少？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在MNIST上进行贝叶斯逻辑回归时，如果需要对数据分片，应该分片什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "能解释一下 ContextType 和 Context 的区别，以及 Attri",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这次更新中 Angular 和 Vue 有什么变化吗？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 1203 题的英文版在哪里可以查看？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "按照字母顺序排序的产品列表里，输入 m 和 mo 时会显示哪些产品？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定一个整数数组，怎么统计其中位数为偶数的数字个数？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "二叉树的边界这道题的英文版在哪里可以查看？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在Python里怎么导入PIL的Image模块？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "IBM设计训练营主要强调和培养了哪些能力？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TFF的聚合计算示例中，value不再乘以2.0，而是改成了乘以什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个项目的内容覆盖了哪些领域？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Pusherは何をするものですか？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么要取 x 和 count[i] 的最小值？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个判断 value1 是否在 value2 和 value3 之间的函数，什么",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "掘金翻译计划涵盖了哪些领域的译文？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在使用 React Redux 时，为什么要用 Provider 和 conne",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果 nums1 = [1,2]，nums2 = [3,4]，它们所有配对按位异",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "链表插入排序这题的要求和示例是什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlow Agents 提供了哪些 bandit 相关的教程？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "bert_qa 和 mobilebert_qa_squad 这两个模型有什么区别",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段Java代码中fib(n)方法是如何利用矩阵计算斐波那契数的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这题对 queries 和 k 有什么限制条件？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "开发App上架应用商店时，有哪些需要注意的地方？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这道题里输入 word = \"aeiaaioaaaaeiiiiouuuooaau",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定一个字符串 s 和一个在 s 中出现的字符 c，如何计算每个位置到 c 的最",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "字符串 s = \"bab\", t = \"aba\"，要让 t 变成 s 的字母异位",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在 TensorFlow 1 中怎么使用 ParameterServerStra",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这篇文章得到了哪些人的审阅和反馈？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在三值逻辑里，TRUE OR UNKNOWN 和 TRUE AND UNKNOW",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Handright 这个 Python 库是干什么的？",
+      "hit": true,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "这门课用什么教材？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "オンデバイスMLアプリでモデルサイズを小さくして実行速度を上げるには、どうすれば",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在随机梯度下降中，如果想减少方差，甚至超过小批量梯度平均的效果，可以用什么方法替",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "你之前在卫报和纽约时报主要做什么工作？开发过哪些工具？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在 Go 里使用 unsafe.Pointer 和 uintptr 转换时，应该",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlow Lite 怎么开始使用？在哪里可以查看支持的内置运算符？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "demo.py 这个工具有什么作用？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Servo在这个阶段先处理了什么，接下来又处理了什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "IPアドレスの割り当てでブロックされてしまった場合、必要なIP数を減らすにはどう",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 974 这道题难度如何？主要涉及哪些知识点？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 2699 这道题难度怎么样？是哪场比赛的题目，主要考察什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在构建转换图时，如果同一个原始字符串到目标字符串有多个成本，应该怎么更新？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "React在什么情况下会进入这个大的while循环函数？完成当前fiber的工作",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "¿Cómo se construye el búfer de repetició",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在单词列表 ['a', 'banana', 'app', 'appl', 'ap",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如何查找燃油效率有所提升的司机？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个项目现在还在更新吗？中文文档在哪里可以找到？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "服务器推送在什么连接上更有效？为什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个游戏每一轮操作是怎么进行的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "HelloGitHub 是做什么的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlow Liteのタスクライブラリで、BERTによる質問応答をデプ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Flink 的 FoldFunction 是做什么的？使用时有什么限制？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "现在到达第三级台阶有几种允许的走法？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "UTF-8为什么能兼容ASCII码？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么TensorFlow的GradientTape在访问可训练变量后默认记录所",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在model-free强化学习的policy iteration中，策略更新过程",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "我想用TensorFlow Hub做文本相关任务，有什么现成的指南和工具可以参考",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "文本嵌入向量模块导出程序有什么作用？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Nonlocal Net 的提出对图像领域有什么影响？Facebook 开源的视",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果我是通过 intent 打开 Activity，并且把搜索参数放在 inte",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlow Liteでネイティブにサポートされている演算のみを含むモデ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "我在哪里可以找到芝加哥出租车行程的数据集？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Puppeteer 是做什么用的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个订阅用户数据表里都有哪些字段？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "示例应用里初始化分类器的代码在哪个文件的哪个函数里？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "次の図は何を示していますか？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "在实现新的损失函数时，是应该传入 softmax 概率还是直接传入 logits",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 3633 这道题难度怎么样？涉及哪些算法标签？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在多GPU训练时，怎么检查是否存在GPU之间按顺序执行的情况？如果发现了需要做什",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是超平面？它在不同维度下分别是什么样的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是控制流？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "散列表存储的是什么？它为什么能快速找到值？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在 TensorFlow 里，模型权重是什么时候开始构建的？怎么查看可训练参数的",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Dataset 객체로 모델을 훈련할 때 데이터는 어떤 형식으로 반환되나요",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "预解析器在解析函数时会做什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Lighthouse性能分数主要包含哪几个指标？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果输入 nums = [1,2,3,4,4,3,2,1]，n = 4，输出结果",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是 late firings？它会对数据流结果产生什么影响？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这篇译文的原文作者是谁？译文出自哪里？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "concat_ws 函数和 concat 函数有什么区别？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定一个整数数组 nums 和一个初始值 original，如果 origina",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 第3596题 Minimum Cost Path with A",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是JSON Mode？它有什么限制？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "默认情况下会生成什么类型的二进制文件？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这些攻击手段在哪里有讨论，并且有和 scrypt 比较吗？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段代码里用 find(m * n) 来判断 O 要不要改成 X，这个 m*n ",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "¿Qué tan rápido es el modelo en el dispo",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如何从句子列表生成带掩码的训练数据？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 1977 这道题难度怎么样，主要考察哪些知识点？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "AbortSignal.abort() 这个方法是用来做什么的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "¿Qué debe ocurrir durante el bucle de en",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 3262 Find Overlapping Shifts 这道",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么GIF图片在较小尺寸时看不到锯齿？我能用大图缩小的方式来避免锯齿吗？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlow官方ResNet模型里建议怎么转换变量类型？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "FrameGenerator 类的作用是什么？它的 __call__ 方法会返回",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "最少要修改几个数，才能让一个数组里的数字变成连续的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "请问 Scipy 有特殊矩阵的实现吗？在哪里可以查看？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是 padding（填充）？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个项目的内容覆盖了哪些技术领域？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "请问在TFF里，next_fn拿到的state是在哪里的？怎么把它传给客户端？怎",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "我该在哪里查看Kubeflow管道的输出结果？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在处理MRI扫描这类体数据时，应该使用哪种CNN模型？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "有没有适合想成为专业程序员的人看的资源合集？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在Keras模型里怎么引入输入掩码？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "AlexNet这个名字是怎么来的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在 React 里，key 是用来干什么的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "O que os Tensor Cores das GPUs NVIDIA mo",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "想系统学习 JVM，应该按什么顺序看这些资料？每部分重点是什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "训练过程中回报的变化趋势是怎样的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果我想让代码表现得像没有使用分布式策略一样，应该使用哪种策略？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "响应式图片应该怎么实现比较好？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Maurice Wilkes 在1949年爬楼梯时突然意识到了什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode第1268题搜索建议系统的英文版说明在哪里可以看？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "当 n 等于 6 时，最少需要多少次操作？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Kubeflow Pipelinesをデプロイするとき、Kubernetes E",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "运行管道时产生的 artifacts 需要存储在哪里？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果字符串来自开放集合，在安全求和时编码上会遇到什么问题？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "使用 --setup_file、--extra_package 或 --requ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TensorFlow Lite 文本分类示例中的 TextClassificat",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是操作（Ops）？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Kubeflow Pipelinesでメモリ使用量を設定するにはどうすればいいで",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "审计日志到底该记什么，不该记什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "rtype和rfx现在成熟吗？短期内会有什么变化？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "FASTQ文件格式一般存储哪些信息？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "下一节会如何使用这个方法？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "构建线段树时，如果某个元素的值不能被 p 整除，应该存储什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "¿Qué hace TensorFlow.js cuando se llama ",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "preload 和服务器推送在性能上有什么区别？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么自动化测试比手工测试更精确？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "2021年3月15号都有哪些记录？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "这里写了什么？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "可微可塑性在图像重建任务中表现怎么样？跟传统网络比有什么不同？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "视频中提到的 begin 和 complete 分别代表什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这篇文章的译者和校对者分别是谁？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "ReactPathMenu 可以自定义子按钮的数量吗？怎么设置？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "掘金翻译计划是做什么的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "观察值是字典形式时，怎么自定义智能体使用的网络？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个教程用的是芝加哥出租车数据集，我想换成自己的数据，可以放在哪里？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "力扣 662 题里二叉树的宽度到底是怎么算的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Como posso treinar e implementar modelos",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Quais são os requisitos de Android neces",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在选择编程范式时，除了性能还需要考虑哪些因素？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "分数排名应该怎么计算？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "深度学习现在到底成功在哪些方面？它离人类水平的AI还有多远？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "모델의 훈련 진행 상황을 어떻게 시각화하나요?",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在哪里可以查看 Flutter 中 StatefulWidget、State 和",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "发现译文有错误想修改的话，应该去哪里提交 PR？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Python Basics 这门课和哪些课程一起出现过？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "LeetCode 1067 范围内的数字计数的中文文档在哪里？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "vhr这个项目是做什么的？适合什么人练手？",
+      "hit": true,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "掘金翻译的知乎专栏地址是什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个输入里的 n 和 edges 分别代表什么意思？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么把宿主机的 /opt/apps 目录挂载到容器的 webapps 目录后，",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "我想开发一个能与Ropsten测试网上智能合约交互的前端应用，应该怎么创建客户端",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "3676 Count Bowl Subarrays 这道题的英文版在哪里可以查看",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "请问右上角那个网格里所有格子的R值加起来是多少？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在 Remix 里部署合约时，环境和构造器参数应该怎么设置？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "tensorflow_hub 库可以和哪些 TensorFlow 版本一起安装？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "网站速度现在对 SEO 排名影响大吗？移动端流量大概占多少？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "有什么可以替代交互式地图的方案吗？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "刘利刚老师2020年春季的计算机图形学课程网站和教学录像在哪里可以找到？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LeetCode 3444 这道题难不难？是哪场周赛的题目？考什么知识点？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果 source 是四个 'a'，target 是四个 'b'，只能按 a->",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "作者第一次接触到 async-await 模式是在什么场景下？他有什么感受？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段版权声明里的版权方是谁？是哪一年的？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "我是Scoop新手，想学习使用，看什么资料比较好？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "テキスト分類モデルのトレーニングで最初に行うことは何ですか？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "EstimationProcess 的 clipping_norm 参数应该怎么",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "知识片段里提到的标签是什么？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "这个项目的内容覆盖哪些技术领域？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段代码里的 fib 函数是怎么计算斐波那契数的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Se eu definir esse valor bem pequeno, co",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这段递归背包代码中，第13和14行是如何处理当前物品的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个 &(subExpr1, subExpr2, ..., subExprn) ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个符号是什么？",
+      "hit": true,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "如何从上游仓库拉取最新代码并推送到我的 GitHub 账户？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "请问这道题对数组 nums 的长度 n 和元素 nums[i] 有什么限制？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "XLAのCPUバックエンド間の主な違いは何ですか？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "React 在哪个函数中调用所有剩余的生命周期方法？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "LaTeX 里 aligned 环境是怎么结束的？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "2019年推荐使用哪种密码哈希算法？如果Argon2不可用怎么办？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "你为什么没有选择PBKDF2作为密码哈希函数？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TCP-IP-NetworkNote这个项目是做什么的？",
+      "hit": true,
+      "verdict": "pass",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "FAB 按钮应该用来放什么功能？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "从专业角度看，A/B测试是什么？它和统计假设检验、双样本假设检验有什么关系？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定一个整数数组 nums 和一个整数 p，什么样的子序列可以被称为 good？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在 RFC 中需要列出哪些人的 GitHub ID？",
+      "hit": true,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "为什么RMSProp在训练后期不会像AdaGrad那样变量更新得很慢？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "3499题“Maximize Active Section with Trade",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "启用fp16后为什么有时候矩阵乘法没有明显的加速？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "フェデレーテッドラーニングで、より現実的なトレーニングループを実装するにはどうす",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "输入数组 nums = [2,3,1,0] 时，有效拆分有多少种？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TFF 中 next 函数执行之间传递的状态和报告出来的测量值可能为空吗？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如何统计顶尖学生连续完成的课程对出现次数？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "请问在求最少删除多少位数字使剩余数字能被25整除的递归中，dfs(i + 1, ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "我想给网站做个主屏幕图标，但不会设计专业 logo，有什么简单的制作方法吗？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "能解释一下 bucket 和 part files 是什么关系吗？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "为什么说 PyTorch 好用？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个教程可以在哪里查看和运行代码？",
+      "hit": true,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "掘金翻译计划涵盖哪些领域？想查看更多优质译文可以关注什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "优化问题里的条件数是什么？如果条件数很大说明什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这篇内容的译者和校对者分别是谁？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "这个知识片段讲了什么？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "我怎样才能在自己的数据上使用 Fairness Indicators？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如何使用 SecAgg 计算加权平均值？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果 root 是 [\"ropetree\"]，k 是 8，输出结果是什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在这个 n*n 的网格里，-1 代表什么？我可以怎么移动？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这门课的课程视频在哪里可以看？教材是哪本？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "iOS 11 的 TableView 自动估算行高导致滚动条乱跳、丢帧，怎么回到",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "背包问题有哪些解法？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "PicGo 是什么？它支持哪些图床和系统？",
+      "hit": true,
+      "verdict": "pass",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "力扣第3858题Minimum Bitwise OR From Grid难度怎么",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "pipeline.pyでコンポーネントをパイプラインに追加するにはどうすればいい",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "skip-gram模型训练时常用哪些优化方法？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "点击图标查看含义虽然花的时间可能很短，但会带来什么问题？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "这门课主要会讲哪些内容？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个任务库支持执行什么类型的机器学习模型？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在TensorFlow项目里添加新功能时，单元测试应该怎么处理？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个数据集有哪些划分？每个划分分别有多少样本？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "为什么说图片是改善网页性能的重点之一？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个知识片段讲了什么内容？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "Como os usuários e os itens são descrito",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "在TFF中，如果需要对一个结构化张量乘以常数，应该怎么处理？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "怎么升级 pip 并安装 TensorFlow 2.11.0？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "SQL里 NOT IN 遇到 NULL 值时会怎么返回结果？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "如果输入的 events 是 [[1,5,3],[1,5,1],[6,6,5]]",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这篇译文是谁翻译的？校对者有哪些？它出自哪里？",
+      "hit": true,
+      "verdict": "pass",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "String 类的 equals 方法和 Object 类的 equals 方法",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "React 组件更新阶段会涉及哪些生命周期方法？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这道题对 d、low 和 high 的约束是什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在使用 TypeScript 时，什么情况下需要在 tsconfig.json ",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Angular 和 React 中的变更检测机制是干什么的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在这个EAKF推断框架中，状态和参数是如何打包用于迭代滤波的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "RPA-Python是什么？可以帮我自动打开网页截图吗？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "TFLite 编译时，只用内置 ops 和只用 TF ops 分别需要多长时间？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "为什么系统会给用户1和用户3互相推荐为好友？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个页面提供了哪些操作入口？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "Após restaurar um checkpoint, o que acon",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Android SQLiteDatabase 的 insertWithOnCon",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个示例演示了什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个模型里的 M 和 N 分别代表什么？它们是怎么随时间变化的？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在讲解动量法时构造的函数 f(x)=0.1x1^2+2x2^2 有什么特点？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "我 git push 完了，接下来怎么提交 pull request？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "那篇端到端图像压缩的文章里，图像重建分别被称为什么？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "barco 是什么项目？",
+      "hit": false,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "创建Casino合约时，minBet和houseEdge是怎么设置的？随机数是怎",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定 nums = [1,2,3]，所有严格递增子序列的 GCD 之和是多少？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Ao utilizar a API Functional ou a API Se",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定一个整数数组，怎么判断它能不能通过最多修改一个元素变成非递减？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这道题里 m、n、r、c 的输入范围有什么限制？",
+      "hit": true,
+      "verdict": "不充分",
+      "via": "score_gate_fail"
+    },
+    {
+      "q": "《An Ode to Async-Await》这篇文章的译者是谁？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Como instalo o TensorFlow Compression e ",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "怎么让多个子按钮在动画时一个一个地延迟启动？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "什么是矩阵的奇异值分解？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "在 Numbers 表里，num 为 0、1、2、3 的频率分别是 7、1、3、",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Como posso criar um modelo CNN 3D para c",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "推多米诺骨牌问题中，一开始骨牌是怎么摆放和推动的？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "给定一个整数数组和一个整数 k，怎么判断能不能把数组里的所有元素分成若干个组，每",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "掘金翻译计划的知乎专栏地址是什么？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "CUAD数据集使用的是什么许可证？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Como posso colocar o TensorFlow.js em um",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "有人说 mmap + write 固定是 4 次切换、3 次拷贝，这说法靠谱吗？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这部分会讲什么？数学部分能跳过吗？",
+      "hit": false,
+      "verdict": "fail",
+      "via": "llm_chaos"
+    },
+    {
+      "q": "在 Profiler 的跟踪记录中，高性能模型通常表现出哪些特征？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "V8团队为什么要更新管线？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "计算softmax时为了避免数值溢出有什么技巧？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "这个项目支持哪些功能？",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "Keras混合精度训练时，Softmax运算和损失扩缩策略上有什么性能优化建议？",
+      "hit": true,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    },
+    {
+      "q": "北京 java 8k 岗位有哪些",
+      "hit": false,
+      "verdict": "充分",
+      "via": "score_gate_pass"
+    }
+  ]
+}

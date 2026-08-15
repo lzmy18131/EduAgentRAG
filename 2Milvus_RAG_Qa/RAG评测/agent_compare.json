@@ -1,0 +1,3675 @@
+{
+  "mode": "compare_single_vs_agent",
+  "top_k": 5,
+  "num_queries": 453,
+  "single": {
+    "hits": 307,
+    "hit_rate": 0.6777,
+    "mrr": 0.5551
+  },
+  "agent": {
+    "hits": 304,
+    "hit_rate": 0.6711,
+    "mrr": 0.5449
+  },
+  "transition_matrix": {
+    "both_hit": 304,
+    "single_hit_agent_miss": 3,
+    "single_miss_agent_hit": 0,
+    "both_miss": 146
+  },
+  "mcnemar": {
+    "b": 3,
+    "c": 0,
+    "p_value": 0.25,
+    "note": "McNemar 精确二项检验(配对样本);p<0.05 才宣称显著差异"
+  },
+  "paired_bootstrap_95ci": {
+    "agent_minus_single_hit_rate": [
+      -0.0132,
+      -0.0066,
+      0.0
+    ],
+    "agent_minus_single_mrr": [
+      -0.0186,
+      -0.0102,
+      -0.0025
+    ],
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "rewrite_analysis": {
+    "rewrote_count": 45,
+    "avg_rewrites": 0.1744,
+    "rescue_total": 0,
+    "rescued_with_rewrite": 0,
+    "rescue_rate_given_rewrite": 0.0,
+    "note": "改写救活率=发生改写的 query 中由未命中变为命中的比例;净变化还需看 regression(b)"
+  },
+  "per_query": [
+    {
+      "question": "Golang中的&^运算符是什么意思？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Object.defineProperty 方法是什么？它的 enumerable 特性有什么作用？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这篇文档是谁翻译和校对的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "为什么日语学习者知道一个单词的发音却不会写汉字的情况很常见？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "딥드림이 뭐야?",
+      "single_hit": true,
+      "single_rank": 5,
+      "agent_hit": true,
+      "agent_rank": 5,
+      "rewrites": 0
+    },
+    {
+      "question": "Como posso distribuir o treinamento no TensorFlow?",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "有没有简单的方法判断我的界面是否需要使用 FAB？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个 Colab 笔记本在最新版的 TensorFlow Federated 上能正常运行吗？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "深度学习最令人惊讶的地方是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "网页加载自定义字体时，如果字体文件加载失败，有没有办法让文字还能正常阅读？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个知识片段讲了什么内容？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 2
+    },
+    {
+      "question": "eladmin 这个后台管理系统有哪些主要功能？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "在表达式解析问题中，遍历表达式时遇到 t、f、!、&、| 这些字符应该怎么处理？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "掘金翻译的知乎专栏地址是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "掘金翻译计划涵盖哪些领域？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "connect 的第一个函数和第二个函数分别是干什么的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "触屏设备上点击总有300毫秒延迟，怎么解决？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "功能说明文字太多，用户不看怎么办？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 第 2437 题是什么题？难度如何？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "AverageWordVecModelSpecのwordvec_dimを大きくして、モデルを再トレーニングするにはどうすればいいですか？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是差分隐私？它有什么作用？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "如何将增量FoldFunction与ProcessWindowFunction组合使用？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "你们网站为什么选择使用SVG图片？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "有没有可以快速上手 React Grid 的教程？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "这个QCNN模型的层是怎么定义的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "选择排序和冒泡排序在处理相等元素的顺序上有什么不同？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么这里要把状态分成“上一轮跳了1级”和“上一轮跳了2级”？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在面向协议的方法中，想水平翻转绘制结果该怎么处理？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这道题里一次操作具体是怎么定义的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "descriptions = [[20,15,1],[20,17,0],[50,20,1],[50,80,0],[80,19,1]] 时，构造出来的二叉树输出序列是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "怎么检查我的环境是否已经正确安装好了？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "InceptionV3做DeepDream时应该关注哪些层？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么这个例子中输出是1？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 第 826 题 Most Profit Assigning Work 的难度是什么？有哪些标签？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么把 unsafe.Pointer 转成 uintptr 保存地址后再使用会出错？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这道题怎么统计满足条件的小时和分钟数量？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "请问这个取余（模数）函数返回值的正负号是怎么规定的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "LeetCode 1022 这道题难度怎么样？涉及哪些算法知识点，是哪场周赛的题？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Em uma determinada rodada, os coeficientes de qualquer cliente podem ser iguais a zero?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "给定二叉搜索树 [6,2,8,0,4,7,9,null,null,3,5]，节点2和节点8的最近公共祖先是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "3680.Generate Schedule 的题解文档在哪里可以看到？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "PersistDB 的公共 API 提供了哪些内容？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "这段DTM Saga代码中，TransOut子事务的正向操作和补偿操作分别是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "参与这些项目能有什么收获？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "动量方法在优化中为什么能起作用？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如果缓存和网络请求都失败了，应该怎么处理？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是回归测试？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "代码里 global_batch_size 为什么要用 per_worker_batch_size 乘以 num_workers？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在文件读取并发送到 TCP 的场景里，mmap 的拷贝次数是固定的吗？零拷贝主要减少了什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Sprout网站首页的动画图像最初是用什么格式展示的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlow TFXのモデル分析APIドキュメントはどこで見られますか？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "神经风格迁移需要哪些输入？生成的图像有什么特点？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "它有哪些实用的功能？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "如何计算一个数的双曲正弦值？返回类型是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "掘金翻译计划涉及哪些领域？想查看更多优质译文可以关注哪些渠道？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Function Calling 和 MCP 有什么区别和联系？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个字符层次生成的过程是怎样的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "如何从验证数据集中取16张图片，并对它们进行压缩和解压？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "如何运行 demo.py 将摘要结果写入日志目录，并启动 TensorBoard？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlowの演算で、TensorFlow Liteに変換する際にグラフから除外されるものはありますか？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个知识片段主要讲了什么内容？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 2
+    },
+    {
+      "question": "这个 dfs 函数里，如果节点是 nil 或 null，会返回什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个数据集在 TFDS 中有哪些数据划分？分别包含多少样本？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个例子中会用 Debugger 打开什么样的应用程序？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Shardedディストリビューションで、各デバイスのsampleは異なるのにlog_probが同じ値になるのはなぜですか？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "这段代码的版权归谁所有？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Google 去年三月对搜索排名算法做了什么调整？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "给定一个字符串数组 words，怎么判断它是否满足每个位置 words[i][j] 都等于 words[j][i]？如果下标越界怎么办？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如何用前面定义好的 generator 对象创建一个 tf.data.Dataset？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "复杂的数据库要怎么迁移到 Room？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "BucketingSink 怎么指定自定义的 writer？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "在免费试用期间创建 TensorFlow Enterprise 2.7 笔记本时，怎样设置才能不超出免费额度？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "Quais GPUs NVIDIA têm maior vantagem de desempenho com precisão mista e por quê?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个压缩字符串迭代器的初始化和 next、hasNext 操作的时间复杂度分别是多少？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "TLS错误开端和会话恢复分别是怎样减少握手往返的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "创建存储桶接收器时，必须指定的参数是什么？默认会生成什么样的文件？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "IBM是如何在公司内部推行设计文化的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "레이어 그래프에 레이어를 몇 개 더 추가한 뒤에는 무엇을 할 수 있나요?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 1
+    },
+    {
+      "question": "TFDV 内部用什么框架来处理大规模数据集的统计计算？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在Soft Q-learning中，策略π(s_t,a_t)和Q_soft、V_soft是什么关系？这里的softmax是怎么定义的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "第一列为2且第二列为5的那一行，第三列的数字是多少？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "Java 接口里的 static 方法能被子类重写吗？接口里的 private 方法又是用来干嘛的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Si estoy entrenando un modelo de lenguaje con un vocabulario de 20004, ¿qué valor debería poner en threshold?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "No meu aplicativo Android, o que preciso fazer antes de realizar previsões com o modelo TensorFlow Lite?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如何让多个浏览器在文件改动时自动刷新并同步我的操作？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "quantization_bits 设置为多少比较保险？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如果我只想复用之前网络的一部分，比如把前两层用到一个不同结构的新网络里，应该怎么做？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlow Lite Model Makerライブラリは何をしてくれますか？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "给定一个正整数 k，请问如何求能被 k 整除且只由数字 1 组成的最小正整数的长度？如果不存在这样的数怎么办？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlow Lite库可以用CMake构建吗？在哪些平台上测试过？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "onSaveInstanceState() 方法适合用来保存什么样的数据？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个知识片段里有什么内容？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 2
+    },
+    {
+      "question": "这种看起来像goto语句的操作，一般程序员会用到吗？主要用在什么场景？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么 U 和 W 要分片，而 V 却要在设备之间同步呢？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "我在哪里可以找到预训练的MoViNet模型？有适合TFLite的量化版本吗？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个subsetsWithDup方法是用来解决什么问题的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 1
+    },
+    {
+      "question": "在神经网络中显式建模几何先验和约束能带来什么好处？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "DDPG是怎么解决DQN不能用于连续控制问题的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "你们的网站在性能测试中表现怎么样？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "xtreme_pos数据集的示例在哪里可以查看？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这段代码执行什么操作？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 第 3360 题 Stone Removal Game 的难度是什么？它来自哪场比赛？涉及哪些标签？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "Prettier 怎么针对特定文件设置不同的格式化配置？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "这个知识库都包含哪些Java相关的专题？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "怎么判断一个前序遍历序列是不是合法的二叉树序列化？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "文本分类模型怎么创建和训练？默认的 epoch 和 batch size 是在哪里设置的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "怎么创建新集群？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这段代码里 mx 初始值是多少？哈希表 vis 的键和值分别存的是什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "这段求最大子数组的代码里，crossMaxSub 函数是怎么计算跨越中间位置的最大和的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TF_CONFIG 变量怎么在本地配置两个 worker？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "姿态预测模型有哪些？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么 source maps 不能和 ESLint loader 一起使用？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如果输入的矩阵是 [[0,0],[0,0]]，里面全是 0，那么最大的全 1 子矩阵面积是多少？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个接收器写入的存储桶文件中，date-time、parallel-task 和 count 分别代表什么？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "在哪里可以查看梯度实现的示例？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这段 Go 代码主要是在做什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在2x2管理的收敛表现中，经过t步后最初的值会怎样变化？收敛速度由什么决定？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "使用分片数据集跑 MCMC 时，各设备上计算的对数密度要注意什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 1660 Correct a Binary Tree 这道题难度如何，主要考察哪些知识点？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么说维护一个开源项目比建立一个小工具要难得多？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Por que devo dobrar o tamanho do lote ao usar TPUs na nuvem?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "データサイエンスや機械学習プロジェクトで最初に行うべきことは何ですか？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这段代码里定义的 HashMap d 都包含哪些数字和英文单词的对应关系？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 1
+    },
+    {
+      "question": "LeetCode 2725 Interval Cancellation 这道题难度怎么样？主要涉及什么语言？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "optimize-js 的基准测试结果能反映真实使用场景吗？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "你们为什么选择自己架构 de Voorhoede 站点？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如何运行TensorBoard并查看新的评估运行结果？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是二部图？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "滑动窗口分配器的offset参数有什么作用？可以举个例子吗？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "不同风险等级的操作分别有哪些安全管控措施？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "网页上持续的动画会对哪些人造成不好的影响？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个页面提供了哪些查看和运行方式？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "Linux系统里怎么快速安装Docker？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个解法的时间复杂度和空间复杂度分别是多少？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个表格对比了哪几种输出模式？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 1
+    },
+    {
+      "question": "モデルを変更したい場合、どの手順を踏めばいいですか？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Kubeflow Pipelines 默认配置不满足我的工作负载需求时，怎么自定义资源配置？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "这段分治代码中调用的 crossMaxSub 方法是用来计算什么的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 1
+    },
+    {
+      "question": "最近对 UADataValues.getHighEntropyValues() 和 NavigatorUAData.toJSON() 做了哪些改进？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Keras Model.fit 支持哪些 TensorFlow 分布式策略？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Evaluatorは何をするものですか？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "《Blazingly fast parsing, part 2: lazy parsing》这篇文章的原文地址是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么软件中需要异步和并发？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在 TensorFlow 中训练模型时，怎样做可以提高 GPU 的使用效率？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这道题对输入有什么限制？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "怎么把数字或字符串转成十六进制？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个算法为什么空间复杂度是 O(N*C) 呀？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "GIF动图太大会影响页面性能，有什么更好的替代方案吗？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "GIF 파일을 tf.Tensor로 읽는 방법과 비디오의 형상이 어떻게 되나요?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "首次有效绘制这个性能指标是高好还是低好？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Java 9 为什么要把 String 的底层实现从 char[] 改成 byte[]？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "用数字1、3、5、7可以组成多少个不超过100的正整数？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "トレーニングジョブとモデルはそれぞれどこで確認できますか？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "コンパイル済みのrunをキャッシュして、オーバーヘッドなしで再度実行したときの速度はどれくらいでしたか？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个联邦学习模拟中，每轮会使用几个客户端，每个客户端用几个mini-batch？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "这个项目里模型相关的代码文件有哪些？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Como posso treinar o modelo novamente do zero?",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个项目做了哪些开发相关的配置？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 1
+    },
+    {
+      "question": "接下来我们要在验证数据集上计算什么指标？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "DNA序列里的字母都有哪些？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "请问输入 root = [1,null,3,2,4,null,5,6] 的 N 叉树序列化结果是什么？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "二分图在实际中有哪些常见的应用例子？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "到达第 n 级台阶的总方法数用这个 dp 递推式最后怎么求？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在挑选要展示的项目时，需要注意什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "怎么查看哪些 GPU 内核在使用 Tensor Core？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "这个解法在二叉搜索树上的时间复杂度和空间复杂度分别是多少？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Como fazer aprendizado por transferência para classificação de vídeos com MoViNet?",
+      "single_hit": true,
+      "single_rank": 5,
+      "agent_hit": true,
+      "agent_rank": 5,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么工具参数的格式校验通过了，还需要再做权限校验？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "V8 中快速元素和字典元素有什么区别？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Apache HTTP 服务器是怎么处理多个并发客户端的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么我运行多个GPU时性能反而变差了？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "怎么才能生成一个能在 TensorFlow Lite 上用的 TensorFlow 模型？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "给定字符串 s = \"bbbab\"，它的最长回文子序列长度是多少？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "动态规划和分治法的主要区别是什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "给定区间 [l, r]，怎么求二进制表示里没有连续 1 的数字个数？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么中间件里会有那么多箭头函数？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "O que o método `call` está configurado para calcular?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Web Bundles 是什么？它主要解决了什么问题？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Qual é a maneira mais simples de criar uma MultiWorkerMirroredStrategy?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "示例4中，products 是 ['havana']，searchWord 是 'tatiana' 时，输出是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如果两个多项式相加的结果是 0，应该返回什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 1
+    },
+    {
+      "question": "JavaScript 里的 Object.seal 方法是用来做什么的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Chrome 会支持 meta name=\"theme-color\" 的 media 属性吗？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "斯坦福大学开设的这门课有什么先修要求？主要用哪些编程语言，难度和课时是多少？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在MNIST上进行贝叶斯逻辑回归时，如果需要对数据分片，应该分片什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "能解释一下 ContextType 和 Context 的区别，以及 Attribution 和 Association 分别是什么吗？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "这次更新中 Angular 和 Vue 有什么变化吗？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 1203 题的英文版在哪里可以查看？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "按照字母顺序排序的产品列表里，输入 m 和 mo 时会显示哪些产品？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "给定一个整数数组，怎么统计其中位数为偶数的数字个数？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "二叉树的边界这道题的英文版在哪里可以查看？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在Python里怎么导入PIL的Image模块？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "IBM设计训练营主要强调和培养了哪些能力？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TFF的聚合计算示例中，value不再乘以2.0，而是改成了乘以什么？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "这个项目的内容覆盖了哪些领域？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Pusherは何をするものですか？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么要取 x 和 count[i] 的最小值？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个判断 value1 是否在 value2 和 value3 之间的函数，什么情况下会返回 TRUE？如果 value2 或 value3 为空呢？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "掘金翻译计划涵盖了哪些领域的译文？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在使用 React Redux 时，为什么要用 Provider 和 connect？手动绑定 store 有什么问题？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如果 nums1 = [1,2]，nums2 = [3,4]，它们所有配对按位异或的结果是多少？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "链表插入排序这题的要求和示例是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlow Agents 提供了哪些 bandit 相关的教程？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "bert_qa 和 mobilebert_qa_squad 这两个模型有什么区别？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这段Java代码中fib(n)方法是如何利用矩阵计算斐波那契数的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这题对 queries 和 k 有什么限制条件？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "开发App上架应用商店时，有哪些需要注意的地方？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这道题里输入 word = \"aeiaaioaaaaeiiiiouuuooaauuaeiu\" 时，输出结果是多少？",
+      "single_hit": true,
+      "single_rank": 5,
+      "agent_hit": true,
+      "agent_rank": 5,
+      "rewrites": 0
+    },
+    {
+      "question": "给定一个字符串 s 和一个在 s 中出现的字符 c，如何计算每个位置到 c 的最短距离？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "字符串 s = \"bab\", t = \"aba\"，要让 t 变成 s 的字母异位词，最少需要替换几个字符？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在 TensorFlow 1 中怎么使用 ParameterServerStrategy？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这篇文章得到了哪些人的审阅和反馈？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在三值逻辑里，TRUE OR UNKNOWN 和 TRUE AND UNKNOWN 分别会返回什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Handright 这个 Python 库是干什么的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 2
+    },
+    {
+      "question": "这门课用什么教材？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "オンデバイスMLアプリでモデルサイズを小さくして実行速度を上げるには、どうすればいいですか？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在随机梯度下降中，如果想减少方差，甚至超过小批量梯度平均的效果，可以用什么方法替代梯度计算？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "你之前在卫报和纽约时报主要做什么工作？开发过哪些工具？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在 Go 里使用 unsafe.Pointer 和 uintptr 转换时，应该注意什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlow Lite 怎么开始使用？在哪里可以查看支持的内置运算符？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "demo.py 这个工具有什么作用？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "Servo在这个阶段先处理了什么，接下来又处理了什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "IPアドレスの割り当てでブロックされてしまった場合、必要なIP数を減らすにはどうすればいいですか？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 974 这道题难度如何？主要涉及哪些知识点？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 2699 这道题难度怎么样？是哪场比赛的题目，主要考察什么？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "在构建转换图时，如果同一个原始字符串到目标字符串有多个成本，应该怎么更新？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "React在什么情况下会进入这个大的while循环函数？完成当前fiber的工作后会做什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "¿Cómo se construye el búfer de repetición y de dónde se obtienen las especificaciones de los tensores?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在单词列表 ['a', 'banana', 'app', 'appl', 'ap', 'apply', 'apple'] 中，哪个单词的所有前缀都在列表里，并且是最长且字典序最小的？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "如何查找燃油效率有所提升的司机？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "这个项目现在还在更新吗？中文文档在哪里可以找到？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "服务器推送在什么连接上更有效？为什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个游戏每一轮操作是怎么进行的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "HelloGitHub 是做什么的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlow Liteのタスクライブラリで、BERTによる質問応答をデプロイするために使うものは何ですか？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "Flink 的 FoldFunction 是做什么的？使用时有什么限制？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "现在到达第三级台阶有几种允许的走法？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "UTF-8为什么能兼容ASCII码？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么TensorFlow的GradientTape在访问可训练变量后默认记录所有运算？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在model-free强化学习的policy iteration中，策略更新过程通常分为哪两个阶段？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "我想用TensorFlow Hub做文本相关任务，有什么现成的指南和工具可以参考吗？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "文本嵌入向量模块导出程序有什么作用？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Nonlocal Net 的提出对图像领域有什么影响？Facebook 开源的视频分类项目基于什么框架？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如果我是通过 intent 打开 Activity，并且把搜索参数放在 intent 的 extras 里，配置变更后还需要用 onSaveInstanceState 保存这些参数吗？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlow Liteでネイティブにサポートされている演算のみを含むモデルを変換する場合、追加のフラグは必要ですか？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "我在哪里可以找到芝加哥出租车行程的数据集？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Puppeteer 是做什么用的？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "这个订阅用户数据表里都有哪些字段？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "示例应用里初始化分类器的代码在哪个文件的哪个函数里？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "次の図は何を示していますか？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在实现新的损失函数时，是应该传入 softmax 概率还是直接传入 logits？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 3633 这道题难度怎么样？涉及哪些算法标签？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在多GPU训练时，怎么检查是否存在GPU之间按顺序执行的情况？如果发现了需要做什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是超平面？它在不同维度下分别是什么样的？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是控制流？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "散列表存储的是什么？它为什么能快速找到值？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在 TensorFlow 里，模型权重是什么时候开始构建的？怎么查看可训练参数的总数？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "Dataset 객체로 모델을 훈련할 때 데이터는 어떤 형식으로 반환되나요?",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "预解析器在解析函数时会做什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Lighthouse性能分数主要包含哪几个指标？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如果输入 nums = [1,2,3,4,4,3,2,1]，n = 4，输出结果是什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是 late firings？它会对数据流结果产生什么影响？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "这篇译文的原文作者是谁？译文出自哪里？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "concat_ws 函数和 concat 函数有什么区别？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "给定一个整数数组 nums 和一个初始值 original，如果 original 在数组中存在，就把它乘以 2，然后继续判断新值是否还在数组中，直到不在为止。这个逻辑怎么实现？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 第3596题 Minimum Cost Path with Alternating Directions I 难度如何，主要考察什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是JSON Mode？它有什么限制？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "默认情况下会生成什么类型的二进制文件？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这些攻击手段在哪里有讨论，并且有和 scrypt 比较吗？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这段代码里用 find(m * n) 来判断 O 要不要改成 X，这个 m*n 节点是干什么的？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 1
+    },
+    {
+      "question": "¿Qué tan rápido es el modelo en el dispositivo?",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "如何从句子列表生成带掩码的训练数据？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 1977 这道题难度怎么样，主要考察哪些知识点？",
+      "single_hit": true,
+      "single_rank": 5,
+      "agent_hit": true,
+      "agent_rank": 5,
+      "rewrites": 0
+    },
+    {
+      "question": "AbortSignal.abort() 这个方法是用来做什么的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "¿Qué debe ocurrir durante el bucle de entrenamiento en este ejemplo?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 3262 Find Overlapping Shifts 这道题的难度和分类是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么GIF图片在较小尺寸时看不到锯齿？我能用大图缩小的方式来避免锯齿吗？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlow官方ResNet模型里建议怎么转换变量类型？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "FrameGenerator 类的作用是什么？它的 __call__ 方法会返回什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "最少要修改几个数，才能让一个数组里的数字变成连续的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "请问 Scipy 有特殊矩阵的实现吗？在哪里可以查看？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是 padding（填充）？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个项目的内容覆盖了哪些技术领域？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "请问在TFF里，next_fn拿到的state是在哪里的？怎么把它传给客户端？怎么确认跑得对不对？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "我该在哪里查看Kubeflow管道的输出结果？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "在处理MRI扫描这类体数据时，应该使用哪种CNN模型？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "有没有适合想成为专业程序员的人看的资源合集？",
+      "single_hit": true,
+      "single_rank": 5,
+      "agent_hit": true,
+      "agent_rank": 5,
+      "rewrites": 0
+    },
+    {
+      "question": "在Keras模型里怎么引入输入掩码？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "AlexNet这个名字是怎么来的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在 React 里，key 是用来干什么的？",
+      "single_hit": true,
+      "single_rank": 5,
+      "agent_hit": true,
+      "agent_rank": 5,
+      "rewrites": 0
+    },
+    {
+      "question": "O que os Tensor Cores das GPUs NVIDIA modernas exigem em relação às dimensões dos tensores?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "想系统学习 JVM，应该按什么顺序看这些资料？每部分重点是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "训练过程中回报的变化趋势是怎样的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "如果我想让代码表现得像没有使用分布式策略一样，应该使用哪种策略？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "响应式图片应该怎么实现比较好？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Maurice Wilkes 在1949年爬楼梯时突然意识到了什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode第1268题搜索建议系统的英文版说明在哪里可以看？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "当 n 等于 6 时，最少需要多少次操作？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Kubeflow Pipelinesをデプロイするとき、Kubernetes Engine APIの有効化とクラスタのゾーン選択はどうすればいい？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "运行管道时产生的 artifacts 需要存储在哪里？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如果字符串来自开放集合，在安全求和时编码上会遇到什么问题？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "使用 --setup_file、--extra_package 或 --requirements_file 时，对 tfx 版本有什么要求？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TensorFlow Lite 文本分类示例中的 TextClassificationHelper.kt 文件在 GitHub 上的路径是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是操作（Ops）？",
+      "single_hit": true,
+      "single_rank": 5,
+      "agent_hit": true,
+      "agent_rank": 5,
+      "rewrites": 0
+    },
+    {
+      "question": "Kubeflow Pipelinesでメモリ使用量を設定するにはどうすればいいですか？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "审计日志到底该记什么，不该记什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "rtype和rfx现在成熟吗？短期内会有什么变化？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "FASTQ文件格式一般存储哪些信息？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "下一节会如何使用这个方法？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 1
+    },
+    {
+      "question": "构建线段树时，如果某个元素的值不能被 p 整除，应该存储什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "¿Qué hace TensorFlow.js cuando se llama a `.engine().runKernel(...)`?",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "preload 和服务器推送在性能上有什么区别？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么自动化测试比手工测试更精确？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "2021年3月15号都有哪些记录？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "这里写了什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 2
+    },
+    {
+      "question": "可微可塑性在图像重建任务中表现怎么样？跟传统网络比有什么不同？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "视频中提到的 begin 和 complete 分别代表什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这篇文章的译者和校对者分别是谁？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "ReactPathMenu 可以自定义子按钮的数量吗？怎么设置？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "掘金翻译计划是做什么的？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "观察值是字典形式时，怎么自定义智能体使用的网络？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "这个教程用的是芝加哥出租车数据集，我想换成自己的数据，可以放在哪里？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "力扣 662 题里二叉树的宽度到底是怎么算的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Como posso treinar e implementar modelos de classificação de texto do zero?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Quais são os requisitos de Android necessários para usar o SDK?",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在选择编程范式时，除了性能还需要考虑哪些因素？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "分数排名应该怎么计算？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "深度学习现在到底成功在哪些方面？它离人类水平的AI还有多远？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "모델의 훈련 진행 상황을 어떻게 시각화하나요?",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "在哪里可以查看 Flutter 中 StatefulWidget、State 和 StatelessWidget 的更多信息？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "发现译文有错误想修改的话，应该去哪里提交 PR？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Python Basics 这门课和哪些课程一起出现过？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 2
+    },
+    {
+      "question": "LeetCode 1067 范围内的数字计数的中文文档在哪里？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "vhr这个项目是做什么的？适合什么人练手？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 2
+    },
+    {
+      "question": "掘金翻译的知乎专栏地址是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个输入里的 n 和 edges 分别代表什么意思？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么把宿主机的 /opt/apps 目录挂载到容器的 webapps 目录后，访问 tomcat 会无法访问？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "我想开发一个能与Ropsten测试网上智能合约交互的前端应用，应该怎么创建客户端应用的骨架？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "3676 Count Bowl Subarrays 这道题的英文版在哪里可以查看？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "请问右上角那个网格里所有格子的R值加起来是多少？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "在 Remix 里部署合约时，环境和构造器参数应该怎么设置？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "tensorflow_hub 库可以和哪些 TensorFlow 版本一起安装？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "网站速度现在对 SEO 排名影响大吗？移动端流量大概占多少？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "有什么可以替代交互式地图的方案吗？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "刘利刚老师2020年春季的计算机图形学课程网站和教学录像在哪里可以找到？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "LeetCode 3444 这道题难不难？是哪场周赛的题目？考什么知识点？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "如果 source 是四个 'a'，target 是四个 'b'，只能按 a->c 成本 1、c->b 成本 2 转换，最少需要多少总成本？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "作者第一次接触到 async-await 模式是在什么场景下？他有什么感受？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这段版权声明里的版权方是谁？是哪一年的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "我是Scoop新手，想学习使用，看什么资料比较好？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "テキスト分類モデルのトレーニングで最初に行うことは何ですか？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "EstimationProcess 的 clipping_norm 参数应该怎么设置比较好？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "知识片段里提到的标签是什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "这个项目的内容覆盖哪些技术领域？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这段代码里的 fib 函数是怎么计算斐波那契数的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Se eu definir esse valor bem pequeno, como 1, ou um valor grande, o tutorial ainda vai funcionar corretamente?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这段递归背包代码中，第13和14行是如何处理当前物品的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个 &(subExpr1, subExpr2, ..., subExprn) 表达式是什么意思？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个符号是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 2
+    },
+    {
+      "question": "如何从上游仓库拉取最新代码并推送到我的 GitHub 账户？",
+      "single_hit": true,
+      "single_rank": 5,
+      "agent_hit": true,
+      "agent_rank": 5,
+      "rewrites": 0
+    },
+    {
+      "question": "请问这道题对数组 nums 的长度 n 和元素 nums[i] 有什么限制？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "XLAのCPUバックエンド間の主な違いは何ですか？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "React 在哪个函数中调用所有剩余的生命周期方法？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "LaTeX 里 aligned 环境是怎么结束的？",
+      "single_hit": true,
+      "single_rank": 5,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 2
+    },
+    {
+      "question": "2019年推荐使用哪种密码哈希算法？如果Argon2不可用怎么办？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "你为什么没有选择PBKDF2作为密码哈希函数？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TCP-IP-NetworkNote这个项目是做什么的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 2
+    },
+    {
+      "question": "FAB 按钮应该用来放什么功能？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "从专业角度看，A/B测试是什么？它和统计假设检验、双样本假设检验有什么关系？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "给定一个整数数组 nums 和一个整数 p，什么样的子序列可以被称为 good？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "在 RFC 中需要列出哪些人的 GitHub ID？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 2
+    },
+    {
+      "question": "为什么RMSProp在训练后期不会像AdaGrad那样变量更新得很慢？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "3499题“Maximize Active Section with Trade I”的英文版在哪里可以看？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "启用fp16后为什么有时候矩阵乘法没有明显的加速？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "フェデレーテッドラーニングで、より現実的なトレーニングループを実装するにはどうすればよいですか？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "输入数组 nums = [2,3,1,0] 时，有效拆分有多少种？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "TFF 中 next 函数执行之间传递的状态和报告出来的测量值可能为空吗？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "如何统计顶尖学生连续完成的课程对出现次数？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "请问在求最少删除多少位数字使剩余数字能被25整除的递归中，dfs(i + 1, (k * 10 + num[i]) mod 25)这一步表示什么意思？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "我想给网站做个主屏幕图标，但不会设计专业 logo，有什么简单的制作方法吗？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "能解释一下 bucket 和 part files 是什么关系吗？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 2
+    },
+    {
+      "question": "为什么说 PyTorch 好用？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个教程可以在哪里查看和运行代码？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "掘金翻译计划涵盖哪些领域？想查看更多优质译文可以关注什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "优化问题里的条件数是什么？如果条件数很大说明什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这篇内容的译者和校对者分别是谁？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "这个知识片段讲了什么？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 2
+    },
+    {
+      "question": "我怎样才能在自己的数据上使用 Fairness Indicators？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "如何使用 SecAgg 计算加权平均值？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "如果 root 是 [\"ropetree\"]，k 是 8，输出结果是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在这个 n*n 的网格里，-1 代表什么？我可以怎么移动？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这门课的课程视频在哪里可以看？教材是哪本？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "iOS 11 的 TableView 自动估算行高导致滚动条乱跳、丢帧，怎么回到以前的行为？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "背包问题有哪些解法？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "PicGo 是什么？它支持哪些图床和系统？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 2
+    },
+    {
+      "question": "力扣第3858题Minimum Bitwise OR From Grid难度怎么样？是哪场周赛的题目？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "pipeline.pyでコンポーネントをパイプラインに追加するにはどうすればいいですか？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "skip-gram模型训练时常用哪些优化方法？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "点击图标查看含义虽然花的时间可能很短，但会带来什么问题？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 1
+    },
+    {
+      "question": "这门课主要会讲哪些内容？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个任务库支持执行什么类型的机器学习模型？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "在TensorFlow项目里添加新功能时，单元测试应该怎么处理？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "这个数据集有哪些划分？每个划分分别有多少样本？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "为什么说图片是改善网页性能的重点之一？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个知识片段讲了什么内容？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 2
+    },
+    {
+      "question": "Como os usuários e os itens são descritos?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 2
+    },
+    {
+      "question": "在TFF中，如果需要对一个结构化张量乘以常数，应该怎么处理？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "怎么升级 pip 并安装 TensorFlow 2.11.0？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "SQL里 NOT IN 遇到 NULL 值时会怎么返回结果？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "如果输入的 events 是 [[1,5,3],[1,5,1],[6,6,5]]，答案是多少？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这篇译文是谁翻译的？校对者有哪些？它出自哪里？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 2
+    },
+    {
+      "question": "String 类的 equals 方法和 Object 类的 equals 方法有什么区别？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "React 组件更新阶段会涉及哪些生命周期方法？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这道题对 d、low 和 high 的约束是什么？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "在使用 TypeScript 时，什么情况下需要在 tsconfig.json 里设置 skipLibCheck 为 true？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "Angular 和 React 中的变更检测机制是干什么的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "在这个EAKF推断框架中，状态和参数是如何打包用于迭代滤波的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "RPA-Python是什么？可以帮我自动打开网页截图吗？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "TFLite 编译时，只用内置 ops 和只用 TF ops 分别需要多长时间？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 1
+    },
+    {
+      "question": "为什么系统会给用户1和用户3互相推荐为好友？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个页面提供了哪些操作入口？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "Após restaurar um checkpoint, o que acontece com o estado do iterador do dataset distribuído?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Android SQLiteDatabase 的 insertWithOnConflict 方法接收哪些参数？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "这个示例演示了什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这个模型里的 M 和 N 分别代表什么？它们是怎么随时间变化的？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在讲解动量法时构造的函数 f(x)=0.1x1^2+2x2^2 有什么特点？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "我 git push 完了，接下来怎么提交 pull request？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "那篇端到端图像压缩的文章里，图像重建分别被称为什么？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "barco 是什么项目？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 2
+    },
+    {
+      "question": "创建Casino合约时，minBet和houseEdge是怎么设置的？随机数是怎么生成的？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "给定 nums = [1,2,3]，所有严格递增子序列的 GCD 之和是多少？",
+      "single_hit": true,
+      "single_rank": 2,
+      "agent_hit": true,
+      "agent_rank": 2,
+      "rewrites": 0
+    },
+    {
+      "question": "Ao utilizar a API Functional ou a API Sequential, o que acontece com a máscara gerada por uma camada Embedding ou Masking?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "给定一个整数数组，怎么判断它能不能通过最多修改一个元素变成非递减？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这道题里 m、n、r、c 的输入范围有什么限制？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 2
+    },
+    {
+      "question": "《An Ode to Async-Await》这篇文章的译者是谁？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Como instalo o TensorFlow Compression e importo as dependências?",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "怎么让多个子按钮在动画时一个一个地延迟启动？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "什么是矩阵的奇异值分解？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在 Numbers 表里，num 为 0、1、2、3 的频率分别是 7、1、3、1，这个表的中位数是多少？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Como posso criar um modelo CNN 3D para classificar vídeos?",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "推多米诺骨牌问题中，一开始骨牌是怎么摆放和推动的？",
+      "single_hit": true,
+      "single_rank": 4,
+      "agent_hit": true,
+      "agent_rank": 4,
+      "rewrites": 0
+    },
+    {
+      "question": "给定一个整数数组和一个整数 k，怎么判断能不能把数组里的所有元素分成若干个组，每组正好 k 个元素，并且组内不能有重复？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "掘金翻译计划的知乎专栏地址是什么？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "CUAD数据集使用的是什么许可证？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "Como posso colocar o TensorFlow.js em um projeto para navegador?",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "有人说 mmap + write 固定是 4 次切换、3 次拷贝，这说法靠谱吗？mmap 能省多少内存？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "这部分会讲什么？数学部分能跳过吗？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "在 Profiler 的跟踪记录中，高性能模型通常表现出哪些特征？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "V8团队为什么要更新管线？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "计算softmax时为了避免数值溢出有什么技巧？",
+      "single_hit": true,
+      "single_rank": 3,
+      "agent_hit": true,
+      "agent_rank": 3,
+      "rewrites": 0
+    },
+    {
+      "question": "这个项目支持哪些功能？",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    },
+    {
+      "question": "Keras混合精度训练时，Softmax运算和损失扩缩策略上有什么性能优化建议？",
+      "single_hit": true,
+      "single_rank": 1,
+      "agent_hit": true,
+      "agent_rank": 1,
+      "rewrites": 0
+    },
+    {
+      "question": "北京 java 8k 岗位有哪些",
+      "single_hit": false,
+      "single_rank": null,
+      "agent_hit": false,
+      "agent_rank": null,
+      "rewrites": 0
+    }
+  ]
+}

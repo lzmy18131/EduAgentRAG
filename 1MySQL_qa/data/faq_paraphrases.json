@@ -1,0 +1,800 @@
+[
+  {
+    "question": "Python数据分析课程有哪些",
+    "paraphrases": [
+      "学Python数据分析的课都有哪些？",
+      "有没有Python数据分析相关的课程啊？"
+    ]
+  },
+  {
+    "question": "零基础怎么学Python",
+    "paraphrases": [
+      "没基础的话，Python该怎么学啊？",
+      "完全不懂编程的人要怎么开始学Python？"
+    ]
+  },
+  {
+    "question": "AI工程师薪资多少",
+    "paraphrases": [
+      "AI工程师工资一般多少",
+      "搞AI的工程师能拿多少钱"
+    ]
+  },
+  {
+    "question": "什么是RAG检索增强生成",
+    "paraphrases": [
+      "RAG检索增强生成到底是啥？",
+      "能给我讲讲RAG检索增强生成是什么意思吗？"
+    ]
+  },
+  {
+    "question": "大数据工程师月薪大概多少",
+    "paraphrases": [
+      "大数据工程师一个月工资大概多少",
+      "做大数据工程师薪资一般多少"
+    ]
+  },
+  {
+    "question": "Python多线程怎么用",
+    "paraphrases": [
+      "Python多线程咋用啊",
+      "Python里的多线程要怎么使"
+    ]
+  },
+  {
+    "question": "怎么报名课程",
+    "paraphrases": [
+      "课程怎么报名啊",
+      "想报这个课要怎么弄"
+    ]
+  },
+  {
+    "question": "有没有试听课",
+    "paraphrases": [
+      "你们有体验课吗",
+      "能先试听一下吗"
+    ]
+  },
+  {
+    "question": "什么是过拟合",
+    "paraphrases": [
+      "过拟合是啥意思？",
+      "啥叫过拟合？"
+    ]
+  },
+  {
+    "question": "学完能拿到高薪吗",
+    "paraphrases": [
+      "学完能拿到高工资吗",
+      "学完之后工资高不高啊"
+    ]
+  },
+  {
+    "question": "什么是Python？",
+    "paraphrases": [
+      "Python是个啥？",
+      "Python是啥玩意儿？"
+    ]
+  },
+  {
+    "question": "什么是机器学习？",
+    "paraphrases": [
+      "机器学习是啥？",
+      "机器学习到底指的是什么？"
+    ]
+  },
+  {
+    "question": "什么是深度学习？",
+    "paraphrases": [
+      "深度学习是啥？",
+      "深度学习到底是什么意思？"
+    ]
+  },
+  {
+    "question": "什么是自然语言处理？",
+    "paraphrases": [
+      "自然语言处理是啥？",
+      "自然语言处理指的是什么？"
+    ]
+  },
+  {
+    "question": "什么是神经网络？",
+    "paraphrases": [
+      "神经网络是个啥？",
+      "神经网络是怎么回事？"
+    ]
+  },
+  {
+    "question": "什么是监督学习？",
+    "paraphrases": [
+      "监督学习是啥意思？",
+      "监督学习是怎么回事？"
+    ]
+  },
+  {
+    "question": "什么是无监督学习？",
+    "paraphrases": [
+      "无监督学习是啥意思？",
+      "能不能给我讲讲无监督学习是什么？"
+    ]
+  },
+  {
+    "question": "什么是强化学习？",
+    "paraphrases": [
+      "强化学习是个啥？",
+      "能给我讲讲强化学习是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是大语言模型？",
+    "paraphrases": [
+      "大语言模型是个啥？",
+      "大语言模型到底是什么东西？"
+    ]
+  },
+  {
+    "question": "什么是 Transformer？",
+    "paraphrases": [
+      "Transformer 是个啥？",
+      "能给我讲讲 Transformer 是什么吗？"
+    ]
+  },
+  {
+    "question": "什么是 RAG？",
+    "paraphrases": [
+      "RAG 是个啥？",
+      "啥叫 RAG？"
+    ]
+  },
+  {
+    "question": "什么是向量数据库？",
+    "paraphrases": [
+      "向量数据库是个啥？",
+      "能不能简单说下向量数据库是什么？"
+    ]
+  },
+  {
+    "question": "什么是 Docker？",
+    "paraphrases": [
+      "Docker 是个啥？",
+      "Docker 是干嘛的？"
+    ]
+  },
+  {
+    "question": "什么是 Git？",
+    "paraphrases": [
+      "Git 是个啥？",
+      "能给我讲讲 Git 是什么吗？"
+    ]
+  },
+  {
+    "question": "什么是 API？",
+    "paraphrases": [
+      "API 是啥？",
+      "API 到底是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是 RESTful API？",
+    "paraphrases": [
+      "RESTful API 是个啥？",
+      "能给我讲讲 RESTful API 是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是 SQL？",
+    "paraphrases": [
+      "啥是 SQL？",
+      "SQL 是个啥？"
+    ]
+  },
+  {
+    "question": "什么是 NoSQL？",
+    "paraphrases": [
+      "NoSQL 是个啥？",
+      "能给我讲讲 NoSQL 是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是微服务架构？",
+    "paraphrases": [
+      "微服务架构是啥？",
+      "微服务架构到底是什么意思？"
+    ]
+  },
+  {
+    "question": "什么是 CI/CD？",
+    "paraphrases": [
+      "CI/CD 是个啥？",
+      "解释一下 CI/CD 呗？"
+    ]
+  },
+  {
+    "question": "什么是 Redis？",
+    "paraphrases": [
+      "Redis 是个啥？",
+      "Redis 是用来干嘛的？"
+    ]
+  },
+  {
+    "question": "什么是 JWT？",
+    "paraphrases": [
+      "JWT 是个啥？",
+      "能给我讲讲 JWT 是什么吗？"
+    ]
+  },
+  {
+    "question": "什么是 HTTPS？",
+    "paraphrases": [
+      "HTTPS 是啥？",
+      "HTTPS 是什么意思啊？"
+    ]
+  },
+  {
+    "question": "什么是正则表达式？",
+    "paraphrases": [
+      "正则表达式是啥意思？",
+      "正则表达式是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是负载均衡？",
+    "paraphrases": [
+      "负载均衡是啥意思？",
+      "负载均衡到底是个啥？"
+    ]
+  },
+  {
+    "question": "什么是 JSON？",
+    "paraphrases": [
+      "JSON是啥？",
+      "JSON是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是 Markdown？",
+    "paraphrases": [
+      "Markdown 是个啥？",
+      "能不能讲讲 Markdown 是什么？"
+    ]
+  },
+  {
+    "question": "什么是 WebSocket？",
+    "paraphrases": [
+      "WebSocket是什么东西？",
+      "WebSocket是啥？"
+    ]
+  },
+  {
+    "question": "什么是 TCP/IP？",
+    "paraphrases": [
+      "TCP/IP 是个啥？",
+      "能给我解释下 TCP/IP 是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是 DNS？",
+    "paraphrases": [
+      "DNS是啥？",
+      "DNS是什么意思？"
+    ]
+  },
+  {
+    "question": "什么是 CDN？",
+    "paraphrases": [
+      "CDN 是个啥？",
+      "能给我讲讲 CDN 是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是云计算？",
+    "paraphrases": [
+      "云计算是啥意思？",
+      "云计算到底是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是边缘计算？",
+    "paraphrases": [
+      "边缘计算是啥意思？",
+      "能不能给我讲讲边缘计算是什么？"
+    ]
+  },
+  {
+    "question": "什么是区块链？",
+    "paraphrases": [
+      "区块链是个啥？",
+      "区块链到底是什么意思啊？"
+    ]
+  },
+  {
+    "question": "什么是 Web3？",
+    "paraphrases": [
+      "Web3 是啥？",
+      "能给我讲讲 Web3 是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是 AIGC？",
+    "paraphrases": [
+      "AIGC是啥意思？",
+      "AIGC到底是什么东西？"
+    ]
+  },
+  {
+    "question": "什么是 Prompt？",
+    "paraphrases": [
+      "Prompt 是个啥意思？",
+      "Prompt 指的是什么呀？"
+    ]
+  },
+  {
+    "question": "什么是 Token？",
+    "paraphrases": [
+      "Token 是啥意思？",
+      "Token 是什么东西啊？"
+    ]
+  },
+  {
+    "question": "什么是 Fine-tuning？",
+    "paraphrases": [
+      "Fine-tuning 到底是什么？",
+      "能解释下 Fine-tuning 吗？"
+    ]
+  },
+  {
+    "question": "什么是 Embedding？",
+    "paraphrases": [
+      "Embedding 是啥意思？",
+      "能不能给我讲讲 Embedding 是什么？"
+    ]
+  },
+  {
+    "question": "什么是过拟合？",
+    "paraphrases": [
+      "过拟合是啥意思？",
+      "啥叫过拟合？"
+    ]
+  },
+  {
+    "question": "什么是欠拟合？",
+    "paraphrases": [
+      "欠拟合是啥意思？",
+      "什么叫欠拟合？"
+    ]
+  },
+  {
+    "question": "什么是交叉验证？",
+    "paraphrases": [
+      "交叉验证是啥意思？",
+      "能给我讲讲交叉验证是怎么回事吗？"
+    ]
+  },
+  {
+    "question": "什么是梯度下降？",
+    "paraphrases": [
+      "梯度下降是啥意思？",
+      "梯度下降到底是怎么回事？"
+    ]
+  },
+  {
+    "question": "什么是反向传播？",
+    "paraphrases": [
+      "反向传播到底是啥？",
+      "能给我讲讲反向传播吗？"
+    ]
+  },
+  {
+    "question": "什么是激活函数？",
+    "paraphrases": [
+      "激活函数是啥？",
+      "什么叫激活函数？"
+    ]
+  },
+  {
+    "question": "什么是损失函数？",
+    "paraphrases": [
+      "损失函数是啥意思？",
+      "能给我讲讲损失函数是干嘛的吗？"
+    ]
+  },
+  {
+    "question": "什么是卷积神经网络？",
+    "paraphrases": [
+      "卷积神经网络是啥？",
+      "能不能解释一下卷积神经网络？"
+    ]
+  },
+  {
+    "question": "什么是循环神经网络？",
+    "paraphrases": [
+      "循环神经网络是个啥？",
+      "能给我讲讲循环神经网络吗？"
+    ]
+  },
+  {
+    "question": "什么是生成对抗网络？",
+    "paraphrases": [
+      "啥是生成对抗网络？",
+      "生成对抗网络是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是注意力机制？",
+    "paraphrases": [
+      "注意力机制是啥？",
+      "能给我讲讲注意力机制是怎么回事吗？"
+    ]
+  },
+  {
+    "question": "什么是知识图谱？",
+    "paraphrases": [
+      "知识图谱是个啥？",
+      "能不能解释一下知识图谱是什么？"
+    ]
+  },
+  {
+    "question": "什么是强化学习中的 Q-Learning？",
+    "paraphrases": [
+      "强化学习里的 Q-Learning 是啥？",
+      "Q-Learning 在强化学习中是怎么回事？"
+    ]
+  },
+  {
+    "question": "什么是迁移学习？",
+    "paraphrases": [
+      "迁移学习是啥？",
+      "迁移学习到底指什么？"
+    ]
+  },
+  {
+    "question": "什么是模型蒸馏？",
+    "paraphrases": [
+      "模型蒸馏是啥意思？",
+      "能不能讲讲模型蒸馏是怎么回事？"
+    ]
+  },
+  {
+    "question": "什么是数据增强？",
+    "paraphrases": [
+      "数据增强是啥意思？",
+      "能给我讲讲数据增强是什么吗？"
+    ]
+  },
+  {
+    "question": "什么是超参数？",
+    "paraphrases": [
+      "超参数是啥意思？",
+      "超参数指的是什么呀？"
+    ]
+  },
+  {
+    "question": "什么是学习率？",
+    "paraphrases": [
+      "学习率是啥意思？",
+      "学习率指的是什么呀？"
+    ]
+  },
+  {
+    "question": "什么是混淆矩阵？",
+    "paraphrases": [
+      "混淆矩阵是啥？",
+      "能解释一下混淆矩阵是什么吗？"
+    ]
+  },
+  {
+    "question": "什么是精确率和召回率？",
+    "paraphrases": [
+      "精确率和召回率是啥意思？",
+      "精确率跟召回率到底指什么？"
+    ]
+  },
+  {
+    "question": "什么是 F1 分数？",
+    "paraphrases": [
+      "F1分数是啥？",
+      "F1分数是什么意思？"
+    ]
+  },
+  {
+    "question": "什么是 AUC-ROC？",
+    "paraphrases": [
+      "AUC-ROC 是啥意思？",
+      "AUC-ROC 指的是什么呀？"
+    ]
+  },
+  {
+    "question": "什么是偏差-方差权衡？",
+    "paraphrases": [
+      "偏差-方差权衡是啥意思？",
+      "偏差和方差之间的权衡指的是什么？"
+    ]
+  },
+  {
+    "question": "什么是 Python 装饰器？",
+    "paraphrases": [
+      "Python 装饰器是个啥？",
+      "能解释下 Python 装饰器是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是 Python 生成器？",
+    "paraphrases": [
+      "Python 生成器是个啥？",
+      "能给我讲讲 Python 生成器是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是 MySQL 索引？",
+    "paraphrases": [
+      "MySQL索引是个啥？",
+      "能给我讲讲MySQL索引是怎么回事吗？"
+    ]
+  },
+  {
+    "question": "什么是 Redis 的持久化？",
+    "paraphrases": [
+      "Redis 持久化到底是个啥？",
+      "能说说 Redis 的持久化是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是消息队列？",
+    "paraphrases": [
+      "消息队列是啥？",
+      "消息队列是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是分布式系统？",
+    "paraphrases": [
+      "啥叫分布式系统？",
+      "分布式系统到底是什么意思？"
+    ]
+  },
+  {
+    "question": "什么是 CAP 定理？",
+    "paraphrases": [
+      "CAP 定理讲的是啥？",
+      "能不能给我解释一下 CAP 定理？"
+    ]
+  },
+  {
+    "question": "什么是设计模式？",
+    "paraphrases": [
+      "设计模式是个啥？",
+      "设计模式是什么意思啊？"
+    ]
+  },
+  {
+    "question": "什么是 MVC 模式？",
+    "paraphrases": [
+      "MVC 模式是个啥？",
+      "能解释下 MVC 模式是怎么回事吗？"
+    ]
+  },
+  {
+    "question": "什么是 ORM？",
+    "paraphrases": [
+      "ORM 是个啥？",
+      "ORM 是什么意思？"
+    ]
+  },
+  {
+    "question": "什么是虚拟环境？",
+    "paraphrases": [
+      "虚拟环境是个啥？",
+      "能给我讲讲虚拟环境是什么吗？"
+    ]
+  },
+  {
+    "question": "什么是 Docker Compose？",
+    "paraphrases": [
+      "Docker Compose 是个啥？",
+      "能给我讲讲 Docker Compose 是干嘛的吗？"
+    ]
+  },
+  {
+    "question": "什么是 Kubernetes？",
+    "paraphrases": [
+      "Kubernetes 是个啥？",
+      "Kubernetes 是什么东西？"
+    ]
+  },
+  {
+    "question": "什么是持续部署？",
+    "paraphrases": [
+      "持续部署到底是什么意思？",
+      "什么叫持续部署啊？"
+    ]
+  },
+  {
+    "question": "什么是 OAuth 2.0？",
+    "paraphrases": [
+      "OAuth 2.0 是个啥？",
+      "能给我讲讲 OAuth 2.0 是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是 CORS？",
+    "paraphrases": [
+      "CORS 是啥？",
+      "能给我讲讲 CORS 是什么意思吗？"
+    ]
+  },
+  {
+    "question": "什么是 XSS 攻击？",
+    "paraphrases": [
+      "XSS攻击是啥意思？",
+      "能不能给我讲讲XSS攻击是什么？"
+    ]
+  },
+  {
+    "question": "什么是 CSRF 攻击？",
+    "paraphrases": [
+      "CSRF 攻击是啥意思？",
+      "啥叫 CSRF 攻击啊？"
+    ]
+  },
+  {
+    "question": "什么是 SQL 注入？",
+    "paraphrases": [
+      "啥是SQL注入？",
+      "SQL注入是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是 Linux 常用命令？",
+    "paraphrases": [
+      "Linux 常用的命令都有哪些？",
+      "Linux 一般都会用到哪些命令啊？"
+    ]
+  },
+  {
+    "question": "什么是 HTTP 状态码？",
+    "paraphrases": [
+      "HTTP状态码是啥意思？",
+      "啥是HTTP状态码啊？"
+    ]
+  },
+  {
+    "question": "什么是 Web 服务器？",
+    "paraphrases": [
+      "Web服务器是啥？",
+      "Web服务器是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是 Nginx？",
+    "paraphrases": [
+      "Nginx 是啥？",
+      "Nginx 是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是 JavaScript？",
+    "paraphrases": [
+      "JavaScript 是个啥？",
+      "JavaScript 是什么啊？"
+    ]
+  },
+  {
+    "question": "什么是 TypeScript？",
+    "paraphrases": [
+      "TypeScript 是啥？",
+      "TypeScript 是什么东西？"
+    ]
+  },
+  {
+    "question": "什么是 React？",
+    "paraphrases": [
+      "React 是个啥？",
+      "能给我讲讲 React 是什么吗？"
+    ]
+  },
+  {
+    "question": "什么是 Vue.js？",
+    "paraphrases": [
+      "Vue.js 是个啥？",
+      "能给我讲讲 Vue.js 吗？"
+    ]
+  },
+  {
+    "question": "什么是 Node.js？",
+    "paraphrases": [
+      "Node.js 是个啥？",
+      "Node.js 是什么东西？"
+    ]
+  },
+  {
+    "question": "什么是敏捷开发？",
+    "paraphrases": [
+      "敏捷开发是啥意思？",
+      "敏捷开发到底是个啥？"
+    ]
+  },
+  {
+    "question": "什么是 Scrum？",
+    "paraphrases": [
+      "Scrum 是个啥？",
+      "Scrum 是什么意思啊？"
+    ]
+  },
+  {
+    "question": "什么是 TDD？",
+    "paraphrases": [
+      "TDD 是个啥？",
+      "啥是 TDD 啊？"
+    ]
+  },
+  {
+    "question": "什么是 DevOps？",
+    "paraphrases": [
+      "DevOps 是啥意思？",
+      "DevOps 到底是个什么东西？"
+    ]
+  },
+  {
+    "question": "什么是云原生？",
+    "paraphrases": [
+      "云原生是啥意思？",
+      "云原生指的是什么呀？"
+    ]
+  },
+  {
+    "question": "什么是服务网格？",
+    "paraphrases": [
+      "服务网格是个啥？",
+      "能给我讲讲服务网格吗？"
+    ]
+  },
+  {
+    "question": "什么是 GraphQL？",
+    "paraphrases": [
+      "GraphQL 是个啥？",
+      "GraphQL 是什么东西？"
+    ]
+  },
+  {
+    "question": "什么是 gRPC？",
+    "paraphrases": [
+      "gRPC 是个啥？",
+      "能给我讲讲 gRPC 是什么吗？"
+    ]
+  },
+  {
+    "question": "什么是 MQTT？",
+    "paraphrases": [
+      "MQTT 是个啥？",
+      "能不能解释一下 MQTT 是什么东西？"
+    ]
+  },
+  {
+    "question": "什么是物联网？",
+    "paraphrases": [
+      "物联网是啥？",
+      "物联网到底指的是什么？"
+    ]
+  },
+  {
+    "question": "什么是数字孪生？",
+    "paraphrases": [
+      "数字孪生是啥？",
+      "数字孪生到底指什么？"
+    ]
+  },
+  {
+    "question": "什么是深度学习中的 Dropout？",
+    "paraphrases": [
+      "深度学习里的 Dropout 是个啥？",
+      "Dropout 在深度学习中是什么意思啊？"
+    ]
+  },
+  {
+    "question": "什么是 Batch Normalization？",
+    "paraphrases": [
+      "Batch Normalization 是啥意思？",
+      "能给我讲讲 Batch Normalization 是什么吗？"
+    ]
+  }
+]

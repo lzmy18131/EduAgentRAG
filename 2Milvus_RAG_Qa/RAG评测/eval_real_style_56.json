@@ -1,0 +1,546 @@
+[
+  {
+    "question": "这题用二叉搜索树做的话 时间复杂度和空间复杂度分别是啥啊",
+    "answer": "整体时间复杂度为 O(n log n)，空间复杂度为 O(n)，其中 n 是数组 nums1 的长度；前缀和查询的单次时间复杂度为 O(log n)。",
+    "expected_chunk": "1. **前缀和查询** `query(x)`：查询序列 `[1,...x]` 区间的区间和，即位置 x 的前缀和。  \n这两个操作的时间复杂度均为 $O(\\log n)$。因此，整体的时间复杂度为 $O(n \\log n)$，其中 $n$ 为数组 $\\textit{nums1}$ 的长度。空间复杂度 $O(n)$。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 133,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "lighthouse 那个性能分 到底是按哪几个指标算出来的",
+    "answer": "Lighthouse性能分数大体由6个指标构成：可交互时间（TTI）、速度指标（Speed Index）、首次内容绘制时间（FCP）、首次CPU空闲时间（First CPU Idle）、首次有效绘制（FMP）、预计输入延迟时间（Estimated Input Latency）。",
+    "expected_chunk": "在性能测试中，Lighthouse 聚焦于用户所见和用户体验，记录了很多指标。  \n下面这 6 个指标构成了性能分数的大体部分。他们是：  \n* 可交互时间 Time to Interactive (TTI)\n* 速度指标 Speed Index\n* 首次内容绘制时间 First Contentful Paint (FCP)\n* 首次 CPU 空闲时间 First CPU Idle\n* 首次有效绘制 First Meaningful Paint (FMP)\n* 预计输入延迟时间 Estimated Input Latency",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 259,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "梯度下降里加动量 为啥就能收敛得更稳 原理是啥",
+    "answer": "动量允许对随后的梯度计算平均值，以获得更稳定的下降方向；同时加速度也是其在无噪声凸问题上起效的关键原因之一。",
+    "expected_chunk": "此外，它们允许我们对随后的梯度计算平均值，以获得更稳定的下降方向。\n诚然，即使是对于无噪声凸问题，加速度这方面也是动量如此起效的关键原因之一。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 44,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "啥叫回归测试 代码改完之后为啥还要把老用例再跑一遍",
+    "answer": "回归测试是一种维护测试，在修改代码后再次运行功能性和非功能性测试，以查看软件功能是否跟修改前一致。其主要目的是确保代码修改后原有功能不受影响。",
+    "expected_chunk": "回归测试是一种维护测试。在修改代码后再次运行功能性和非功能性测试，旨在查看在某些代码或程序更改后软件的功能是否跟修改前一致。  \n如果前后的功能不相同，就称该软件倒退了。  \n回归测试的主要目的是确保代码修改后，原有的功能没有受到影响。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 46,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "react 列表里那个 key 属性 到底干嘛用的 不写会出啥问题",
+    "answer": "key 是列表子元素的一个唯一标识符，用于帮助 React 判断哪些项发生了变化、被添加或被移除。",
+    "expected_chunk": "**key\n**Unique identifier with a group of children to help React figure out which items have changed, have been added or removed from the list. It’s related to the “lists and keys” functionality of React described [here](https://reactjs.org/docs/lists-and-keys.html#keys).",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 289,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "选择排序跟冒泡排序 碰到相等元素的时候 处理上有啥不一样",
+    "answer": "选择排序会改变相等元素的原始顺序；冒泡排序只在左边元素大于右边元素时才交换相邻元素，相等元素不会交换，因此能保持原始顺序。",
+    "expected_chunk": "1 回目の終了時は $[2_a, 1, 2_b]$ となります。$2_a$ は引き続き $2_b$ より前にあり、相対的な順序は変わっていません。  \n3. この例では、選択ソートは等しい要素の元の順序を変えます。バブルソートは、左側の要素が右側の要素より大きい場合にだけ\n隣り合う要素を交換します。等しい要素同士は交換しないため、元の順序を保てます。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 25,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "Maurice Wilkes 是不是有句关于找 bug 的名言 具体咋说的",
+    "answer": "他意识到自己整个后半生的美好时光都将在寻找程序BUG中度过。",
+    "expected_chunk": "Maurice Wilkes，第一个存储程序计算机EDSAC的设计者，1949年他在实验室爬楼梯时有一个顿悟。在《计算机先驱回忆录》（Memoirs of a Computer Pioneer）里，他回忆到：“忽然间有一种醍醐灌顶的感觉，我整个后半生的美好时光都将在寻找程序BUG中度过了”。肯定从那之后的大部分正常的码农都会同情Wilkes过分悲观的想法，虽然也许会有人困惑于他对软件开发的难度的天真看法。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 295,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "力扣 662 二叉树的宽度 中间那些空节点算不算 到底怎么数",
+    "answer": "二叉树某一层的宽度是指该层最左侧非空节点到最右侧非空节点之间的节点数，包含两端节点以及中间的 null 节点；最大宽度就是所有层宽度的最大值。",
+    "expected_chunk": "[中文文档](/solution/0600-0699/0662.Maximum%20Width%20of%20Binary%20Tree/README.md)",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 322,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "inception v3 做 deepdream 的时候 一般关注哪些层 效果差别大吗",
+    "answer": "InceptionV3中有从mixed0到mixed10共11个卷积层，选择不同的层会决定生成的DeepDream图像效果。",
+    "expected_chunk": "InceptionV3는 상당히 큰 모델입니다 (모델 구조의 그래프는 텐서플로 [연구 저장소](https://github.com/tensorflow/models/tree/master/research/slim)에서 확인할 수 있습니다). 모델의 많은 층들 중, 딥드림을 구현하기 위해 살펴보아야 할 곳은 합성곱층들이 연결된 부분입니다. InceptionV3에는 'mixed0'부터 'mixed10'까지 총 11개의 이러한 합성곱층이 있습니다. 이 중 어떤 층을 선택하느냐에 따라서 딥드림 이미지의 모습이 결정됩니다",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 31,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "刚装完 咋检查环境装没装对啊",
+    "answer": "请运行相关的命令来确认环境是否正确设置。如果没有看到问候信息，请参考安装指南（Installation）中的说明。",
+    "expected_chunk": "Please run the following to make sure that your environment is\ncorrectly setup. If you don't see a greeting, please refer to the\n[Installation](../install.md) guide for instructions.",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 30,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "深度学习这两年这么火 到底在哪些地方算真正成功了",
+    "answer": "目前深度学习成功的地方在于接受大量人工注释的数据，通过连续的几何变换将空间X映射到空间Y。这对几乎所有工业领域都是革命性的变化，但离人类层次的AI还有很长一段路要走。",
+    "expected_chunk": "你应该记住：目前深度学习成功的地方只在于接受大量的人工注释的数据，通过连续的几何变换，将空间 X 映射到 空间 Y。这对于几乎所有的工业领域都是革命性的变化，但离人类层次的 AI 还有很长一段路要走。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 327,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "alexnet 这名字咋来的 有故事吗",
+    "answer": "AlexNet以Alex Krizhevsky的名字命名，他是相关论文的第一作者。",
+    "expected_chunk": "。在2012年ImageNet挑战赛中取得了轰动一时的成绩。AlexNet以Alex Krizhevsky的名字命名，他是论文 :cite:`Krizhevsky.Sutskever.Hinton.2012`的第一作者。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 288,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "rpa-python 是个啥东西 能帮我自动开网页截图不",
+    "answer": "可以，RPA-Python是一个Python自动化操作的库，比如能自动打开网页并截图。",
+    "expected_chunk": "19、[RPA-Python](https://hellogithub.com/en/periodical/statistics/click?target=https://github.com/tebelorg/RPA-Python)：一个 Python 自动化操作的库。比如：自动打开网页并截图，示例代码：",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 417,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "scoop 咋上手 新手应该先看啥资料",
+    "answer": "Scoop的官方文档对初学者非常友好，推荐阅读官方文档或Quick Start快速入门指南。",
+    "expected_chunk": "Scoop's official documentation is very user-friendly for beginners. Instead of elaborating here, it is recommended to read the [official documentation](https://github.com/ScoopInstaller/Scoop) or the [Quick Start guide](https://github.com/ScoopInstaller/Scoop/wiki/Quick-Start).",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 349,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "现在存密码 哈希算法推荐用哪个 argon2 还是 bcrypt",
+    "answer": "建议不要使用PBKDF2或BCrypt，强烈建议使用Argon2（最好是Argon2id）。如果Argon2不可用，Scrypt是不二选择，但要注意它也存在侧信道泄露的问题。",
+    "expected_chunk": "在 2019 年，我建议你以后**不要使用** PBKDF2 或 BCrypt，并强烈建议将 Argon2（最好是 Argon2id）用于最新系统。  \nScrypt 是当 Argon2 不可用时的不二选择，但要记住，它在侧侧信道泄露方面也存在相同的问题。  \n> 如果发现译文存在错误或其他需要改进的地方，欢迎到 [掘金翻译计划](https://github.com/xitu/gold-miner) 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 **本文永久链接** 即为本文在 GitHub 上的 MarkDown 链接。  \n---",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 364,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "vhr 这个项目是干嘛的 练手合适不",
+    "answer": "vhr是一个前后端分离的人力资源管理系统，采用 SpringBoot + Vue 架构，涉及场景很多，可作为全栈工程师的入门实践。",
+    "expected_chunk": "9、[vhr](https://hellogithub.com/en/periodical/statistics/click?target=https://github.com/lenve/vhr)：一个前后端分离的人力资源管理系统。该项目采用 SpringBoot + Vue 架构，这两个都是近些年很流行的框架。该项目涉及的场景很多，可作为全栈工程师的入门实践",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 333,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "想往专业程序员这条路走 有没有啥资料合集能推荐",
+    "answer": "可以关注 be-a-professional-programmer 项目，它整理了成为专业程序员路上用到的各种优秀资料、神器及框架。",
+    "expected_chunk": "22、[be-a-professional-programmer](https://hellogithub.com/en/periodical/statistics/click?target=https://github.com/stanzhai/be-a-professional-programmer)：成为专业程序员路上用到的各种优秀资料、神器及框架",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 286,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "训练的时候 reward 曲线一般是啥走向 一路涨吗",
+    "answer": "图表显示，训练期间每次评估时回报会向最大值增长，但可能有些波动，不总是单调递增。",
+    "expected_chunk": ". Los gráficos muestran que la devolución aumenta hacia ese máximo cada vez que se evalúa durante el entrenamiento. (Es posible que sea un poco inestable y no siempre aumente monotónicamente).",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 292,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "gif 放大了有锯齿 那我用大图缩小来展示行不行",
+    "answer": "浏览器在调整图像尺寸过程中会把边缘的锯齿抚平，所以较小尺寸时看不到锯齿。虽然可以故意使用比目标尺寸大得多的GIF再缩小来避免锯齿，但这会让用户下载更大的图片文件，占用更多手机带宽，并影响页面大小和性能，因此不建议这样做。",
+    "expected_chunk": "**注意：** 如果你用浏览器阅读这篇文章仍然没办法看到第一张图片里面的锯齿效果，试着放大页面再来看。  \n为什么图片在较小尺寸时看不到锯齿？这是因为：浏览器在调整图像尺寸的过程中将边缘的锯齿抚平了。这是否意味着你可以借此摆脱锯齿问题继续使用GIF？是的，你可以。但是要这样做你必须使用比你想要的尺寸大得多的GIF，然后进行缩小。这也意味着你的用户需要从你的服务器下载更大的图片文件，进而占据他们手机更多的带宽，同时也会影响整个页面的大小和性能。请不要这样做。  \n**总结**：  \nGIF\nAnimated SVG",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 276,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "这项目都涉及哪些技术方向啊",
+    "answer": "覆盖Android、iOS、前端、后端、区块链和产品等领域。",
+    "expected_chunk": "。内容覆盖 [Android](https://github.com/xitu/gold-miner#android)、[iOS](https://github.com/xitu/gold-miner#ios)、[前端](https://github.com/xitu/gold-miner#前端)、[后端](https://github.com/xitu/gold-miner#后端)、[区块链](https://github.com/xitu/gold-miner#区块链)、[产品](https://github",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 282,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "力扣 1022 这题难不难 都考些啥知识点",
+    "answer": "难度是简单，标签包括树、深度优先搜索、二叉树，来源是第 131 场周赛 Q2，rating 为 1462。",
+    "expected_chunk": "---\ncomments: true\ndifficulty: 简单\nedit_url: https://github.com/doocs/leetcode/edit/main/solution/1000-1099/1022.Sum%20of%20Root%20To%20Leaf%20Binary%20Numbers/README.md\nrating: 1462\nsource: 第 131 场周赛 Q2\ntags:\n- 树\n- 深度优先搜索\n- 二叉树\n---",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 37,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "本地想跑两个 worker tf_config 这个变量咋配",
+    "answer": "需要在每个 worker 上适当定义 TF_CONFIG 变量，本教程示例展示了如何在 localhost 上设置包含两个 workers 的 TF_CONFIG 变量。",
+    "expected_chunk": "Na prática, você criaria diversos workers em endereços IP/portas externos e definiria a variável `TF_CONFIG` em cada worker da forma adequada. Para fins de ilustração, este tutorial mostra como definir uma variável `TF_CONFIG` com dois workers no `localhost`:",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 109,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "mmap 那个零拷贝 拷贝次数是固定的吗 到底省了啥",
+    "answer": "不是固定的。mmap 的拷贝/切换次数会随 Page Cache 命中与缺页时机浮动，不宜钉成固定值。在 cache miss 文件到 TCP 模型里，2 次 DMA 搬运仍然存在，分别是从磁盘到内存和从内存到网卡；零拷贝主要减少的是 CPU payload 拷贝和模式切换，换一个 I/O 场景不能继续照搬这个固定数字。sendfile 在网卡支持 SG-DMA 时，CPU payload 拷贝降到 0。",
+    "expected_chunk": "（mmap 那行的拷贝/切换次数随 Page Cache 命中与缺页时机浮动，不宜钉成固定值；sendfile 在网卡支持 SG-DMA 时，CPU payload 拷贝降到 0。）  \n两个结论：  \n**第一，在本文的 cache miss 文件到 TCP 模型里，2 次 DMA 搬运仍然存在。** 它们分别对应“磁盘到内存”和“内存到网卡”。零拷贝主要减少的是 CPU payload 拷贝和模式切换；换一个 I/O 场景，不能继续照搬这个固定数字。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 48,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "力扣 1203 的英文题解在哪能看",
+    "answer": "英文版链接：/solution/1200-1299/1203.Sort%20Items%20by%20Groups%20Respecting%20Dependencies/README_EN.md",
+    "expected_chunk": "[English Version](/solution/1200-1299/1203.Sort%20Items%20by%20Groups%20Respecting%20Dependencies/README_EN.md)",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 187,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "那个用芝加哥出租车数据的教程 我想换成自己的数据 放哪都行吗",
+    "answer": "你可以将自己的数据放入管道，数据可以存储在管道能访问的任何地方，包括 Google Cloud Storage、BigQuery 或 CSV 文件。",
+    "expected_chunk": "In this tutorial, you made a pipeline for a model using the Chicago Taxi\ndataset. Now try putting your own data into the pipeline. Your data can be\nstored anywhere the pipeline can access it, including Google Cloud Storage,\nBigQuery, or CSV files.",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 321,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "bert_qa 跟 mobilebert_qa_squad 这俩模型到底啥区别",
+    "answer": "mobilebert_qa_squad 是 MobileBERT-SQuAD 模型，采用与 MobileBERT 相同的架构，并基于 SQuAD1.1 重新训练；bert_qa 是 BERT-Base 模型，是 NLP 任务中广泛使用的标准 BERT 模型。",
+    "expected_chunk": "[MobileBERT-SQuAD](https://arxiv.org/pdf/2004.02984.pdf) | 'mobilebert_qa_squad' | MobileBERT モデルと同じモデルアーキテクチャを持ち、最初のモデルは [SQuAD1.1](https://rajpurkar.github.io/SQuAD-explorer/) で再トレーニング済みです。\n[BERT-Base](https://arxiv.org/pdf/1810.04805.pdf) | 'bert_qa' | NLP タスクで広く使用される標準的な BERT モデルです。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 203,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "MRI 那种体数据 该用啥 CNN 模型处理",
+    "answer": "建议使用3D CNN，而不是(2+1)D CNN。",
+    "expected_chunk": "- [비디오 분류를 위한 3D CNN 모델 구축](https://www.tensorflow.org/tutorials/video/video_classification): 이 튜토리얼에서는 3D 데이터의 공간적 및 시간적 측면을 분해하는 (2+1)D CNN을 사용합니다. MRI 스캔과 같은 체적 데이터를 사용하는 경우 (2+1)D CNN 대신 3D CNN을 사용하는 것이 좋습니다.",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 285,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "怎么用 generator 建一个 tf.data 的数据集来着",
+    "answer": "使用 tf.data.Dataset 的 .from_generator(...) 方法，并传入上面定义好的 generator 对象。",
+    "expected_chunk": "Following cell will setup `tf.data.Dataset` object using its `.from_generator(...)` method. We will be using the `generator` object, we defined in the above cell.",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 68,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "压缩字符串迭代器那道题 初始化和 next 的复杂度是多少",
+    "answer": "初始化时间复杂度为 O(n)，next 和 hasNext 操作的时间复杂度为 O(1)，其中 n 是 compressedString 的长度。",
+    "expected_chunk": "Then perform operations in `next` and `hasNext`.  \nThe initialization time complexity is $O(n)$, and the time complexity of the other operations is $O(1)$. Here, $n$ is the length of `compressedString`.",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 73,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "二进制手表那道题 小时和分钟数怎么统计",
+    "answer": "分开枚举小时和分钟，分别统计满足条件的小时数和分钟数，然后将二者相乘。时间复杂度为 O(24+60)，空间复杂度为 O(1)。",
+    "expected_chunk": "我们可以分开枚举小时和分钟，统计有多少个小时和分钟满足条件，然后将二者相乘即可。  \n时间复杂度 $O(24 + 60)$，空间复杂度 $O(1)$。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 35,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "力扣 2725 这题难不难 主要考啥语言",
+    "answer": "这道题难度为简单，标签是 JavaScript。",
+    "expected_chunk": "---\ncomments: true\ndifficulty: 简单\nedit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2725.Interval%20Cancellation/README.md\ntags:\n- JavaScript\n---",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 123,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "这页面都能干点啥 有哪些入口",
+    "answer": "提供了在 TensorFlow.org 查看、在 Google Colab 运行、在 GitHub 查看源码以及下载 notebook 的入口。",
+    "expected_chunk": "View on TensorFlow.org  \nRun in Google Colab  \nView source on GitHub  \nDownload notebook",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 420,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "descriptions 构造二叉树 输出序列是啥",
+    "answer": "[50,20,80,15,17,19]",
+    "expected_chunk": "测试用例会保证可以构造出 有效 的二叉树。  \n&nbsp;  \n示例 1：  \n输入：descriptions = [[20,15,1],[20,17,0],[50,20,1],[50,80,0],[80,19,1]]\n输出：[50,20,80,15,17,19]\n解释：根节点是值为 50 的节点，因为它没有父节点。\n结果二叉树如上图所示。  \n示例 2：  \n输入：descriptions = [[1,2,1],[2,3,0],[3,4,1]]\n输出：[1,2,null,null,3,4]\n解释：根节点是值为 1 的节点，因为它没有父节点。\n结果二叉树如上图所示。  \n&nbsp;",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 29,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "QCNN 这个模型的层 是怎么定义的",
+    "answer": "基于Cong和Lukin的QCNN论文来定义模型层，使用Tucci论文的1-qubit和2-qubit参数化酉矩阵，以及一般的参数化2-qubit池化操作。",
+    "expected_chunk": "Cong 및 Lukin QCNN 논문을 사용하여 모델을 구성하는 레이어를 정의합니다. 전제 조건으로 다음을 이용한다고 가정합니다.  \n- Tucci 논문의 1-큐비트 및 2-큐비트 매개변수화된 단일 행렬\n- 일반적인 매개변수화된 2-큐비트 풀링 연산  \n생성 결과를 보기 위해 1-큐비트 단일 회로를 출력합니다.  \n그리고 2-큐비트 단일 회로입니다.  \n그리고 2-큐비트 풀링 회로입니다.  \n##### 1.5.2.1 양자 컨볼루션",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 24,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "tf-agents 有没有 bandit 相关的教程",
+    "answer": "提供了 bandits 教程（https://github.com/tensorflow/agents/tree/master/docs/tutorials/bandits_tutorial.ipynb）和 per-arm bandit 教程（https://github.com/tensorflow/agents/tree/master/docs/tutorials/per_arm_bandits_tutorial.ipynb）。",
+    "expected_chunk": ".com/tensorflow/agents/tree/master/docs/tutorials/bandits_tutorial.ipynb) e [bandit por braço](https://github.com/tensorflow/agents/tree/master/docs/tutorials/per_arm_bandits_tutorial.ipynb).",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 202,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "这门课用的啥教材",
+    "answer": "课程前半部分基于著名的TAPL，后半部分没有固定教材。",
+    "expected_chunk": "- Textbooks: The first half of the course is based on the famous [TAPL](https://www.cis.upenn.edu/~bcpierce/tapl/), and the second half has no fixed textbook",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 214,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "scipy 有没有现成的特殊矩阵 在哪能看",
+    "answer": "Scipy 提供了一些特殊矩阵的实现，具体可以参考 http://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html#special-matrices",
+    "expected_chunk": "`Scipy` 提供了一些特殊矩阵的实现，具体可以参考：  \n[http://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html#special-matrices](http://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html#special-matrices)",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 280,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "这题为啥输出是 1 没太看懂",
+    "answer": "因为更新 nums[2] 为 6 后，数组变为 [3, 8, 6, 16]，其中子序列 [8, 6] 的 GCD 恰好为 p=2，所以答案为 1。",
+    "expected_chunk": "No, as no subsequence has GCD exactly p = 2  \n1\n[2, 6]\nUpdate nums[2] to 6\n[3, 8, 6, 16]\nYes, subsequence [8, 6] has GCD exactly p = 2  \nThus, the answer is 1.  \nExample 2:  \nInput: nums = [4,5,7,8], p = 3, queries = [[0,6],[1,9],[2,3]]  \nOutput: 2  \nExplanation:  \ni\n[indi, vali]\nOperation",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 32,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "梯度实现的示例代码 在哪儿能看",
+    "answer": "您可以在 https://github.com/tensorflow/tfjs/tree/master/tfjs-core/src/gradients 查看梯度实现的示例。",
+    "expected_chunk": "Puede ver ejemplos de [implementaciones de gradientes aquí](https://github.com/tensorflow/tfjs/tree/master/tfjs-core/src/gradients).",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 114,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "这项目都配了些啥开发工具 有 eslint 吗",
+    "answer": "引入了 ESLint 来检查代码错误，配置了热模块替换，并且可能添加了 source maps 功能。",
+    "expected_chunk": "*   我们引入 ESLint 来检查代码是否存在错误\n*   我们配置了热模块替换\n*   我们（可能）添加了 source maps 功能  \n**特别提醒**：由于许多 npm 依赖项可能会在你阅读此内容时发生更改，因此相同的配置可能对你无效。我恳请你将错误留在下面的评论中，以便我以后编辑。  \n> 如果发现译文存在错误或其他需要改进的地方，欢迎到 [掘金翻译计划](https://github.com/xitu/gold-miner) 对译文进行修改并 PR，也可获得相应奖励积分。文章开头的 **本文永久链接** 即为本文在 GitHub 上的 MarkDown 链接。  \n---",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 157,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "3d cnn 做视频分类 官方有现成教程吗",
+    "answer": "Use o tutorial do TensorFlow em https://www.tensorflow.org/tutorials/video/video_classification. Ele usa uma CNN (2+1)D que decompõe os aspectos espaciais e temporais dos dados 3D.",
+    "expected_chunk": "- [Crie um modelo CNN 3D para a classificação de vídeos](https://www.tensorflow.org/tutorials/video/video_classification): observe que este tutorial usa uma CNN (2+1)D que decompõe os aspectos espaciais e temporais dos dados 3D",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 439,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "tf-agents 那个 cartpole 例子 是训练啥的",
+    "answer": "演示如何使用TF-Agents库在Cartpole环境中训练DQN（Deep Q Networks）代理。",
+    "expected_chunk": "En este ejemplo se muestra cómo usar la biblioteca de TF-Agents para entrenar un agente [DQN (Deep Q Networks)](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf) en el entorno Cartpole.",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 423,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "这例子用 debugger 打开的是个啥应用",
+    "answer": "一个非常简单的应用程序，它基于一个基础的 JavaScript 开源框架开发。",
+    "expected_chunk": "在这个例子中，我们将用 Debugger 打开一个非常简单的应用程序。此[应用程序](https://mozilladevelopers.github.io/sample-todo/01-variables/)是基于一个基础的 JavaScript 开源框架开发的",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 63,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "kubeflow pipelines 部署的时候 那个 api 和 zone 咋选",
+    "answer": "まず[有効化]をクリックしてKubernetes Engine APIを有効にし、有効になるまで数分待ちます。その後、[Deploy Kubeflow Pipelines]ページでクラスタのゾーン（またはリージョン）を選択します。ネットワークとサブネットワークはデフォルトのままで構いません。",
+    "expected_chunk": "4. [有効化] をクリックして、Kubernetes Engine API を有効にします。  \n注意: 次に進む前に、Kubernetes Engine API が有効になるまで数分かかることがある場合があります。  \n5. [Deploy Kubeflow Pipelines] ページで:  \n1. クラスタの[ゾーン](https://cloud.google.com/compute/docs/regions-zones)（または「リージョン」）を背たくします。ネットワークとサブネットワークを設定することはできますが、このチュートリアルではデフォルトのままにします。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 298,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "wordvec_dim 想调大重新训 咋操作",
+    "answer": "wordvec_dimやseq_lenなどのモデル設定を調整できます。より大きなwordvec_dimでトレーニングする場合は、新しいmodel_specを構築し、前処理されたデータを取得して、新しいモデルをトレーニングします。",
+    "expected_chunk": "`AverageWordVecModelSpec` クラスの`wordvec_dim` や `seq_len` 変数などのモデルインフラストラクチャを調整できます。  \nたとえば、より大きな `wordvec_dim` の値を使ってモデルをトレーニングできます。モデルを変更する場合、新しい `model_spec` を構築する必要があります。  \n前処理されたデータを取得します。  \n新しいモデルをトレーニングします。",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 19,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "gif 文件怎么读成 tf tensor 视频形状是啥",
+    "answer": "GIF를 다운로드한 뒤, GIF 파일을 `tf.Tensor`로 읽는 함수를 정의합니다. 비디오의 형상은 `(frames, height, width, colors)`입니다.",
+    "expected_chunk": "gif를 다운로드합니다.  \ngif 파일을 `tf.Tensor`로 읽는 함수를 정의합니다.  \n비디오의 형상은 `(frames, height, width, colors)`입니다.",
+    "source": "human_written",
+    "kind": "tech_qa",
+    "gold_id": 148,
+    "build_method": "question rephrased from gold answer only; expected_chunk reused as grading label"
+  },
+  {
+    "question": "北京有没有 15k 以上的 java 岗",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "北京",
+      "tech": "java",
+      "salary_min": 15
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  },
+  {
+    "question": "想在上海找个 python 的活 20k 左右",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "上海",
+      "tech": "python",
+      "salary_min": 20
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  },
+  {
+    "question": "杭州前端 10k 有没有",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "杭州",
+      "tech": "web",
+      "salary_min": 10
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  },
+  {
+    "question": "深圳运维 linux 12k 的岗位",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "深圳",
+      "tech": "linux",
+      "salary_min": 12
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  },
+  {
+    "question": "成都 C# 10k",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "成都",
+      "tech": "C#",
+      "salary_min": 10
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  },
+  {
+    "question": "武汉 python 15k 有吗",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "武汉",
+      "tech": "python",
+      "salary_min": 15
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  },
+  {
+    "question": "西安 web 8k 的工作",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "西安",
+      "tech": "web",
+      "salary_min": 8
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  },
+  {
+    "question": "广州 java 8k 到 12k 之间",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "广州",
+      "tech": "java",
+      "salary_min": 8,
+      "salary_max": 12
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  },
+  {
+    "question": "南京有 java 应届生岗位吗",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "南京",
+      "tech": "java"
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  },
+  {
+    "question": "北京 linux 25k 的岗位",
+    "answer": "",
+    "expected_chunk": "",
+    "conditions": {
+      "city": "北京",
+      "tech": "linux",
+      "salary_min": 25
+    },
+    "source": "human_written",
+    "kind": "job_condition",
+    "build_method": "hand-written colloquial job query; graded by S4 condition-satisfaction"
+  }
+]

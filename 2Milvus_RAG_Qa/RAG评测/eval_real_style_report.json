@@ -1,0 +1,454 @@
+{
+  "set": "eval_real_style_56.json",
+  "design_notes": "56 条人工编写的口语化/碎片化 query(技术 46 + 求职 10),问题仅依据黄金集标准答案改写、不接触 chunk 文本,expected_chunk 仅作评分标签;本子集是分布外探测,指标与 453 条 LLM 生成集分开报告。",
+  "tech_qa": {
+    "num_queries": 46,
+    "hits": 23,
+    "hit_rate": 0.5,
+    "mrr": 0.4058,
+    "hit_rate_ci95": [
+      0.3612,
+      0.6388
+    ],
+    "mrr_ci95": [
+      0.279,
+      0.5362
+    ],
+    "per_query": [
+      {
+        "question": "这题用二叉搜索树做的话 时间复杂度和空间复杂度分别是啥啊",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 7985,
+        "gold_id": 133
+      },
+      {
+        "question": "lighthouse 那个性能分 到底是按哪几个指标算出来的",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2759,
+        "gold_id": 259
+      },
+      {
+        "question": "梯度下降里加动量 为啥就能收敛得更稳 原理是啥",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2510,
+        "gold_id": 44
+      },
+      {
+        "question": "啥叫回归测试 代码改完之后为啥还要把老用例再跑一遍",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2759,
+        "gold_id": 46
+      },
+      {
+        "question": "react 列表里那个 key 属性 到底干嘛用的 不写会出啥问题",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2679,
+        "gold_id": 289
+      },
+      {
+        "question": "选择排序跟冒泡排序 碰到相等元素的时候 处理上有啥不一样",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2570,
+        "gold_id": 25
+      },
+      {
+        "question": "Maurice Wilkes 是不是有句关于找 bug 的名言 具体咋说的",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2895,
+        "gold_id": 295
+      },
+      {
+        "question": "力扣 662 二叉树的宽度 中间那些空节点算不算 到底怎么数",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2824,
+        "gold_id": 322
+      },
+      {
+        "question": "inception v3 做 deepdream 的时候 一般关注哪些层 效果差别大吗",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 2631,
+        "gold_id": 31
+      },
+      {
+        "question": "刚装完 咋检查环境装没装对啊",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 2580,
+        "gold_id": 30
+      },
+      {
+        "question": "深度学习这两年这么火 到底在哪些地方算真正成功了",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 2582,
+        "gold_id": 327
+      },
+      {
+        "question": "alexnet 这名字咋来的 有故事吗",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 13937,
+        "gold_id": 288
+      },
+      {
+        "question": "rpa-python 是个啥东西 能帮我自动开网页截图不",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 11430,
+        "gold_id": 417
+      },
+      {
+        "question": "scoop 咋上手 新手应该先看啥资料",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 12361,
+        "gold_id": 349
+      },
+      {
+        "question": "现在存密码 哈希算法推荐用哪个 argon2 还是 bcrypt",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 11417,
+        "gold_id": 364
+      },
+      {
+        "question": "vhr 这个项目是干嘛的 练手合适不",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 12841,
+        "gold_id": 333
+      },
+      {
+        "question": "想往专业程序员这条路走 有没有啥资料合集能推荐",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 12638,
+        "gold_id": 286
+      },
+      {
+        "question": "训练的时候 reward 曲线一般是啥走向 一路涨吗",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 11389,
+        "gold_id": 292
+      },
+      {
+        "question": "gif 放大了有锯齿 那我用大图缩小来展示行不行",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 11801,
+        "gold_id": 276
+      },
+      {
+        "question": "这项目都涉及哪些技术方向啊",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 12675,
+        "gold_id": 282
+      },
+      {
+        "question": "力扣 1022 这题难不难 都考些啥知识点",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 13123,
+        "gold_id": 37
+      },
+      {
+        "question": "本地想跑两个 worker tf_config 这个变量咋配",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 12009,
+        "gold_id": 109
+      },
+      {
+        "question": "mmap 那个零拷贝 拷贝次数是固定的吗 到底省了啥",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 11422,
+        "gold_id": 48
+      },
+      {
+        "question": "力扣 1203 的英文题解在哪能看",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 13613,
+        "gold_id": 187
+      },
+      {
+        "question": "那个用芝加哥出租车数据的教程 我想换成自己的数据 放哪都行吗",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 12566,
+        "gold_id": 321
+      },
+      {
+        "question": "bert_qa 跟 mobilebert_qa_squad 这俩模型到底啥区别",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 10477,
+        "gold_id": 203
+      },
+      {
+        "question": "MRI 那种体数据 该用啥 CNN 模型处理",
+        "hit": true,
+        "rank": 2,
+        "latency_ms": 12613,
+        "gold_id": 285
+      },
+      {
+        "question": "怎么用 generator 建一个 tf.data 的数据集来着",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 13630,
+        "gold_id": 68
+      },
+      {
+        "question": "压缩字符串迭代器那道题 初始化和 next 的复杂度是多少",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 11955,
+        "gold_id": 73
+      },
+      {
+        "question": "二进制手表那道题 小时和分钟数怎么统计",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 13194,
+        "gold_id": 35
+      },
+      {
+        "question": "力扣 2725 这题难不难 主要考啥语言",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 11462,
+        "gold_id": 123
+      },
+      {
+        "question": "这页面都能干点啥 有哪些入口",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 13188,
+        "gold_id": 420
+      },
+      {
+        "question": "descriptions 构造二叉树 输出序列是啥",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 11848,
+        "gold_id": 29
+      },
+      {
+        "question": "QCNN 这个模型的层 是怎么定义的",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 12733,
+        "gold_id": 24
+      },
+      {
+        "question": "tf-agents 有没有 bandit 相关的教程",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 13945,
+        "gold_id": 202
+      },
+      {
+        "question": "这门课用的啥教材",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 10945,
+        "gold_id": 214
+      },
+      {
+        "question": "scipy 有没有现成的特殊矩阵 在哪能看",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 10915,
+        "gold_id": 280
+      },
+      {
+        "question": "这题为啥输出是 1 没太看懂",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 14092,
+        "gold_id": 32
+      },
+      {
+        "question": "梯度实现的示例代码 在哪儿能看",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 14065,
+        "gold_id": 114
+      },
+      {
+        "question": "这项目都配了些啥开发工具 有 eslint 吗",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 12663,
+        "gold_id": 157
+      },
+      {
+        "question": "3d cnn 做视频分类 官方有现成教程吗",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 10065,
+        "gold_id": 439
+      },
+      {
+        "question": "tf-agents 那个 cartpole 例子 是训练啥的",
+        "hit": false,
+        "rank": null,
+        "latency_ms": 12199,
+        "gold_id": 423
+      },
+      {
+        "question": "这例子用 debugger 打开的是个啥应用",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 11792,
+        "gold_id": 63
+      },
+      {
+        "question": "kubeflow pipelines 部署的时候 那个 api 和 zone 咋选",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 13081,
+        "gold_id": 298
+      },
+      {
+        "question": "wordvec_dim 想调大重新训 咋操作",
+        "hit": true,
+        "rank": 3,
+        "latency_ms": 12189,
+        "gold_id": 19
+      },
+      {
+        "question": "gif 文件怎么读成 tf tensor 视频形状是啥",
+        "hit": true,
+        "rank": 1,
+        "latency_ms": 13963,
+        "gold_id": 148
+      }
+    ]
+  },
+  "job_condition": {
+    "num_queries": 10,
+    "condition_satisfied": 10,
+    "condition_satisfaction_rate": 1.0,
+    "rate_ci95": [
+      0.7225,
+      1.0
+    ],
+    "per_query": [
+      {
+        "question": "北京有没有 15k 以上的 java 岗",
+        "cond": {
+          "city": "北京",
+          "tech": "java",
+          "salary_min": 15
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      },
+      {
+        "question": "想在上海找个 python 的活 20k 左右",
+        "cond": {
+          "city": "上海",
+          "tech": "python",
+          "salary_min": 20
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      },
+      {
+        "question": "杭州前端 10k 有没有",
+        "cond": {
+          "city": "杭州",
+          "tech": "web",
+          "salary_min": 10
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      },
+      {
+        "question": "深圳运维 linux 12k 的岗位",
+        "cond": {
+          "city": "深圳",
+          "tech": "linux",
+          "salary_min": 12
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      },
+      {
+        "question": "成都 C# 10k",
+        "cond": {
+          "city": "成都",
+          "tech": "C#",
+          "salary_min": 10
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      },
+      {
+        "question": "武汉 python 15k 有吗",
+        "cond": {
+          "city": "武汉",
+          "tech": "python",
+          "salary_min": 15
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      },
+      {
+        "question": "西安 web 8k 的工作",
+        "cond": {
+          "city": "西安",
+          "tech": "web",
+          "salary_min": 8
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      },
+      {
+        "question": "广州 java 8k 到 12k 之间",
+        "cond": {
+          "city": "广州",
+          "tech": "java",
+          "salary_min": 8,
+          "salary_max": 12
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      },
+      {
+        "question": "南京有 java 应届生岗位吗",
+        "cond": {
+          "city": "南京",
+          "tech": "java"
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      },
+      {
+        "question": "北京 linux 25k 的岗位",
+        "cond": {
+          "city": "北京",
+          "tech": "linux",
+          "salary_min": 25
+        },
+        "satisfied": true,
+        "num_jd_returned": 5
+      }
+    ]
+  },
+  "timestamp": "2026-08-15 06:20:25"
+}

@@ -1,0 +1,40 @@
+# Web 与配置
+fastapi==0.141.1
+uvicorn[standard]==0.49.0
+pydantic==2.13.4
+python-dotenv==1.2.2
+python-multipart==0.0.32
+openai==2.49.0
+
+# MySQL / Redis / BM25
+PyMySQL==1.2.0
+pandas==3.0.3
+redis==8.1.0
+jieba==0.42.1
+rank-bm25==0.2.2
+numpy==2.5.1
+
+# BERT 与向量检索
+# torch 建议按 CUDA 版本从 https://pytorch.org/get-started/locally/ 安装。
+torch==2.12.1
+transformers==5.14.1
+scikit-learn==1.9.0
+tqdm==4.68.3
+sentence-transformers==5.6.1
+pymilvus==3.0.0
+milvus-model==0.2.12
+langchain-text-splitters==1.1.2
+
+# PDF / DOCX 文档加载（补齐 Windows 可选依赖）
+docling==2.117.0
+tabulate>=0.9,<1
+pywin32>=311; platform_system == "Windows"
+rich>=13.7,<15
+
+# RAGAS 评测
+ragas==0.4.3
+datasets==5.0.0
+langchain-openai==1.4.1
+
+# 测试
+pytest==8.3.5
